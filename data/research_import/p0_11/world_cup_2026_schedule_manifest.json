@@ -1,0 +1,32 @@
+{
+  "dataset_id": "world_cup_2026_frozen_schedule_v1",
+  "competition": "2026 FIFA World Cup",
+  "season": "2026",
+  "fixtures_file": "world_cup_2026_fixtures.csv",
+  "coverage_summary": {
+    "fixtures": 72,
+    "groups": 12,
+    "fixed_group_stage_rounds": 3
+  },
+  "frozen_scope": {
+    "fixed_group_stage_fixtures": true,
+    "fixed_knockout_slots_included": false,
+    "concrete_knockout_teams_included": false
+  },
+  "dynamic_team_assignment_policy": {
+    "round_of_32_and_beyond": "materialize_from_results_later",
+    "hard_coded_future_knockout_teams_allowed": false
+  },
+  "static_stage_labels": [
+    "First Stage"
+  ],
+  "source_policy": {
+    "raw_saved": false,
+    "network_required_for_import": false,
+    "notes": [
+      "This frozen schedule snapshot is the authoritative local baseline for currently fixed 2026 World Cup fixtures.",
+      "Group-stage fixtures may carry concrete teams because those pairings are already fixed.",
+      "Knockout teams must be materialized later from results; they are not prefilled in this baseline."
+    ]
+  }
+}

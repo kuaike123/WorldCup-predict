@@ -1,0 +1,38 @@
+{
+  "final_score": {
+    "home": 1,
+    "away": 2
+  },
+  "actual_outcome": "away_win",
+  "over_2_5_result": true,
+  "key_events": [
+    {
+      "minute": 10,
+      "event_type": "goal",
+      "team": "away",
+      "description": "客队早段进球改变比赛结构"
+    }
+  ],
+  "match_stats": {
+    "home_xg": 1.8,
+    "away_xg": 0.8,
+    "home_shots": 15,
+    "away_shots": 3,
+    "home_shots_on_target": 6,
+    "away_shots_on_target": 2
+  },
+  "abnormality_flags": [
+    "normal"
+  ],
+  "review_confidence": 0.9,
+  "review_tags": [
+    {
+      "source_layer": "pre_match",
+      "factor": "motivation_stage",
+      "error_direction": 1,
+      "bias_strength": 1.0,
+      "evidence": "弱队必须抢分，战意和执行强度被低估。"
+    }
+  ],
+  "reviewer_note": "样例复盘只生成调权建议，不自动修改配置。"
+}

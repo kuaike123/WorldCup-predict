@@ -1,0 +1,16 @@
+{
+  "name": "world-cup-agent-open",
+  "owner": {
+    "name": "World Cup Agent"
+  },
+  "description": "Provider-based World Cup research backfill and scoring plugin marketplace.",
+  "plugins": [
+    {
+      "name": "world-cup-agent-open",
+      "displayName": "World Cup Agent Open",
+      "description": "Provider-based World Cup research backfill and scoring plugin.",
+      "version": "1.0.0",
+      "source": "./"
+    }
+  ]
+}

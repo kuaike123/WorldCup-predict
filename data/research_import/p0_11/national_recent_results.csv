@@ -1,0 +1,162 @@
+fixture_id,competition,season,match_time,home_team_id,away_team_id,neutral_field,result_status,home_score,away_score,opponent_team_id,source_fixture_id,source_result_id,available_at
+recent_result_1874034,WCQ,2025,2025-10-12T00:00:00+00:00,team_romania,team_austria,false,closed,1,0,team_romania,1874034,1874034:result,2026-06-10T18:30:00+08:00
+recent_result_1874085,WCQ,2025,2025-10-14T00:00:00+00:00,team_latvia,team_england,false,closed,0,5,team_latvia,1874085,1874085:result,2026-06-10T18:30:00+08:00
+recent_result_1896712,WCQ,2025,2025-10-14T00:00:00+00:00,team_portugal,team_hungary,false,closed,2,2,team_hungary,1896712,1896712:result,2026-06-10T18:30:00+08:00
+recent_result_1874088,WCQ,2025,2025-11-13T00:00:00+00:00,team_england,team_serbia,false,closed,2,0,team_serbia,1874088,1874088:result,2026-06-10T18:30:00+08:00
+recent_result_1874122,WCQ,2025,2025-11-13T00:00:00+00:00,team_norway,team_estonia,false,closed,4,1,team_estonia,1874122,1874122:result,2026-06-10T18:30:00+08:00
+recent_result_1896700,WCQ,2025,2025-11-13T00:00:00+00:00,team_france,team_ukraine,false,closed,4,0,team_ukraine,1896700,1896700:result,2026-06-10T23:10:00+08:00
+recent_result_1896711,WCQ,2025,2025-11-13T00:00:00+00:00,team_ireland,team_portugal,false,closed,2,0,team_ireland,1896711,1896711:result,2026-06-10T18:30:00+08:00
+recent_result_1896718,WCQ,2025,2025-11-14T00:00:00+00:00,team_poland,team_netherlands,false,closed,1,1,team_poland,1896718,1896718:result,2026-06-10T18:30:00+08:00
+recent_result_1896735,WCQ,2025,2025-11-14T00:00:00+00:00,team_croatia,team_faroe_islands,false,closed,3,1,team_faroe_islands,1896735,1896735:result,2026-06-10T18:30:00+08:00
+recent_result_1906917,WCQ,2025,2025-11-14T00:00:00+00:00,team_haiti,team_costa_rica,false,closed,1,0,team_costa_rica,1906917,1906917:result,2026-06-10T18:30:00+08:00
+recent_result_1874013,WCQ,2025,2025-11-15T00:00:00+00:00,team_switzerland,team_sweden,false,closed,4,1,team_switzerland,1874013,1874013:result,2026-06-10T18:30:00+08:00
+recent_result_1874035,WCQ,2025,2025-11-15T00:00:00+00:00,team_cyprus,team_austria,false,closed,0,2,team_cyprus,1874035,1874035:result,2026-06-10T18:30:00+08:00
+recent_result_1874040,WCQ,2025,2025-11-15T00:00:00+00:00,team_greece,team_scotland,false,closed,3,2,team_greece,1874040,1874040:result,2026-06-10T18:30:00+08:00
+recent_result_1874053,WCQ,2025,2025-11-15T00:00:00+00:00,team_turkiye,team_bulgaria,false,closed,2,0,team_bulgaria,1874053,1874053:result,2026-06-10T18:30:00+08:00
+recent_result_1874107,WCQ,2025,2025-11-15T00:00:00+00:00,team_kazakhstan,team_belgium,false,closed,1,1,team_kazakhstan,1874107,1874107:result,2026-06-10T18:30:00+08:00
+recent_result_1874089,WCQ,2025,2025-11-16T00:00:00+00:00,team_albania,team_england,false,closed,0,2,team_albania,1874089,1874089:result,2026-06-10T18:30:00+08:00
+recent_result_1896699,WCQ,2025,2025-11-16T00:00:00+00:00,team_azerbaijan,team_france,false,closed,1,3,team_azerbaijan,1896699,1896699:result,2026-06-10T23:10:00+08:00
+recent_result_1896710,WCQ,2025,2025-11-16T00:00:00+00:00,team_portugal,team_armenia,false,closed,9,1,team_armenia,1896710,1896710:result,2026-06-10T18:30:00+08:00
+recent_result_1896728,WCQ,2025,2025-11-16T00:00:00+00:00,team_italy,team_norway,false,closed,1,4,team_italy,1896728,1896728:result,2026-06-10T18:30:00+08:00
+recent_result_1874070,World Cup Qualification UEFA,2025,2025-11-17T00:00:00+00:00,team_czechia,team_gibraltar,false,closed,6,0,team_gibraltar,1874070,1874070:result,2026-06-10T23:10:00+08:00
+recent_result_1896688,WCQ,2025,2025-11-17T00:00:00+00:00,team_germany,team_slovakia,false,closed,6,0,team_slovakia,1896688,1896688:result,2026-06-10T18:30:00+08:00
+recent_result_1896720,WCQ,2025,2025-11-17T00:00:00+00:00,team_netherlands,team_lithuania,false,closed,4,0,team_lithuania,1896720,1896720:result,2026-06-10T18:30:00+08:00
+recent_result_1896734,WCQ,2025,2025-11-17T00:00:00+00:00,team_montenegro,team_croatia,false,closed,2,3,team_montenegro,1896734,1896734:result,2026-06-10T18:30:00+08:00
+recent_result_1874014,WCQ,2025,2025-11-18T00:00:00+00:00,team_kosovo,team_switzerland,false,closed,1,1,team_kosovo,1874014,1874014:result,2026-06-10T18:30:00+08:00
+recent_result_1874015,WCQ,2025,2025-11-18T00:00:00+00:00,team_sweden,team_slovenia,false,closed,1,1,team_slovenia,1874015,1874015:result,2026-06-10T18:30:00+08:00
+recent_result_1874037,WCQ,2025,2025-11-18T00:00:00+00:00,team_austria,team_bosnia_and_herzegovina,false,closed,1,1,team_bosnia_and_herzegovina,1874037,1874037:result,2026-06-10T18:30:00+08:00
+recent_result_1874109,WCQ,2025,2025-11-18T00:00:00+00:00,team_belgium,team_liechtenstein,false,closed,7,0,team_liechtenstein,1874109,1874109:result,2026-06-10T18:30:00+08:00
+recent_result_1896692,WCQ,2025,2025-11-18T00:00:00+00:00,team_scotland,team_denmark,false,closed,4,2,team_denmark,1896692,1896692:result,2026-06-10T18:30:00+08:00
+recent_result_1896703,WCQ,2025,2025-11-18T00:00:00+00:00,team_spain,team_turkiye,false,closed,2,2,team_turkiye,1896703,1896703:result,2026-06-10T18:30:00+08:00
+recent_result_1906920,WCQ,2025,2025-11-19T00:00:00+00:00,team_haiti,team_nicaragua,false,closed,2,0,team_nicaragua,1906920,1906920:result,2026-06-10T18:30:00+08:00
+recent_result_1887343,ACoN,2025,2025-12-29T00:00:00+00:00,team_zimbabwe,team_south_africa,false,closed,2,3,team_zimbabwe,1887343,1887343:result,2026-06-10T18:30:00+08:00
+recent_result_1887355,Africa Cup of Nations,2025,2025-12-30T00:00:00+00:00,team_botswana,team_congo_dr,false,closed,0,3,team_botswana,1887355,1887355:result,2026-06-10T23:50:00+08:00
+recent_result_1959998,Africa Cup of Nations,2026,2026-01-03T00:00:00+00:00,team_mali,team_tunisia,false,closed,1,1,team_mali,1959998,1959998:result,2026-06-10T23:10:00+08:00
+recent_result_1960003,ACoN,2026,2026-01-04T00:00:00+00:00,team_south_africa,team_cameroon,false,closed,1,2,team_cameroon,1960003,1960003:result,2026-06-10T18:30:00+08:00
+recent_result_1959999,Africa Cup of Nations,2026,2026-01-06T00:00:00+00:00,team_algeria,team_congo_dr,false,closed,1,0,team_algeria,1959999,1959999:result,2026-06-10T23:50:00+08:00
+recent_result_1960002,ACoN,2026,2026-01-06T00:00:00+00:00,team_cote_d_ivoire,team_burkina_faso,false,closed,3,0,team_burkina_faso,1960002,1960002:result,2026-06-10T23:50:00+08:00
+recent_result_1960770,Africa Cup of Nations,2026,2026-01-10T00:00:00+00:00,team_algeria,team_nigeria,false,closed,0,2,team_nigeria,1960770,1960770:result,2026-06-10T23:10:00+08:00
+recent_result_1960779,ACoN,2026,2026-01-10T00:00:00+00:00,team_egypt,team_cote_d_ivoire,false,closed,3,2,team_egypt,1960779,1960779:result,2026-06-10T23:50:00+08:00
+recent_result_1963377,Africa Cup of Nations,2026,2026-01-17T00:00:00+00:00,team_egypt,team_nigeria,false,closed,0,0,team_nigeria,1963377,1963377:result,2026-06-10T23:10:00+08:00
+recent_result_1960167,IF,2026,2026-01-18T00:00:00+00:00,team_canada,team_guatemala,false,closed,1,0,team_guatemala,1960167,1960167:result,2026-06-10T23:10:00+08:00
+recent_result_1963376,Africa Cup of Nations,2026,2026-01-18T00:00:00+00:00,team_senegal,team_morocco,false,closed,1,0,team_morocco,1963376,1963376:result,2026-06-10T23:10:00+08:00
+recent_result_1955718,IF,2026,2026-01-23T00:00:00+00:00,team_mexico,team_panama,false,closed,1,0,team_mexico,1955718,1955718:result,2026-06-10T18:30:00+08:00
+recent_result_1966437,Int. Friendly,2026,2026-01-26T00:00:00+00:00,team_uzbekistan,team_china,false,closed,2,2,team_china,1966437,1966437:result,2026-06-10T23:10:00+08:00
+recent_result_1966968,IF,2026,2026-02-26T00:00:00+00:00,team_mexico,team_iceland,false,closed,4,0,team_iceland,1966968,1966968:result,2026-06-10T18:30:00+08:00
+recent_result_1976511,Int. Friendly,2026,2026-03-25T00:00:00+00:00,team_congo_dr,team_bermuda,false,closed,2,0,team_bermuda,1976511,1976511:result,2026-06-10T23:50:00+08:00
+recent_result_1952492,World Cup Qualification UEFA,2026,2026-03-26T00:00:00+00:00,team_wales,team_bosnia_and_herzegovina,false,closed,1,1,team_wales,1952492,1952492:result,2026-06-10T23:10:00+08:00
+recent_result_1952495,WCQ,2026,2026-03-26T00:00:00+00:00,team_ukraine,team_sweden,false,closed,1,3,team_ukraine,1952495,1952495:result,2026-06-10T18:30:00+08:00
+recent_result_1952497,WCQ,2026,2026-03-26T00:00:00+00:00,team_turkiye,team_romania,false,closed,1,0,team_romania,1952497,1952497:result,2026-06-10T18:30:00+08:00
+recent_result_1952498,World Cup Qualification UEFA,2026,2026-03-26T00:00:00+00:00,team_czechia,team_ireland,false,closed,2,2,team_ireland,1952498,1952498:result,2026-06-10T23:10:00+08:00
+recent_result_1954138,IF,2026,2026-03-26T00:00:00+00:00,team_brazil,team_france,false,closed,1,2,team_france,1954138,1954138:result,2026-06-10T18:30:00+08:00
+recent_result_1966206,IF,2026,2026-03-26T00:00:00+00:00,team_colombia,team_croatia,false,closed,1,2,team_croatia,1966206,1966206:result,2026-06-10T18:30:00+08:00
+recent_result_1954615,IF,2026,2026-03-27T00:00:00+00:00,team_switzerland,team_germany,false,closed,3,4,team_switzerland,1954615,1954615:result,2026-06-10T18:30:00+08:00
+recent_result_1958047,IF,2026,2026-03-27T00:00:00+00:00,team_netherlands,team_norway,false,closed,2,1,team_norway,1958047,1958047:result,2026-06-10T18:30:00+08:00
+recent_result_1960774,IF,2026,2026-03-27T00:00:00+00:00,team_england,team_uruguay,false,closed,1,1,team_uruguay,1960774,1960774:result,2026-06-10T18:30:00+08:00
+recent_result_1966431,IF,2026,2026-03-27T00:00:00+00:00,team_austria,team_ghana,false,closed,5,1,team_ghana,1966431,1966431:result,2026-06-10T18:30:00+08:00
+recent_result_1970447,IF,2026,2026-03-27T00:00:00+00:00,team_australia,team_cameroon,false,closed,1,0,team_cameroon,1970447,1970447:result,2026-06-10T18:30:00+08:00
+recent_result_1970452,Int. Friendly,2026,2026-03-27T00:00:00+00:00,team_chile,team_cabo_verde,false,closed,4,2,team_chile,1970452,1970452:result,2026-06-10T23:50:00+08:00
+recent_result_1970453,IF,2026,2026-03-27T00:00:00+00:00,team_new_zealand,team_finland,false,closed,0,2,team_finland,1970453,1970453:result,2026-06-10T18:30:00+08:00
+recent_result_1970457,Int. Friendly,2026,2026-03-27T00:00:00+00:00,team_uzbekistan,team_gabon,false,closed,3,1,team_gabon,1970457,1970457:result,2026-06-10T23:10:00+08:00
+recent_result_1972839,IF,2026,2026-03-27T00:00:00+00:00,team_greece,team_paraguay,false,closed,0,1,team_greece,1972839,1972839:result,2026-06-10T18:30:00+08:00
+recent_result_1973096,IF,2026,2026-03-27T00:00:00+00:00,team_morocco,team_ecuador,false,closed,1,1,team_morocco,1973096,1973096:result,2026-06-10T18:30:00+08:00
+recent_result_1974859,IF,2026,2026-03-27T00:00:00+00:00,team_spain,team_serbia,false,closed,3,0,team_serbia,1974859,1974859:result,2026-06-10T18:30:00+08:00
+recent_result_1974896,Int. Friendly,2026,2026-03-27T00:00:00+00:00,team_algeria,team_guatemala,false,closed,7,0,team_guatemala,1974896,1974896:result,2026-06-10T23:10:00+08:00
+recent_result_1975310,IF,2026,2026-03-27T00:00:00+00:00,team_argentina,team_mauritania,false,closed,2,1,team_mauritania,1975310,1975310:result,2026-06-10T23:10:00+08:00
+recent_result_1975348,IF,2026,2026-03-27T00:00:00+00:00,team_saudi_arabia,team_egypt,false,closed,0,4,team_egypt,1975348,1975348:result,2026-06-10T18:30:00+08:00
+recent_result_1976798,IF,2026,2026-03-27T00:00:00+00:00,team_ir_iran,team_nigeria,false,closed,1,2,team_nigeria,1976798,1976798:result,2026-06-10T18:30:00+08:00
+recent_result_1976802,IF,2026,2026-03-27T00:00:00+00:00,team_jordan,team_costa_rica,false,closed,2,2,team_costa_rica,1976802,1976802:result,2026-06-10T18:30:00+08:00
+recent_result_1976864,IF,2026,2026-03-27T00:00:00+00:00,team_south_africa,team_panama,false,closed,1,1,team_south_africa,1976864,1976864:result,2026-06-10T18:30:00+08:00
+recent_result_1960775,IF,2026,2026-03-28T00:00:00+00:00,team_usa,team_belgium,false,closed,2,5,team_belgium,1960775,1960775:result,2026-06-10T18:30:00+08:00
+recent_result_1966204,IF,2026,2026-03-28T00:00:00+00:00,team_scotland,team_japan,false,closed,0,1,team_japan,1966204,1966204:result,2026-06-10T18:30:00+08:00
+recent_result_1966961,IF,2026,2026-03-28T00:00:00+00:00,team_canada,team_iceland,false,closed,2,2,team_iceland,1966961,1966961:result,2026-06-10T23:10:00+08:00
+recent_result_1975344,Int. Friendly,2026,2026-03-28T00:00:00+00:00,team_senegal,team_peru,false,closed,2,0,team_peru,1975344,1975344:result,2026-06-10T23:10:00+08:00
+recent_result_1976886,IF,2026,2026-03-28T00:00:00+00:00,team_republic_of_korea,team_cote_d_ivoire,false,closed,0,4,team_republic_of_korea,1976886,1976886:result,2026-06-10T23:50:00+08:00
+recent_result_1953626,IF,2026,2026-03-29T00:00:00+00:00,team_mexico,team_portugal,false,closed,0,0,team_portugal,1953626,1953626:result,2026-06-10T18:30:00+08:00
+recent_result_1954139,IF,2026,2026-03-29T00:00:00+00:00,team_colombia,team_france,false,closed,1,3,team_france,1954139,1954139:result,2026-06-10T18:30:00+08:00
+recent_result_1966434,IF,2026,2026-03-29T00:00:00+00:00,team_haiti,team_tunisia,false,closed,0,1,team_tunisia,1966434,1966434:result,2026-06-10T18:30:00+08:00
+recent_result_1954745,IF,2026,2026-03-30T00:00:00+00:00,team_germany,team_ghana,false,closed,2,1,team_ghana,1954745,1954745:result,2026-06-10T18:30:00+08:00
+recent_result_1970454,Int. Friendly,2026,2026-03-30T00:00:00+00:00,team_cabo_verde,team_finland,false,closed,1,1,team_finland,1970454,1970454:result,2026-06-10T23:50:00+08:00
+recent_result_1970455,IF,2026,2026-03-30T00:00:00+00:00,team_new_zealand,team_chile,false,closed,4,1,team_chile,1970455,1970455:result,2026-06-10T18:30:00+08:00
+recent_result_1970459,Int. Friendly,2026,2026-03-30T00:00:00+00:00,team_uzbekistan,team_venezuela,false,closed,0,0,team_venezuela,1970459,1970459:result,2026-06-10T23:10:00+08:00
+recent_result_1958048,IF,2026,2026-03-31T00:00:00+00:00,team_netherlands,team_ecuador,false,closed,1,1,team_netherlands,1958048,1958048:result,2026-06-10T18:30:00+08:00
+recent_result_1960773,IF,2026,2026-03-31T00:00:00+00:00,team_norway,team_switzerland,false,closed,0,0,team_switzerland,1960773,1960773:result,2026-06-10T18:30:00+08:00
+recent_result_1960776,IF,2026,2026-03-31T00:00:00+00:00,team_england,team_japan,false,closed,0,1,team_japan,1960776,1960776:result,2026-06-10T18:30:00+08:00
+recent_result_1962884,IF,2026,2026-03-31T00:00:00+00:00,team_spain,team_egypt,false,closed,0,0,team_egypt,1962884,1962884:result,2026-06-10T18:30:00+08:00
+recent_result_1966432,IF,2026,2026-03-31T00:00:00+00:00,team_austria,team_korea_republic,false,closed,1,0,team_korea_republic,1966432,1966432:result,2026-06-10T18:30:00+08:00
+recent_result_1966837,IF,2026,2026-03-31T00:00:00+00:00,team_cote_d_ivoire,team_scotland,false,closed,1,0,team_scotland,1966837,1966837:result,2026-06-10T23:50:00+08:00
+recent_result_1966963,IF,2026,2026-03-31T00:00:00+00:00,team_serbia,team_saudi_arabia,false,closed,2,1,team_serbia,1966963,1966963:result,2026-06-10T18:30:00+08:00
+recent_result_1966966,IF,2026,2026-03-31T00:00:00+00:00,team_haiti,team_iceland,false,closed,1,1,team_iceland,1966966,1966966:result,2026-06-10T18:30:00+08:00
+recent_result_1970449,IF,2026,2026-03-31T00:00:00+00:00,team_australia,team_curacao,false,closed,5,1,team_curacao,1970449,1970449:result,2026-06-10T18:30:00+08:00
+recent_result_1973097,IF,2026,2026-03-31T00:00:00+00:00,team_morocco,team_paraguay,false,closed,2,1,team_morocco,1973097,1973097:result,2026-06-10T18:30:00+08:00
+recent_result_1976508,IF,2026,2026-03-31T00:00:00+00:00,team_algeria,team_uruguay,false,closed,0,0,team_algeria,1976508,1976508:result,2026-06-10T18:30:00+08:00
+recent_result_1976834,WCQ,2026,2026-03-31T00:00:00+00:00,team_kosovo,team_turkiye,false,closed,0,1,team_kosovo,1976834,1976834:result,2026-06-10T18:30:00+08:00
+recent_result_1976835,WCQ,2026,2026-03-31T00:00:00+00:00,team_sweden,team_poland,false,closed,3,2,team_poland,1976835,1976835:result,2026-06-10T18:30:00+08:00
+recent_result_1976836,World Cup Qualification UEFA,2026,2026-03-31T00:00:00+00:00,team_bosnia_and_herzegovina,team_italy,false,closed,1,1,team_italy,1976836,1976836:result,2026-06-10T23:10:00+08:00
+recent_result_1976837,World Cup Qualification UEFA,2026,2026-03-31T00:00:00+00:00,team_czechia,team_denmark,false,closed,2,2,team_denmark,1976837,1976837:result,2026-06-10T23:10:00+08:00
+recent_result_1976924,IF,2026,2026-03-31T00:00:00+00:00,team_jordan,team_nigeria,false,closed,2,2,team_nigeria,1976924,1976924:result,2026-06-10T18:30:00+08:00
+recent_result_1976937,IF,2026,2026-03-31T00:00:00+00:00,team_south_africa,team_panama,false,closed,1,2,team_south_africa,1976937,1976937:result,2026-06-10T18:30:00+08:00
+recent_result_1976938,Int. Friendly,2026,2026-03-31T00:00:00+00:00,team_senegal,team_gambia,false,closed,3,1,team_gambia,1976938,1976938:result,2026-06-10T23:10:00+08:00
+recent_result_1976944,IF,2026,2026-03-31T00:00:00+00:00,team_costa_rica,team_ir_iran,false,closed,0,5,team_costa_rica,1976944,1976944:result,2026-06-10T18:30:00+08:00
+recent_result_1953627,IF,2026,2026-04-01T00:00:00+00:00,team_usa,team_portugal,false,closed,0,2,team_portugal,1953627,1953627:result,2026-06-10T18:30:00+08:00
+recent_result_1958042,IF,2026,2026-04-01T00:00:00+00:00,team_brazil,team_croatia,false,closed,3,1,team_croatia,1958042,1958042:result,2026-06-10T18:30:00+08:00
+recent_result_1960777,IF,2026,2026-04-01T00:00:00+00:00,team_mexico,team_belgium,false,closed,1,1,team_belgium,1960777,1960777:result,2026-06-10T18:30:00+08:00
+recent_result_1966435,IF,2026,2026-04-01T00:00:00+00:00,team_canada,team_tunisia,false,closed,0,0,team_tunisia,1966435,1966435:result,2026-06-10T23:10:00+08:00
+recent_result_1975342,IF,2026,2026-04-01T00:00:00+00:00,team_argentina,team_zambia,false,closed,5,0,team_zambia,1975342,1975342:result,2026-06-10T23:10:00+08:00
+recent_result_1973098,IF,2026,2026-05-23T00:00:00+00:00,team_mexico,team_ghana,false,closed,2,0,team_ghana,1973098,1973098:result,2026-06-10T18:30:00+08:00
+recent_result_1980091,Int. Friendly,2026,2026-05-26T00:00:00+00:00,team_morocco,team_burundi,false,closed,5,0,team_burundi,1980091,1980091:result,2026-06-10T23:10:00+08:00
+recent_result_1972842,IF,2026,2026-05-28T00:00:00+00:00,team_ireland,team_qatar,false,closed,1,0,team_ireland,1972842,1972842:result,2026-06-10T18:30:00+08:00
+recent_result_1979416,Int. Friendly,2026,2026-05-28T00:00:00+00:00,team_egypt,team_russia,false,closed,1,0,team_russia,1979416,1979416:result,2026-06-10T23:10:00+08:00
+recent_result_1980111,IF,2026,2026-05-29T00:00:00+00:00,team_ir_iran,team_gambia,false,closed,3,1,team_gambia,1980111,1980111:result,2026-06-10T18:30:00+08:00
+recent_result_1980113,IF,2026,2026-05-29T00:00:00+00:00,team_south_africa,team_nicaragua,false,closed,0,0,team_nicaragua,1980113,1980113:result,2026-06-10T18:30:00+08:00
+recent_result_1980114,IF,2026,2026-05-29T00:00:00+00:00,team_iraq,team_andorra,false,closed,1,0,team_andorra,1980114,1980114:result,2026-06-10T18:30:00+08:00
+recent_result_1980254,Int. Friendly,2026,2026-05-29T00:00:00+00:00,team_bosnia_and_herzegovina,team_north_macedonia,false,closed,0,0,team_north_macedonia,1980254,1980254:result,2026-06-10T23:10:00+08:00
+recent_result_1966205,IF,2026,2026-05-30T00:00:00+00:00,team_scotland,team_curacao,false,closed,4,1,team_curacao,1966205,1966205:result,2026-06-10T18:30:00+08:00
+recent_result_1953756,IF,2026,2026-05-31T00:00:00+00:00,team_germany,team_finland,false,closed,4,0,team_finland,1953756,1953756:result,2026-06-10T18:30:00+08:00
+recent_result_1954614,IF,2026,2026-05-31T00:00:00+00:00,team_usa,team_senegal,false,closed,3,2,team_senegal,1954614,1954614:result,2026-06-10T18:30:00+08:00
+recent_result_1973099,IF,2026,2026-05-31T00:00:00+00:00,team_mexico,team_australia,false,closed,1,0,team_australia,1973099,1973099:result,2026-06-10T18:30:00+08:00
+recent_result_1979143,IF,2026,2026-05-31T00:00:00+00:00,team_japan,team_iceland,false,closed,1,0,team_iceland,1979143,1979143:result,2026-06-10T23:10:00+08:00
+recent_result_1979144,IF,2026,2026-05-31T00:00:00+00:00,team_switzerland,team_jordan,false,closed,4,1,team_switzerland,1979144,1979144:result,2026-06-10T18:30:00+08:00
+recent_result_1980115,IF,2026,2026-05-31T00:00:00+00:00,team_ecuador,team_saudi_arabia,false,closed,2,1,team_saudi_arabia,1980115,1980115:result,2026-06-10T18:30:00+08:00
+recent_result_1980116,IF,2026,2026-05-31T00:00:00+00:00,team_korea_republic,team_trinidad_and_tobago,false,closed,5,0,team_trinidad_and_tobago,1980116,1980116:result,2026-06-10T18:30:00+08:00
+recent_result_1980121,Int. Friendly,2026,2026-05-31T00:00:00+00:00,team_czechia,team_kosovo,false,closed,2,1,team_kosovo,1980121,1980121:result,2026-06-10T23:10:00+08:00
+recent_result_1980122,IF,2026,2026-05-31T00:00:00+00:00,team_brazil,team_panama,false,closed,6,2,team_panama,1980122,1980122:result,2026-06-10T18:30:00+08:00
+recent_result_1980413,Int. Friendly,2026,2026-05-31T00:00:00+00:00,team_cabo_verde,team_serbia,false,closed,3,0,team_serbia,1980413,1980413:result,2026-06-10T23:50:00+08:00
+recent_result_1966433,Int. Friendly,2026,2026-06-01T00:00:00+00:00,team_austria,team_tunisia,false,closed,1,0,team_austria,1966433,1966433:result,2026-06-10T23:10:00+08:00
+recent_result_1975838,IF,2026,2026-06-01T00:00:00+00:00,team_norway,team_sweden,false,closed,3,1,team_sweden,1975838,1975838:result,2026-06-10T18:30:00+08:00
+recent_result_1979612,IF,2026,2026-06-01T00:00:00+00:00,team_turkiye,team_north_macedonia,false,closed,4,0,team_north_macedonia,1979612,1979612:result,2026-06-10T18:30:00+08:00
+recent_result_1964125,IF,2026,2026-06-02T00:00:00+00:00,team_canada,team_uzbekistan,false,closed,2,0,team_uzbekistan,1964125,1964125:result,2026-06-10T23:10:00+08:00
+recent_result_1966207,IF,2026,2026-06-02T00:00:00+00:00,team_croatia,team_belgium,false,closed,0,2,team_croatia,1966207,1966207:result,2026-06-10T18:30:00+08:00
+recent_result_1973681,IF,2026,2026-06-02T00:00:00+00:00,team_wales,team_ghana,false,closed,1,1,team_wales,1973681,1973681:result,2026-06-10T18:30:00+08:00
+recent_result_1980092,Int. Friendly,2026,2026-06-02T00:00:00+00:00,team_morocco,team_madagascar,false,closed,4,0,team_madagascar,1980092,1980092:result,2026-06-10T23:10:00+08:00
+recent_result_1980123,IF,2026,2026-06-02T00:00:00+00:00,team_colombia,team_costa_rica,false,closed,3,1,team_costa_rica,1980123,1980123:result,2026-06-10T18:30:00+08:00
+recent_result_1972806,IF,2026,2026-06-03T00:00:00+00:00,team_netherlands,team_algeria,false,closed,0,1,team_algeria,1972806,1972806:result,2026-06-10T18:30:00+08:00
+recent_result_1979225,Int. Friendly,2026,2026-06-03T00:00:00+00:00,team_congo_dr,team_denmark,false,closed,0,0,team_denmark,1979225,1979225:result,2026-06-10T23:50:00+08:00
+recent_result_1980125,IF,2026,2026-06-03T00:00:00+00:00,team_haiti,team_new_zealand,false,closed,4,0,team_new_zealand,1980125,1980125:result,2026-06-10T18:30:00+08:00
+recent_result_1974714,IF,2026,2026-06-04T00:00:00+00:00,team_france,team_cote_d_ivoire,false,closed,1,2,team_france,1974714,1974714:result,2026-06-10T23:50:00+08:00
+recent_result_1979412,IF,2026,2026-06-04T00:00:00+00:00,team_spain,team_iraq,false,closed,1,1,team_spain,1979412,1979412:result,2026-06-10T18:30:00+08:00
+recent_result_1980117,IF,2026,2026-06-04T00:00:00+00:00,team_korea_republic,team_el_salvador,false,closed,1,0,team_el_salvador,1980117,1980117:result,2026-06-10T18:30:00+08:00
+recent_result_1980568,IF,2026,2026-06-04T00:00:00+00:00,team_panama,team_dominican_republic,false,closed,4,2,team_dominican_republic,1980568,1980568:result,2026-06-10T18:30:00+08:00
+recent_result_1980688,IF,2026,2026-06-04T00:00:00+00:00,team_ir_iran,team_mali,false,closed,2,0,team_mali,1980688,1980688:result,2026-06-10T18:30:00+08:00
+recent_result_1978875,Int. Friendly,2026,2026-06-05T00:00:00+00:00,team_czechia,team_guatemala,false,closed,3,1,team_guatemala,1978875,1978875:result,2026-06-10T23:10:00+08:00
+recent_result_1980593,IF,2026,2026-06-05T00:00:00+00:00,team_paraguay,team_nicaragua,false,closed,4,0,team_nicaragua,1980593,1980593:result,2026-06-10T18:30:00+08:00
+recent_result_1953754,IF,2026,2026-06-06T00:00:00+00:00,team_usa,team_germany,false,closed,1,2,team_germany,1953754,1953754:result,2026-06-10T18:30:00+08:00
+recent_result_1966436,Int. Friendly,2026,2026-06-06T00:00:00+00:00,team_belgium,team_tunisia,false,closed,5,0,team_belgium,1966436,1966436:result,2026-06-10T23:10:00+08:00
+recent_result_1972843,IF,2026,2026-06-06T00:00:00+00:00,team_england,team_new_zealand,false,closed,1,0,team_england,1972843,1972843:result,2026-06-10T18:30:00+08:00
+recent_result_1978874,IF,2026,2026-06-06T00:00:00+00:00,team_qatar,team_el_salvador,false,closed,0,0,team_el_salvador,1978874,1978874:result,2026-06-10T18:30:00+08:00
+recent_result_1979153,IF,2026,2026-06-06T00:00:00+00:00,team_canada,team_ireland,false,closed,1,1,team_ireland,1979153,1979153:result,2026-06-10T23:10:00+08:00
+recent_result_1979154,IF,2026,2026-06-06T00:00:00+00:00,team_switzerland,team_australia,false,closed,1,1,team_switzerland,1979154,1979154:result,2026-06-10T18:30:00+08:00
+recent_result_1980419,IF,2026,2026-06-06T00:00:00+00:00,team_brazil,team_egypt,false,closed,2,1,team_egypt,1980419,1980419:result,2026-06-10T18:30:00+08:00
+recent_result_1980642,Int. Friendly,2026,2026-06-06T00:00:00+00:00,team_panama,team_bosnia_and_herzegovina,false,closed,1,1,team_panama,1980642,1980642:result,2026-06-10T23:10:00+08:00
+recent_result_1980653,IF,2026,2026-06-06T00:00:00+00:00,team_puerto_rico,team_saudi_arabia,false,closed,0,3,team_puerto_rico,1980653,1980653:result,2026-06-10T18:30:00+08:00
+recent_result_1980662,Int. Friendly,2026,2026-06-06T00:00:00+00:00,team_cabo_verde,team_bermuda,false,closed,3,0,team_bermuda,1980662,1980662:result,2026-06-10T23:50:00+08:00
+recent_result_1978287,Int. Friendly,2026,2026-06-07T00:00:00+00:00,team_morocco,team_norway,false,closed,1,1,team_norway,1978287,1978287:result,2026-06-10T23:10:00+08:00
+recent_result_1978601,IF,2026,2026-06-07T00:00:00+00:00,team_ecuador,team_guatemala,false,closed,3,0,team_guatemala,1978601,1978601:result,2026-06-10T18:30:00+08:00
+recent_result_1980291,IF,2026,2026-06-07T00:00:00+00:00,team_argentina,team_honduras,false,closed,2,0,team_honduras,1980291,1980291:result,2026-06-10T23:10:00+08:00
+recent_result_1980124,IF,2026,2026-06-08T00:00:00+00:00,team_colombia,team_jordan,false,closed,2,0,team_jordan,1980124,1980124:result,2026-06-10T18:30:00+08:00
+recent_result_1980261,Int. Friendly,2026,2026-06-08T00:00:00+00:00,team_netherlands,team_uzbekistan,false,closed,2,1,team_netherlands,1980261,1980261:result,2026-06-10T23:10:00+08:00
+recent_result_1977765,IF,2026,2026-06-09T00:00:00+00:00,team_peru,team_spain,false,closed,1,3,team_peru,1977765,1977765:result,2026-06-10T18:30:00+08:00
+recent_result_1980670,Int. Friendly,2026,2026-06-09T00:00:00+00:00,team_congo_dr,team_chile,false,closed,1,2,team_chile,1980670,1980670:result,2026-06-10T23:50:00+08:00
+recent_result_1979155,IF,2026,2026-06-10T00:00:00+00:00,team_argentina,team_iceland,false,closed,3,0,team_iceland,1979155,1979155:result,2026-06-10T23:10:00+08:00
+recent_result_1980672,IF,2026,2026-06-10T00:00:00+00:00,team_saudi_arabia,team_senegal,false,closed,0,0,team_senegal,1980672,1980672:result,2026-06-10T18:30:00+08:00
+recent_result_1980673,IF,2026,2026-06-10T00:00:00+00:00,team_iraq,team_venezuela,false,closed,0,2,team_venezuela,1980673,1980673:result,2026-06-10T18:30:00+08:00

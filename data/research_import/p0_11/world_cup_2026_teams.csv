@@ -1,0 +1,106 @@
+team_id,canonical_name,country_code,fifa_code,source_team_id,confederation,stage,host_team,available_at,aliases
+team_albania,Albania,,,whoscored_team_name:albania,,,false,2026-06-10T18:30:00+08:00,Albania
+team_algeria,Algeria,ALG,ALG,43843,CAF,Group J,false,2026-06-10T18:00:00+08:00,ALG|Algeria|algeria
+team_andorra,Andorra,,,whoscored_team_name:andorra,,,false,2026-06-10T18:30:00+08:00,Andorra
+team_argentina,Argentina,ARG,ARG,43922,CONMEBOL,Group J,false,2026-06-10T18:00:00+08:00,ARG|Argentina|argentina
+team_armenia,Armenia,,,whoscored_team_name:armenia,,,false,2026-06-10T18:30:00+08:00,Armenia
+team_australia,Australia,AUS,AUS,43976,AFC,Group D,false,2026-06-10T18:00:00+08:00,AUS|Australia|australia
+team_austria,Austria,AUT,AUT,43934,UEFA,Group J,false,2026-06-10T18:00:00+08:00,AUT|Austria|austria
+team_azerbaijan,Azerbaijan,,,whoscored_team_name:azerbaijan,,,false,2026-06-10T23:10:00+08:00,Azerbaijan
+team_belgium,Belgium,BEL,BEL,43935,UEFA,Group G,false,2026-06-10T18:00:00+08:00,BEL|Belgium|belgium
+team_bermuda,Bermuda,,,whoscored_team_name:bermuda,,,false,2026-06-10T23:25:00+08:00,Bermuda
+team_bosnia_and_herzegovina,Bosnia and Herzegovina,BIH,BIH,44037,UEFA,Group B,false,2026-06-10T18:00:00+08:00,BIH|Bosnia and Herzegovina|bosnia and herzegovina
+team_botswana,Botswana,,,whoscored_team_name:botswana,,,false,2026-06-10T23:25:00+08:00,Botswana
+team_brazil,Brazil,BRA,BRA,43924,CONMEBOL,Group C,false,2026-06-10T18:00:00+08:00,BRA|Brazil|brazil
+team_bulgaria,Bulgaria,,,whoscored_team_name:bulgaria,,,false,2026-06-10T18:30:00+08:00,Bulgaria
+team_burkina_faso,Burkina Faso,,,whoscored_team_name:burkina_faso,,,false,2026-06-10T23:25:00+08:00,Burkina Faso
+team_burundi,Burundi,,,whoscored_team_name:burundi,,,false,2026-06-10T23:10:00+08:00,Burundi
+team_cabo_verde,Cabo Verde,CPV,CPV,43850,CAF,Group H,false,2026-06-10T18:00:00+08:00,CPV|Cabo Verde|cabo verde
+team_cameroon,Cameroon,,,whoscored_team_name:cameroon,,,false,2026-06-10T18:30:00+08:00,Cameroon
+team_canada,Canada,CAN,CAN,43899,CONCACAF,Group B,true,2026-06-10T18:00:00+08:00,CAN|Canada|canada
+team_chile,Chile,,,whoscored_team_name:chile,,,false,2026-06-10T18:30:00+08:00,Chile
+team_china,China,,,whoscored_team_name:china,,,false,2026-06-10T23:10:00+08:00,China
+team_colombia,Colombia,COL,COL,43926,CONMEBOL,Group K,false,2026-06-10T18:00:00+08:00,COL|Colombia|colombia
+team_congo_dr,Congo DR,COD,COD,20014,CAF,Group K,false,2026-06-10T18:00:00+08:00,COD|Congo DR|congo dr
+team_costa_rica,Costa Rica,,,whoscored_team_name:costa_rica,,,false,2026-06-10T18:30:00+08:00,Costa Rica
+team_cote_d_ivoire,Côte d'Ivoire,CIV,CIV,43854,CAF,Group E,false,2026-06-10T18:00:00+08:00,CIV|Côte d'Ivoire|cote d ivoire
+team_croatia,Croatia,CRO,CRO,43938,UEFA,Group L,false,2026-06-10T18:00:00+08:00,CRO|Croatia|croatia
+team_curacao,Curaçao,CUW,CUW,1895293,CONCACAF,Group E,false,2026-06-10T18:00:00+08:00,CUW|Curaçao|curacao
+team_cyprus,Cyprus,,,whoscored_team_name:cyprus,,,false,2026-06-10T18:30:00+08:00,Cyprus
+team_czechia,Czechia,CZE,CZE,43995,UEFA,Group A,false,2026-06-10T18:00:00+08:00,CZE|Czechia|czechia
+team_denmark,Denmark,,,whoscored_team_name:denmark,,,false,2026-06-10T18:30:00+08:00,Denmark
+team_dominican_republic,Dominican Republic,,,whoscored_team_name:dominican_republic,,,false,2026-06-10T18:30:00+08:00,Dominican Republic
+team_ecuador,Ecuador,ECU,ECU,43927,CONMEBOL,Group E,false,2026-06-10T18:00:00+08:00,ECU|Ecuador|ecuador
+team_egypt,Egypt,EGY,EGY,43855,CAF,Group G,false,2026-06-10T18:00:00+08:00,EGY|Egypt|egypt
+team_el_salvador,El Salvador,,,whoscored_team_name:el_salvador,,,false,2026-06-10T18:30:00+08:00,El Salvador
+team_england,England,ENG,ENG,43942,UEFA,Group L,false,2026-06-10T18:00:00+08:00,ENG|England|england
+team_estonia,Estonia,,,whoscored_team_name:estonia,,,false,2026-06-10T18:30:00+08:00,Estonia
+team_faroe_islands,Faroe Islands,,,whoscored_team_name:faroe_islands,,,false,2026-06-10T18:30:00+08:00,Faroe Islands
+team_finland,Finland,,,whoscored_team_name:finland,,,false,2026-06-10T18:30:00+08:00,Finland
+team_france,France,FRA,FRA,43946,UEFA,Group I,false,2026-06-10T18:00:00+08:00,FRA|France|france
+team_gabon,Gabon,,,whoscored_team_name:gabon,,,false,2026-06-10T23:10:00+08:00,Gabon
+team_gambia,Gambia,,,whoscored_team_name:gambia,,,false,2026-06-10T18:30:00+08:00,Gambia
+team_germany,Germany,GER,GER,43948,UEFA,Group E,false,2026-06-10T18:00:00+08:00,GER|Germany|germany
+team_ghana,Ghana,GHA,GHA,43860,CAF,Group L,false,2026-06-10T18:00:00+08:00,GHA|Ghana|ghana
+team_gibraltar,Gibraltar,,,whoscored_team_name:gibraltar,,,false,2026-06-10T23:10:00+08:00,Gibraltar
+team_greece,Greece,,,whoscored_team_name:greece,,,false,2026-06-10T18:30:00+08:00,Greece
+team_guatemala,Guatemala,,,whoscored_team_name:guatemala,,,false,2026-06-10T18:30:00+08:00,Guatemala
+team_haiti,Haiti,HAI,HAI,43908,CONCACAF,Group C,false,2026-06-10T18:00:00+08:00,HAI|Haiti|haiti
+team_honduras,Honduras,,,whoscored_team_name:honduras,,,false,2026-06-10T23:10:00+08:00,Honduras
+team_hungary,Hungary,,,whoscored_team_name:hungary,,,false,2026-06-10T18:30:00+08:00,Hungary
+team_iceland,Iceland,,,whoscored_team_name:iceland,,,false,2026-06-10T18:30:00+08:00,Iceland
+team_ir_iran,IR Iran,IRN,IRN,43817,AFC,Group G,false,2026-06-10T18:00:00+08:00,IR Iran|IRN|Iran|ir iran
+team_iraq,Iraq,IRQ,IRQ,43818,AFC,Group I,false,2026-06-10T18:00:00+08:00,IRQ|Iraq|iraq
+team_ireland,Ireland,,,whoscored_team_name:ireland,,,false,2026-06-10T18:30:00+08:00,Ireland
+team_italy,Italy,,,whoscored_team_name:italy,,,false,2026-06-10T18:30:00+08:00,Italy
+team_japan,Japan,JPN,JPN,43819,AFC,Group F,false,2026-06-10T18:00:00+08:00,JPN|Japan|japan
+team_jordan,Jordan,JOR,JOR,43820,AFC,Group J,false,2026-06-10T18:00:00+08:00,JOR|Jordan|jordan
+team_kazakhstan,Kazakhstan,,,whoscored_team_name:kazakhstan,,,false,2026-06-10T18:30:00+08:00,Kazakhstan
+team_korea_republic,Korea Republic,KOR,KOR,43822,AFC,Group A,false,2026-06-10T18:00:00+08:00,KOR|Korea Republic|South Korea|korea republic
+team_kosovo,Kosovo,,,whoscored_team_name:kosovo,,,false,2026-06-10T18:30:00+08:00,Kosovo
+team_latvia,Latvia,,,whoscored_team_name:latvia,,,false,2026-06-10T18:30:00+08:00,Latvia
+team_liechtenstein,Liechtenstein,,,whoscored_team_name:liechtenstein,,,false,2026-06-10T18:30:00+08:00,Liechtenstein
+team_lithuania,Lithuania,,,whoscored_team_name:lithuania,,,false,2026-06-10T18:30:00+08:00,Lithuania
+team_madagascar,Madagascar,,,whoscored_team_name:madagascar,,,false,2026-06-10T23:10:00+08:00,Madagascar
+team_mali,Mali,,,whoscored_team_name:mali,,,false,2026-06-10T18:30:00+08:00,Mali
+team_mauritania,Mauritania,,,whoscored_team_name:mauritania,,,false,2026-06-10T23:10:00+08:00,Mauritania
+team_mexico,Mexico,MEX,MEX,43911,CONCACAF,Group A,true,2026-06-10T18:00:00+08:00,MEX|Mexico|mexico
+team_montenegro,Montenegro,,,whoscored_team_name:montenegro,,,false,2026-06-10T18:30:00+08:00,Montenegro
+team_morocco,Morocco,MAR,MAR,43872,CAF,Group C,false,2026-06-10T18:00:00+08:00,MAR|Morocco|morocco
+team_netherlands,Netherlands,NED,NED,43960,UEFA,Group F,false,2026-06-10T18:00:00+08:00,NED|Netherlands|netherlands
+team_new_zealand,New Zealand,NZL,NZL,43978,OFC,Group G,false,2026-06-10T18:00:00+08:00,NZL|New Zealand|new zealand
+team_nicaragua,Nicaragua,,,whoscored_team_name:nicaragua,,,false,2026-06-10T18:30:00+08:00,Nicaragua
+team_nigeria,Nigeria,,,whoscored_team_name:nigeria,,,false,2026-06-10T18:30:00+08:00,Nigeria
+team_north_macedonia,North Macedonia,,,whoscored_team_name:north_macedonia,,,false,2026-06-10T18:30:00+08:00,North Macedonia
+team_norway,Norway,NOR,NOR,43961,UEFA,Group I,false,2026-06-10T18:00:00+08:00,NOR|Norway|norway
+team_panama,Panama,PAN,PAN,43914,CONCACAF,Group L,false,2026-06-10T18:00:00+08:00,PAN|Panama|panama
+team_paraguay,Paraguay,PAR,PAR,43928,CONMEBOL,Group D,false,2026-06-10T18:00:00+08:00,PAR|Paraguay|paraguay
+team_peru,Peru,,,whoscored_team_name:peru,,,false,2026-06-10T18:30:00+08:00,Peru
+team_poland,Poland,,,whoscored_team_name:poland,,,false,2026-06-10T18:30:00+08:00,Poland
+team_portugal,Portugal,POR,POR,43963,UEFA,Group K,false,2026-06-10T18:00:00+08:00,POR|Portugal|portugal
+team_puerto_rico,Puerto Rico,,,whoscored_team_name:puerto_rico,,,false,2026-06-10T18:30:00+08:00,Puerto Rico
+team_qatar,Qatar,QAT,QAT,43834,AFC,Group B,false,2026-06-10T18:00:00+08:00,QAT|Qatar|qatar
+team_republic_of_korea,Republic of Korea,,,whoscored_team_name:republic_of_korea,,,false,2026-06-10T23:50:00+08:00,Republic of Korea
+team_romania,Romania,,,whoscored_team_name:romania,,,false,2026-06-10T18:30:00+08:00,Romania
+team_russia,Russia,,,whoscored_team_name:russia,,,false,2026-06-10T23:10:00+08:00,Russia
+team_saudi_arabia,Saudi Arabia,KSA,KSA,43835,AFC,Group H,false,2026-06-10T18:00:00+08:00,KSA|Saudi Arabia|saudi arabia
+team_scotland,Scotland,SCO,SCO,43967,UEFA,Group C,false,2026-06-10T18:00:00+08:00,SCO|Scotland|scotland
+team_senegal,Senegal,SEN,SEN,43879,CAF,Group I,false,2026-06-10T18:00:00+08:00,SEN|Senegal|senegal
+team_serbia,Serbia,,,whoscored_team_name:serbia,,,false,2026-06-10T18:30:00+08:00,Serbia
+team_slovakia,Slovakia,,,whoscored_team_name:slovakia,,,false,2026-06-10T18:30:00+08:00,Slovakia
+team_slovenia,Slovenia,,,whoscored_team_name:slovenia,,,false,2026-06-10T18:30:00+08:00,Slovenia
+team_south_africa,South Africa,RSA,RSA,43883,CAF,Group A,false,2026-06-10T18:00:00+08:00,RSA|South Africa|south africa
+team_spain,Spain,ESP,ESP,43969,UEFA,Group H,false,2026-06-10T18:00:00+08:00,ESP|Spain|spain
+team_sweden,Sweden,SWE,SWE,43970,UEFA,Group F,false,2026-06-10T18:00:00+08:00,SWE|Sweden|sweden
+team_switzerland,Switzerland,SUI,SUI,43971,UEFA,Group B,false,2026-06-10T18:00:00+08:00,SUI|Switzerland|switzerland
+team_trinidad_and_tobago,Trinidad and Tobago,,,whoscored_team_name:trinidad_and_tobago,,,false,2026-06-10T18:30:00+08:00,Trinidad and Tobago
+team_tunisia,Tunisia,TUN,TUN,43888,CAF,Group F,false,2026-06-10T18:00:00+08:00,TUN|Tunisia|tunisia
+team_turkiye,Türkiye,TUR,TUR,43972,UEFA,Group D,false,2026-06-10T18:00:00+08:00,TUR|Türkiye|turkiye
+team_ukraine,Ukraine,,,whoscored_team_name:ukraine,,,false,2026-06-10T18:30:00+08:00,Ukraine
+team_uruguay,Uruguay,URU,URU,43930,CONMEBOL,Group H,false,2026-06-10T18:00:00+08:00,URU|Uruguay|uruguay
+team_usa,USA,USA,USA,43921,CONCACAF,Group D,true,2026-06-10T18:00:00+08:00,USA|USMNT|United States|usa
+team_uzbekistan,Uzbekistan,UZB,UZB,44005,AFC,Group K,false,2026-06-10T18:00:00+08:00,UZB|Uzbekistan|uzbekistan
+team_venezuela,Venezuela,,,whoscored_team_name:venezuela,,,false,2026-06-10T18:30:00+08:00,Venezuela
+team_wales,Wales,,,whoscored_team_name:wales,,,false,2026-06-10T18:30:00+08:00,Wales
+team_zambia,Zambia,,,whoscored_team_name:zambia,,,false,2026-06-10T23:10:00+08:00,Zambia
+team_zimbabwe,Zimbabwe,,,whoscored_team_name:zimbabwe,,,false,2026-06-10T18:30:00+08:00,Zimbabwe

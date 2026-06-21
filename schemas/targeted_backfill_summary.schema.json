@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/world-cup-agent-open/targeted_backfill_summary.schema.json",
+  "title": "World Cup Agent targeted backfill summary",
+  "type": "object",
+  "required": ["status", "data_quality", "data", "source"],
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": ["ok", "partial", "failed"]
+    },
+    "data_quality": {
+      "type": "object",
+      "required": ["recent_results", "player_form", "odds"],
+      "additionalProperties": false,
+      "properties": {
+        "recent_results": {
+          "type": "string",
+          "enum": ["ok", "partial", "missing"]
+        },
+        "player_form": {
+          "type": "string",
+          "enum": ["ok", "partial", "missing"]
+        },
+        "odds": {
+          "type": "string",
+          "enum": ["ok", "partial", "missing"]
+        }
+      }
+    },
+    "data": {
+      "type": "object",
+      "required": ["recent_results", "player_form", "odds"],
+      "additionalProperties": false,
+      "properties": {
+        "recent_results": {
+          "type": "array",
+          "items": {"type": "object"}
+        },
+        "player_form": {
+          "type": "array",
+          "items": {"type": "object"}
+        },
+        "odds": {
+          "type": "array",
+          "items": {"type": "object"}
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": ["research_provider", "odds_provider"],
+      "properties": {
+        "research_provider": {
+          "type": "string",
+          "enum": ["sportradar_soccer", "crawler", "skip"]
+        },
+        "odds_provider": {
+          "type": "string",
+          "enum": ["the_odds_api", "crawler", "skip"]
+        },
+        "route": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": true
+    },
+    "failed_step": {"type": "string"},
+    "error": {
+      "type": "object",
+      "properties": {
+        "type": {"type": "string"},
+        "message": {"type": "string"}
+      },
+      "additionalProperties": true
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {"status": {"const": "failed"}},
+        "required": ["status"]
+      },
+      "then": {
+        "required": ["failed_step", "error"]
+      }
+    }
+  ],
+  "additionalProperties": true
+}

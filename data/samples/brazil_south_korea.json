@@ -1,0 +1,63 @@
+{
+  "match_id": "brazil_south_korea",
+  "home_team": "Brazil",
+  "away_team": "South Korea",
+  "match_time": "2022-12-06T03:00:00+08:00",
+  "competition": "World Cup",
+  "stage": "Round of 16",
+  "neutral_field": true,
+  "team_features": {
+    "home": {
+      "elo_score": 93,
+      "fifa_rank_score": 95,
+      "squad_value_score": 94,
+      "recent_points_per_game": 2.3,
+      "last_5_goal_diff": 8,
+      "unbeaten_rate": 0.8,
+      "expected_starters_available_ratio": 0.92,
+      "injury_impact_score": 82,
+      "key_players_available_ratio": 0.9,
+      "key_player_form_score": 89,
+      "xg_for": 2.3,
+      "xg_against": 0.7,
+      "goals_for_per_match": 2.2,
+      "goals_against_per_match": 0.6,
+      "rest_days": 4,
+      "travel_km": 120,
+      "extra_time_recent": false,
+      "climate_adjustment": 2,
+      "motivation_score": 93,
+      "must_win": true,
+      "knockout": true
+    },
+    "away": {
+      "elo_score": 73,
+      "fifa_rank_score": 70,
+      "squad_value_score": 68,
+      "recent_points_per_game": 1.35,
+      "last_5_goal_diff": -1,
+      "unbeaten_rate": 0.4,
+      "expected_starters_available_ratio": 0.84,
+      "injury_impact_score": 74,
+      "key_players_available_ratio": 0.8,
+      "key_player_form_score": 76,
+      "xg_for": 1.05,
+      "xg_against": 1.45,
+      "goals_for_per_match": 1.1,
+      "goals_against_per_match": 1.4,
+      "rest_days": 3,
+      "travel_km": 260,
+      "extra_time_recent": false,
+      "climate_adjustment": 0,
+      "motivation_score": 88,
+      "must_win": true,
+      "knockout": true
+    }
+  },
+  "odds_snapshots": [
+    {"snapshot_time": "2022-12-04T12:00:00+08:00", "bookmaker": "A", "home_win_odds": 1.36, "draw_odds": 4.8, "away_win_odds": 9.0, "asian_handicap": -1.25, "home_water": 0.96, "away_water": 0.94, "total_goals_line": 2.75, "over_water": 0.98, "under_water": 0.92},
+    {"snapshot_time": "2022-12-05T22:00:00+08:00", "bookmaker": "A", "home_win_odds": 1.32, "draw_odds": 5.0, "away_win_odds": 9.6, "asian_handicap": -1.5, "home_water": 0.9, "away_water": 1.0, "total_goals_line": 2.75, "over_water": 0.9, "under_water": 1.0},
+    {"snapshot_time": "2022-12-04T12:00:00+08:00", "bookmaker": "B", "home_win_odds": 1.38, "draw_odds": 4.7, "away_win_odds": 8.8, "asian_handicap": -1.25, "home_water": 0.95, "away_water": 0.95, "total_goals_line": 2.75, "over_water": 0.97, "under_water": 0.93},
+    {"snapshot_time": "2022-12-05T22:00:00+08:00", "bookmaker": "B", "home_win_odds": 1.33, "draw_odds": 5.1, "away_win_odds": 9.5, "asian_handicap": -1.5, "home_water": 0.89, "away_water": 1.01, "total_goals_line": 3.0, "over_water": 0.94, "under_water": 0.96}
+  ]
+}

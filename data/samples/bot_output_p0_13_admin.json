@@ -1,0 +1,127 @@
+{
+  "match_id": "france_argentina",
+  "audience": "admin",
+  "analysis_version": "v0.5.0",
+  "generated_at": "2026-06-10T15:03:27.141876+00:00",
+  "match_summary": {
+    "home_team": "France",
+    "away_team": "Argentina",
+    "competition": "World Cup",
+    "kickoff_time": "2022-12-18T23:00:00+08:00"
+  },
+  "core_signal": {
+    "lean": "draw",
+    "risk_level": "high",
+    "confidence_score": 63.47,
+    "value_score": 1.74,
+    "summary_reasons": [
+      "close_score_gap",
+      "knockout_or_life_death_stage",
+      "upset_risk_high"
+    ]
+  },
+  "free_report": {
+    "summary_text": "法国 vs 阿根廷 当前倾向为平局方向，仅作为赛前数据参考。",
+    "risk_explanation": "风险等级为 high，需结合临场阵容、赔率变化和数据质量继续确认。",
+    "odds_observation": "基础赔率观察：市场方向 neutral，强度 low。",
+    "disclaimer": "以上为赛事数据分析参考，不构成确定性结论或收益承诺。"
+  },
+  "vip_strategy": {
+    "account_exposure": {
+      "min_percent": 2,
+      "max_percent": 3,
+      "basis": "planned_account_funds",
+      "explanation": "本场建议参与账户计划资金的一小部分，先控制账户级风险敞口。"
+    },
+    "match_allocation": {
+      "main_position": {
+        "percent_min": 35,
+        "percent_max": 45,
+        "target": "平局方向",
+        "reason": "主策略只占本场资金内部配置，不等同于账户总资金比例。"
+      },
+      "secondary_position": {
+        "percent_min": 15,
+        "percent_max": 30,
+        "target": "比分或大小球相关辅助观察",
+        "reason": "用于补充主方向，不覆盖账户级风险控制。"
+      },
+      "hedge_position": {
+        "percent_min": 10,
+        "percent_max": 15,
+        "target": "反向或平局风险保护",
+        "reason": "用于处理临场信息与盘口分歧。"
+      },
+      "small_high_odds_position": {
+        "percent_min": 3,
+        "percent_max": 10,
+        "target": "小仓高赔率参考方向",
+        "reason": "仅限本场资金内部小比例，不扩大账户风险。"
+      },
+      "reserve_position": {
+        "percent_min": 30,
+        "percent_max": 40,
+        "reason": "保留资金用于应对临场不确定性，风险越高保留比例越高。"
+      }
+    },
+    "odds_change_adjustment": [
+      "若临场赔率与当前倾向背离，降低主策略占比并提高保留资金。",
+      "若数据质量下降或阵容信息不完整，优先维持观望。"
+    ],
+    "combo_risk_control": [
+      "组合策略只作为风险分散参考，不扩大账户级敞口。",
+      "高赔率小仓需保持在本场资金内部 3%-10% 范围。"
+    ]
+  },
+  "admin_debug": {
+    "raw_scores": {
+      "home_score": 79.27,
+      "away_score": 81.01,
+      "score_gap": -1.74,
+      "probabilities": {
+        "home_win": 0.327,
+        "draw": 0.29,
+        "away_win": 0.383,
+        "over_2_5": 0.55,
+        "upset_risk": 0.348
+      },
+      "market_signal": {
+        "score": 50.19,
+        "direction": "neutral",
+        "strength": "low",
+        "risk_flags": [],
+        "quality_score": 0.667,
+        "components": {
+          "european_odds_movement": 44.99,
+          "asian_handicap_movement": 49.22,
+          "over_under_movement": 52.35,
+          "bookmaker_consensus": 60.0,
+          "odds_dispersion": 0.0087
+        },
+        "explanation": "市场信号 neutral，强度 low，综合分 50.2。"
+      }
+    },
+    "rule_hits": [
+      "close_score_gap",
+      "knockout_or_life_death_stage",
+      "upset_risk_high"
+    ],
+    "permission_cut_fields": [],
+    "permission_cut_fields_by_audience": {
+      "free": [
+        "vip_strategy",
+        "admin_debug"
+      ],
+      "vip": [
+        "admin_debug"
+      ],
+      "admin": []
+    },
+    "llm_trace_id": null,
+    "fallback_reason": "llm_adapter_not_configured",
+    "data_quality": {
+      "data_quality_score": 0.958,
+      "missing_fields": []
+    }
+  }
+}

@@ -1,0 +1,577 @@
+player_id,canonical_name,team_id,nationality,position,club_name,club_source_id,source_player_id,fifa_player_id,squad_role,shirt_number,selection_rank,selection_reason,available_at
+player_alg_21,Adil Boulbina,team_algeria,ALG,MF,,,fantasy_player_21,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_alg_19,Melvin Mastil,team_algeria,ALG,GK,,,fantasy_player_19,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_alg_7,Rafik Belghali,team_algeria,ALG,DF,Verona,whoscored_club_name:verona,fantasy_player_7,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_alg_1,Rayan Aït-Nouri,team_algeria,ALG,DF,Manchester City,whoscored_club_name:manchester_city,fantasy_player_1,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_alg_18,Luca Zidane,team_algeria,ALG,GK,Granada,whoscored_club_name:granada,fantasy_player_18,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_alg_11,Riyad Mahrez,team_algeria,ALG,MF,Al Ahli,whoscored_club_name:al_ahli,fantasy_player_11,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_alg_8,Achref Abada,team_algeria,ALG,DF,,,fantasy_player_8,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_alg_26,Houssem Aouar,team_algeria,ALG,MF,Al Ittihad,whoscored_club_name:al_ittihad,fantasy_player_26,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_alg_12,Ibrahim Maza,team_algeria,ALG,FW,,,fantasy_player_12,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_alg_2,Ramy Bensebaini,team_algeria,ALG,DF,,,fantasy_player_2,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_alg_2047,Samir Chergui,team_algeria,ALG,DF,,,fantasy_player_2047,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_alg_2048,Mohamed Tougaï,team_algeria,ALG,DF,,,fantasy_player_2048,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_arg_45,Emiliano Martínez,team_argentina,ARG,GK,Aston Villa,whoscored_club_name:aston_villa,fantasy_player_45,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_arg_38,Lionel Messi,team_argentina,ARG,FW,Inter Miami CF,whoscored_club_name:inter_miami_cf,fantasy_player_38,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_arg_39,Julián Alvarez,team_argentina,ARG,FW,Atletico Madrid,whoscored_club_name:atletico_madrid,fantasy_player_39,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_arg_28,Cristian Romero,team_argentina,ARG,DF,Tottenham,whoscored_club_name:tottenham,fantasy_player_28,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_arg_1338,Lautaro Martínez,team_argentina,ARG,FW,Inter,whoscored_club_name:inter,fantasy_player_1338,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_arg_30,Nahuel Molina,team_argentina,ARG,DF,,,fantasy_player_30,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_arg_57,Enzo Fernández,team_argentina,ARG,MF,Chelsea,whoscored_club_name:chelsea,fantasy_player_57,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_arg_56,Alexis Mac Allister,team_argentina,ARG,MF,Liverpool,whoscored_club_name:liverpool,fantasy_player_56,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_arg_1318,Lisandro Martínez,team_argentina,ARG,DF,,,fantasy_player_1318,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_arg_31,Nicolás Otamendi,team_argentina,ARG,DF,,,fantasy_player_31,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_arg_51,Nico Paz,team_argentina,ARG,MF,,,fantasy_player_51,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_arg_34,Nicolás Tagliafico,team_argentina,ARG,DF,,,fantasy_player_34,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_aus_2006,Mohamed Touré,team_australia,AUS,FW,Norwich,whoscored_club_name:norwich,fantasy_player_2006,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_aus_76,Patrick Beach,team_australia,AUS,GK,,,fantasy_player_76,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_aus_74,Mathew Ryan,team_australia,AUS,GK,Levante,whoscored_club_name:levante,fantasy_player_74,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_aus_58,Jordan Bos,team_australia,AUS,DF,Feyenoord,whoscored_club_name:feyenoord,fantasy_player_58,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_aus_66,Kai Trewin,team_australia,AUS,DF,New York City FC,whoscored_club_name:new_york_city_fc,fantasy_player_66,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_aus_68,Nestory Irankunda,team_australia,AUS,FW,Watford,whoscored_club_name:watford,fantasy_player_68,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_aus_67,Lucas Herrington,team_australia,AUS,DF,,,fantasy_player_67,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_aus_2002,Harry Souttar,team_australia,AUS,DF,Leicester,whoscored_club_name:leicester,fantasy_player_2002,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_aus_2050,Cristian Volpato,team_australia,AUS,MF,,,fantasy_player_2050,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_aus_2004,Jackson Irvine,team_australia,AUS,MF,,,fantasy_player_2004,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_aus_81,Aiden O'Neill,team_australia,AUS,MF,,,fantasy_player_81,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_aus_72,Jacob Italiano,team_australia,AUS,DF,,,fantasy_player_72,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_aut_107,Marcel Sabitzer,team_austria,AUT,MF,Borussia Dortmund,whoscored_club_name:borussia_dortmund,fantasy_player_107,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_aut_85,David Alaba,team_austria,AUT,DF,Real Madrid,whoscored_club_name:real_madrid,fantasy_player_85,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_aut_102,Carney Chukwuemeka,team_austria,AUT,MF,Borussia Dortmund,whoscored_club_name:borussia_dortmund,fantasy_player_102,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_aut_95,Marko Arnautovic,team_austria,AUT,FW,FK Crvena Zvezda,whoscored_club_name:fk_crvena_zvezda,fantasy_player_95,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_aut_88,Kevin Danso,team_austria,AUT,DF,Tottenham,whoscored_club_name:tottenham,fantasy_player_88,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_aut_103,Konrad Laimer,team_austria,AUT,MF,Bayern Munich,whoscored_club_name:bayern_munich,fantasy_player_103,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_aut_98,Alexander Schlager,team_austria,AUT,GK,Salzburg,whoscored_club_name:salzburg,fantasy_player_98,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_aut_90,Stefan Posch,team_austria,AUT,DF,Mainz 05,whoscored_club_name:mainz_05,fantasy_player_90,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_aut_101,Florian Wiegele,team_austria,AUT,GK,,,fantasy_player_101,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_aut_96,Michael Gregoritsch,team_austria,AUT,FW,,,fantasy_player_96,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_aut_97,Sasa Kalajdzic,team_austria,AUT,FW,,,fantasy_player_97,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_aut_86,Philipp Lienhart,team_austria,AUT,DF,,,fantasy_player_86,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bel_125,Jérémy Doku,team_belgium,BEL,MF,Manchester City,whoscored_club_name:manchester_city,fantasy_player_125,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bel_1522,Thibaut Courtois,team_belgium,BEL,GK,Real Madrid,whoscored_club_name:real_madrid,fantasy_player_1522,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bel_138,Kevin De Bruyne,team_belgium,BEL,MF,Napoli,whoscored_club_name:napoli,fantasy_player_138,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bel_114,Maxim De Cuyper,team_belgium,BEL,DF,Brighton,whoscored_club_name:brighton,fantasy_player_114,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bel_1526,Leandro Trossard,team_belgium,BEL,MF,Arsenal,whoscored_club_name:arsenal,fantasy_player_1526,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bel_124,Romelu Lukaku,team_belgium,BEL,FW,Napoli,whoscored_club_name:napoli,fantasy_player_124,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bel_132,Senne Lammens,team_belgium,BEL,GK,Manchester United,whoscored_club_name:manchester_united,fantasy_player_132,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bel_137,Youri Tielemans,team_belgium,BEL,MF,Aston Villa,whoscored_club_name:aston_villa,fantasy_player_137,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bel_119,Axel Witsel,team_belgium,BEL,MF,,,fantasy_player_119,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bel_129,Charles De Ketelaere,team_belgium,BEL,MF,,,fantasy_player_129,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bel_117,Thomas Meunier,team_belgium,BEL,DF,,,fantasy_player_117,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bel_1523,Mike Penders,team_belgium,BEL,GK,,,fantasy_player_1523,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bih_2067,Mladen Jurkas,team_bosnia_and_herzegovina,BIH,GK,,,fantasy_player_2067,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bih_147,Edin Dzeko,team_bosnia_and_herzegovina,BIH,FW,Schalke 04,whoscored_club_name:schalke_04,fantasy_player_147,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bih_153,Nikola Vasilj,team_bosnia_and_herzegovina,BIH,GK,St. Pauli,whoscored_club_name:st_pauli,fantasy_player_153,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bih_145,Nidal Celik,team_bosnia_and_herzegovina,BIH,DF,Lens,whoscored_club_name:lens,fantasy_player_145,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bih_140,Amar Dedic,team_bosnia_and_herzegovina,BIH,DF,Benfica,whoscored_club_name:benfica,fantasy_player_140,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bih_152,Kerim Alajbegovic,team_bosnia_and_herzegovina,BIH,FW,Salzburg,whoscored_club_name:salzburg,fantasy_player_152,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bih_141,Tarik Muharemovic,team_bosnia_and_herzegovina,BIH,DF,Sassuolo,whoscored_club_name:sassuolo,fantasy_player_141,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bih_155,Martin Zlomislic,team_bosnia_and_herzegovina,BIH,GK,Rijeka,whoscored_club_name:rijeka,fantasy_player_155,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bih_150,Esmir Bajraktarevic,team_bosnia_and_herzegovina,BIH,FW,,,fantasy_player_150,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bih_139,Sead Kolasinac,team_bosnia_and_herzegovina,BIH,DF,,,fantasy_player_139,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bih_142,Nikola Katic,team_bosnia_and_herzegovina,BIH,DF,,,fantasy_player_142,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bih_146,Ermedin Demirovic,team_bosnia_and_herzegovina,BIH,FW,,,fantasy_player_146,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bra_1366,Raphinha,team_brazil,BRA,MF,Barcelona,whoscored_club_name:barcelona,fantasy_player_1366,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bra_164,Gabriel Magalhães,team_brazil,BRA,DF,Arsenal,whoscored_club_name:arsenal,fantasy_player_164,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bra_173,Vinícius Júnior,team_brazil,BRA,MF,Real Madrid,whoscored_club_name:real_madrid,fantasy_player_173,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bra_165,Marquinhos,team_brazil,BRA,DF,APOEL Nicosia,whoscored_club_name:apoel_nicosia,fantasy_player_165,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bra_183,Alisson Becker,team_brazil,BRA,GK,Liverpool,whoscored_club_name:liverpool,fantasy_player_183,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bra_174,Matheus Cunha,team_brazil,BRA,FW,Cruzeiro,whoscored_club_name:cruzeiro,fantasy_player_174,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bra_182,Ederson,team_brazil,BRA,GK,Fenerbahce,whoscored_club_name:fenerbahce,fantasy_player_182,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bra_1369,Neymar,team_brazil,BRA,MF,Santos FC,whoscored_club_name:santos_fc,fantasy_player_1369,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bra_178,Igor Thiago,team_brazil,BRA,FW,,,fantasy_player_178,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bra_181,Endrick,team_brazil,BRA,FW,,,fantasy_player_181,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bra_188,Casemiro,team_brazil,BRA,MF,,,fantasy_player_188,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_bra_1361,Bruno Guimarães,team_brazil,BRA,MF,,,fantasy_player_1361,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cpv_1532,Gilson Benchimol,team_cabo_verde,CPV,MF,Akron Togliatti,whoscored_club_name:akron_togliatti,fantasy_player_1532,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cpv_203,Sidny Cabral,team_cabo_verde,CPV,DF,Benfica,whoscored_club_name:benfica,fantasy_player_203,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cpv_216,Márcio da Rosa,team_cabo_verde,CPV,GK,,,fantasy_player_216,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cpv_206,Ryan Mendes,team_cabo_verde,CPV,FW,Kocaelispor,whoscored_club_name:kocaelispor,fantasy_player_206,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cpv_207,Jovane Cabral,team_cabo_verde,CPV,FW,Estrela da Amadora,whoscored_club_name:estrela_da_amadora,fantasy_player_207,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cpv_208,Dailon Livramento,team_cabo_verde,CPV,FW,,,fantasy_player_208,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cpv_195,João Paulo,team_cabo_verde,CPV,MF,Bahia,whoscored_club_name:bahia,fantasy_player_195,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cpv_214,Vozinha,team_cabo_verde,CPV,GK,,,fantasy_player_214,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cpv_205,Diney,team_cabo_verde,CPV,DF,,,fantasy_player_205,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cpv_1528,Stopira,team_cabo_verde,CPV,DF,,,fantasy_player_1528,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cpv_1529,Logan Costa,team_cabo_verde,CPV,DF,,,fantasy_player_1529,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cpv_219,Laros Duarte,team_cabo_verde,CPV,MF,,,fantasy_player_219,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_can_1961,Alphonso Davies,team_canada,CAN,DF,Bayern Munich,whoscored_club_name:bayern_munich,fantasy_player_1961,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_can_235,Maxime Crépeau,team_canada,CAN,GK,Orlando City,whoscored_club_name:orlando_city,fantasy_player_235,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_can_226,Jonathan David,team_canada,CAN,FW,Juventus,whoscored_club_name:juventus,fantasy_player_226,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_can_1967,Stephen Eustaquio,team_canada,CAN,MF,Los Angeles FC,whoscored_club_name:los_angeles_fc,fantasy_player_1967,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_can_237,Owen Goodman,team_canada,CAN,GK,,,fantasy_player_237,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_can_1963,Alistair Johnston,team_canada,CAN,DF,Celtic,whoscored_club_name:celtic,fantasy_player_1963,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_can_225,Luc De Fougerolles,team_canada,CAN,DF,FCV Dender EH,whoscored_club_name:fcv_dender_eh,fantasy_player_225,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_can_221,Derek Cornelius,team_canada,CAN,DF,Rangers,whoscored_club_name:rangers,fantasy_player_221,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_can_236,Dayne St. Clair,team_canada,CAN,GK,,,fantasy_player_236,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_can_245,Ismaël Koné,team_canada,CAN,MF,,,fantasy_player_245,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_can_227,Cyle Larin,team_canada,CAN,FW,,,fantasy_player_227,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_can_228,Tajon Buchanan,team_canada,CAN,FW,,,fantasy_player_228,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_col_256,Luis Díaz,team_colombia,COL,MF,Bayern Munich,whoscored_club_name:bayern_munich,fantasy_player_256,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_col_248,Daniel Muñoz,team_colombia,COL,DF,Crystal Palace,whoscored_club_name:crystal_palace,fantasy_player_248,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_col_252,Johan Mojica,team_colombia,COL,DF,Mallorca,whoscored_club_name:mallorca,fantasy_player_252,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_col_270,James Rodríguez,team_colombia,COL,MF,Minnesota United,whoscored_club_name:minnesota_united,fantasy_player_270,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_col_262,Camilo Vargas,team_colombia,COL,GK,Atlas,whoscored_club_name:atlas,fantasy_player_262,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_col_259,Luis Suárez,team_colombia,COL,FW,Inter Miami CF,whoscored_club_name:inter_miami_cf,fantasy_player_259,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_col_263,David Ospina,team_colombia,COL,GK,Atletico Nacional,whoscored_club_name:atletico_nacional,fantasy_player_263,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_col_250,Dávinson Sánchez,team_colombia,COL,DF,Galatasaray,whoscored_club_name:galatasaray,fantasy_player_250,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_col_247,Richard Ríos,team_colombia,COL,MF,,,fantasy_player_247,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_col_269,Jhon Arias,team_colombia,COL,MF,,,fantasy_player_269,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_col_1396,Cucho Hernández,team_colombia,COL,FW,,,fantasy_player_1396,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_col_1374,Yerry Mina,team_colombia,COL,DF,,,fantasy_player_1374,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cod_272,Aaron Wan-Bissaka,team_congo_dr,COD,DF,West Ham,whoscored_club_name:west_ham,fantasy_player_272,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cod_275,Axel Tuanzebe,team_congo_dr,COD,DF,Burnley,whoscored_club_name:burnley,fantasy_player_275,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cod_281,Yoane Wissa,team_congo_dr,COD,FW,Newcastle,whoscored_club_name:newcastle,fantasy_player_281,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cod_289,Lionel Mpasi,team_congo_dr,COD,GK,,,fantasy_player_289,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cod_283,Cédric Bakambu,team_congo_dr,COD,FW,Real Betis,whoscored_club_name:real_betis,fantasy_player_283,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cod_294,Noah Sadiki,team_congo_dr,COD,MF,Sunderland,whoscored_club_name:sunderland,fantasy_player_294,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cod_284,Meschack Elia,team_congo_dr,COD,FW,,,fantasy_player_284,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cod_285,Fiston Mayele,team_congo_dr,COD,FW,,,fantasy_player_285,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cod_274,Chancel Mbemba,team_congo_dr,COD,DF,,,fantasy_player_274,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cod_290,Matthieu Epolo,team_congo_dr,COD,GK,,,fantasy_player_290,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cod_297,Théo Bongonda,team_congo_dr,COD,MF,,,fantasy_player_297,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cod_282,Simon Banza,team_congo_dr,COD,FW,,,fantasy_player_282,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_civ_307,Yan Diomande,team_cote_d_ivoire,CIV,FW,RB Leipzig,whoscored_club_name:rb_leipzig,fantasy_player_307,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_civ_303,Guéla Doué,team_cote_d_ivoire,CIV,DF,Strasbourg,whoscored_club_name:strasbourg,fantasy_player_303,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_civ_310,Amad Diallo,team_cote_d_ivoire,CIV,FW,Manchester United,whoscored_club_name:manchester_united,fantasy_player_310,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_civ_301,Ousmane Diomande,team_cote_d_ivoire,CIV,DF,Sporting CP,whoscored_club_name:sporting_cp,fantasy_player_301,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_civ_299,Evan Ndicka,team_cote_d_ivoire,CIV,DF,Roma,whoscored_club_name:roma,fantasy_player_299,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_civ_317,Yahia Fofana,team_cote_d_ivoire,CIV,GK,Rizespor,whoscored_club_name:rizespor,fantasy_player_317,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_civ_305,Ghislain Konan,team_cote_d_ivoire,CIV,DF,Gil Vicente,whoscored_club_name:gil_vicente,fantasy_player_305,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_civ_323,Seko Fofana,team_cote_d_ivoire,CIV,MF,FC Porto,whoscored_club_name:fc_porto,fantasy_player_323,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_civ_308,Nicolas Pépé,team_cote_d_ivoire,CIV,FW,,,fantasy_player_308,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_civ_314,Bazoumana Touré,team_cote_d_ivoire,CIV,FW,,,fantasy_player_314,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_civ_300,Wilfried Singo,team_cote_d_ivoire,CIV,DF,,,fantasy_player_300,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_civ_316,Alban Lafont,team_cote_d_ivoire,CIV,GK,,,fantasy_player_316,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cro_1536,Josko Gvardiol,team_croatia,CRO,DF,Manchester City,whoscored_club_name:manchester_city,fantasy_player_1536,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cro_346,Luka Modric,team_croatia,CRO,MF,AC Milan,whoscored_club_name:ac_milan,fantasy_player_346,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cro_338,Dominik Livakovic,team_croatia,CRO,GK,Dinamo Zagreb,whoscored_club_name:dinamo_zagreb,fantasy_player_338,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cro_330,Luka Vuskovic,team_croatia,CRO,DF,Hamburger SV,whoscored_club_name:hamburger_sv,fantasy_player_330,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cro_324,Petar Sucic,team_croatia,CRO,MF,Inter,whoscored_club_name:inter,fantasy_player_324,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cro_334,Ivan Perisic,team_croatia,CRO,FW,PSV Eindhoven,whoscored_club_name:psv_eindhoven,fantasy_player_334,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cro_325,Josip Stanisic,team_croatia,CRO,DF,Bayern Munich,whoscored_club_name:bayern_munich,fantasy_player_325,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cro_1537,Mateo Kovacic,team_croatia,CRO,MF,Manchester City,whoscored_club_name:manchester_city,fantasy_player_1537,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cro_327,Duje Caleta-Car,team_croatia,CRO,DF,,,fantasy_player_327,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cro_328,Marin Pongracic,team_croatia,CRO,DF,,,fantasy_player_328,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cro_332,Ante Budimir,team_croatia,CRO,FW,,,fantasy_player_332,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cro_348,Martin Baturina,team_croatia,CRO,MF,,,fantasy_player_348,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cuw_350,Tahith Chong,team_curacao,CUW,MF,Sheffield United,whoscored_club_name:sheffield_united,fantasy_player_350,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cuw_366,Gervane Kastaneer,team_curacao,CUW,FW,,,fantasy_player_366,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cuw_352,Leandro Bacuna,team_curacao,CUW,DF,,,fantasy_player_352,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cuw_370,Tyrick Bodak,team_curacao,CUW,GK,,,fantasy_player_370,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cuw_1560,Jürgen Locadia,team_curacao,CUW,FW,,,fantasy_player_1560,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cuw_367,Jeremy Antonisse,team_curacao,CUW,FW,,,fantasy_player_367,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cuw_368,Eloy Room,team_curacao,CUW,GK,Miami FC,whoscored_club_name:miami_fc,fantasy_player_368,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cuw_357,Roshon van Eijma,team_curacao,CUW,DF,,,fantasy_player_357,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cuw_358,Ar'Jany Martha,team_curacao,CUW,DF,Rotherham,whoscored_club_name:rotherham,fantasy_player_358,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cuw_372,Juninho Bacuna,team_curacao,CUW,MF,FC Volendam,whoscored_club_name:fc_volendam,fantasy_player_372,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cuw_351,Godfried Roemeratoe,team_curacao,CUW,MF,RKC Waalwijk,whoscored_club_name:rkc_waalwijk,fantasy_player_351,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cuw_360,Livano Comenencia,team_curacao,CUW,DF,FC Zuerich,whoscored_club_name:fc_zuerich,fantasy_player_360,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cze_380,Vladimír Coufal,team_czechia,CZE,DF,Hoffenheim,whoscored_club_name:hoffenheim,fantasy_player_380,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cze_382,Patrik Schick,team_czechia,CZE,FW,Bayer Leverkusen,whoscored_club_name:bayer_leverkusen,fantasy_player_382,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cze_393,Tomás Soucek,team_czechia,CZE,MF,West Ham,whoscored_club_name:west_ham,fantasy_player_393,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cze_374,Ladislav Krejcí,team_czechia,CZE,DF,,,fantasy_player_374,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cze_387,Matej Kovár,team_czechia,CZE,GK,PSV Eindhoven,whoscored_club_name:psv_eindhoven,fantasy_player_387,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cze_397,Pavel Sulc,team_czechia,CZE,MF,Lyon,whoscored_club_name:lyon,fantasy_player_397,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cze_1400,Jindrich Stanek,team_czechia,CZE,GK,Slavia Prague,whoscored_club_name:slavia_prague,fantasy_player_1400,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cze_381,Stepán Chaloupek,team_czechia,CZE,DF,Slavia Prague,whoscored_club_name:slavia_prague,fantasy_player_381,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cze_1427,Adam Hlozek,team_czechia,CZE,FW,,,fantasy_player_1427,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cze_384,Mojmír Chytil,team_czechia,CZE,FW,,,fantasy_player_384,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cze_1417,Hugo Sochurek,team_czechia,CZE,MF,,,fantasy_player_1417,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_cze_388,Lukás Hornícek,team_czechia,CZE,GK,,,fantasy_player_388,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ecu_2053,Willian Pacho,team_ecuador,ECU,DF,Paris Saint-Germain,whoscored_club_name:paris_saint_germain,fantasy_player_2053,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ecu_423,Hernán Galíndez,team_ecuador,ECU,GK,Huracan,whoscored_club_name:huracan,fantasy_player_423,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ecu_2052,Piero Hincapié,team_ecuador,ECU,DF,Arsenal,whoscored_club_name:arsenal,fantasy_player_2052,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ecu_400,Pervis Estupiñán,team_ecuador,ECU,DF,AC Milan,whoscored_club_name:ac_milan,fantasy_player_400,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ecu_430,Moisés Caicedo,team_ecuador,ECU,MF,Chelsea,whoscored_club_name:chelsea,fantasy_player_430,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ecu_404,Joel Ordóñez,team_ecuador,ECU,DF,Club Brugge,whoscored_club_name:club_brugge,fantasy_player_404,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ecu_412,Enner Valencia,team_ecuador,ECU,FW,Pachuca,whoscored_club_name:pachuca,fantasy_player_412,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ecu_420,Anthony Valencia,team_ecuador,ECU,MF,Royal Antwerp,whoscored_club_name:royal_antwerp,fantasy_player_420,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ecu_411,Yaimar Medina,team_ecuador,ECU,DF,,,fantasy_player_411,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ecu_421,Jeremy Arévalo,team_ecuador,ECU,FW,,,fantasy_player_421,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ecu_1947,Nilson Angulo,team_ecuador,ECU,MF,,,fantasy_player_1947,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ecu_415,Kevin Rodríguez,team_ecuador,ECU,FW,,,fantasy_player_415,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_egy_1597,Mohamed Salah,team_egypt,EGY,MF,Liverpool,whoscored_club_name:liverpool,fantasy_player_1597,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_egy_445,Omar Marmoush,team_egypt,EGY,FW,Manchester City,whoscored_club_name:manchester_city,fantasy_player_445,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_egy_453,Mostafa Shobeir,team_egypt,EGY,GK,,,fantasy_player_453,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_egy_435,Emam Ashour,team_egypt,EGY,MF,Al Ahly SC,whoscored_club_name:al_ahly_sc,fantasy_player_435,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_egy_437,Mohamed Abdelmonem,team_egypt,EGY,DF,Egypt,whoscored_club_name:egypt,fantasy_player_437,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_egy_439,Mohamed Hany,team_egypt,EGY,DF,Al Ahly SC,whoscored_club_name:al_ahly_sc,fantasy_player_439,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_egy_451,Mohamed El Shenawy,team_egypt,EGY,GK,Al Ahly SC,whoscored_club_name:al_ahly_sc,fantasy_player_451,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_egy_444,Yasser Ibrahim,team_egypt,EGY,DF,Al Ahly SC,whoscored_club_name:al_ahly_sc,fantasy_player_444,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_egy_433,Zizo,team_egypt,EGY,MF,,,fantasy_player_433,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_egy_1594,Mostafa Zico,team_egypt,EGY,MF,,,fantasy_player_1594,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_egy_438,Ahmed Fatouh,team_egypt,EGY,DF,,,fantasy_player_438,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_egy_447,Trezeguet,team_egypt,EGY,FW,,,fantasy_player_447,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_eng_468,Harry Kane,team_england,ENG,FW,Bayern Munich,whoscored_club_name:bayern_munich,fantasy_player_468,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_eng_477,Jordan Pickford,team_england,ENG,GK,Everton,whoscored_club_name:everton,fantasy_player_477,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_eng_457,Nico O'Reilly,team_england,ENG,DF,,,fantasy_player_457,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_eng_491,Jude Bellingham,team_england,ENG,MF,Real Madrid,whoscored_club_name:real_madrid,fantasy_player_491,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_eng_461,Marc Guéhi,team_england,ENG,DF,Manchester City,whoscored_club_name:manchester_city,fantasy_player_461,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_eng_488,Declan Rice,team_england,ENG,MF,Arsenal,whoscored_club_name:arsenal,fantasy_player_488,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_eng_469,Bukayo Saka,team_england,ENG,MF,Arsenal,whoscored_club_name:arsenal,fantasy_player_469,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_eng_1709,Reece James,team_england,ENG,DF,Chelsea,whoscored_club_name:chelsea,fantasy_player_1709,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_eng_471,Marcus Rashford,team_england,ENG,MF,Barcelona,whoscored_club_name:barcelona,fantasy_player_471,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_eng_1710,Eberechi Eze,team_england,ENG,MF,,,fantasy_player_1710,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_eng_1711,Ollie Watkins,team_england,ENG,FW,,,fantasy_player_1711,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_eng_466,John Stones,team_england,ENG,DF,,,fantasy_player_466,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_fra_500,Kylian Mbappé,team_france,FRA,FW,Real Madrid,whoscored_club_name:real_madrid,fantasy_player_500,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_fra_517,Michael Olise,team_france,FRA,MF,Bayern Munich,whoscored_club_name:bayern_munich,fantasy_player_517,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_fra_501,Ousmane Dembélé,team_france,FRA,MF,Paris Saint-Germain,whoscored_club_name:paris_saint_germain,fantasy_player_501,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_fra_1429,William Saliba,team_france,FRA,DF,Arsenal,whoscored_club_name:arsenal,fantasy_player_1429,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_fra_506,Mike Maignan,team_france,FRA,GK,AC Milan,whoscored_club_name:ac_milan,fantasy_player_506,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_fra_516,Rayan Cherki,team_france,FRA,MF,Manchester City,whoscored_club_name:manchester_city,fantasy_player_516,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_fra_1430,Jules Koundé,team_france,FRA,DF,Barcelona,whoscored_club_name:barcelona,fantasy_player_1430,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_fra_494,Dayot Upamecano,team_france,FRA,DF,Bayern Munich,whoscored_club_name:bayern_munich,fantasy_player_494,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_fra_505,Désiré Doué,team_france,FRA,MF,,,fantasy_player_505,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_fra_492,Theo Hernández,team_france,FRA,DF,,,fantasy_player_492,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_fra_496,Lucas Hernández,team_france,FRA,DF,,,fantasy_player_496,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_fra_495,Ibrahima Konaté,team_france,FRA,DF,,,fantasy_player_495,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ger_542,Joshua Kimmich,team_germany,GER,DF,Bayern Munich,whoscored_club_name:bayern_munich,fantasy_player_542,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ger_543,Florian Wirtz,team_germany,GER,MF,Liverpool,whoscored_club_name:liverpool,fantasy_player_543,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ger_528,Kai Havertz,team_germany,GER,FW,Arsenal,whoscored_club_name:arsenal,fantasy_player_528,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ger_1600,Jamal Musiala,team_germany,GER,MF,Bayern Munich,whoscored_club_name:bayern_munich,fantasy_player_1600,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ger_1598,Manuel Neuer,team_germany,GER,GK,Bayern Munich,whoscored_club_name:bayern_munich,fantasy_player_1598,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ger_520,Antonio Rüdiger,team_germany,GER,DF,Real Madrid,whoscored_club_name:real_madrid,fantasy_player_520,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ger_523,Jonathan Tah,team_germany,GER,DF,Bayern Munich,whoscored_club_name:bayern_munich,fantasy_player_523,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ger_526,Nico Schlotterbeck,team_germany,GER,DF,Borussia Dortmund,whoscored_club_name:borussia_dortmund,fantasy_player_526,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ger_521,David Raum,team_germany,GER,DF,,,fantasy_player_521,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ger_529,Leroy Sané,team_germany,GER,MF,,,fantasy_player_529,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ger_532,Nick Woltemade,team_germany,GER,FW,,,fantasy_player_532,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ger_531,Deniz Undav,team_germany,GER,FW,,,fantasy_player_531,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_gha_1992,Antoine Semenyo,team_ghana,GHA,FW,Manchester City,whoscored_club_name:manchester_city,fantasy_player_1992,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_gha_1989,Prince Adu,team_ghana,GHA,FW,Viktoria Plzen,whoscored_club_name:viktoria_plzen,fantasy_player_1989,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_gha_1979,Marvin Senaya,team_ghana,GHA,DF,Auxerre,whoscored_club_name:auxerre,fantasy_player_1979,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_gha_1988,Ernest Nuamah,team_ghana,GHA,MF,Lyon,whoscored_club_name:lyon,fantasy_player_1988,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_gha_1987,Iñaki Williams,team_ghana,GHA,FW,Athletic Club,whoscored_club_name:athletic_club,fantasy_player_1987,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_gha_1971,Lawrence Ati Zigi,team_ghana,GHA,GK,FC St. Gallen,whoscored_club_name:fc_st_gallen,fantasy_player_1971,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_gha_1975,Kojo Peprah Oppong,team_ghana,GHA,DF,Nice,whoscored_club_name:nice,fantasy_player_1975,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_gha_1976,Jonas Adjetey,team_ghana,GHA,DF,,,fantasy_player_1976,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_gha_1990,Abdul Fatawu,team_ghana,GHA,FW,,,fantasy_player_1990,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_gha_1983,Thomas Partey,team_ghana,GHA,MF,,,fantasy_player_1983,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_gha_1986,Jordan Ayew,team_ghana,GHA,FW,,,fantasy_player_1986,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_gha_1973,Abdul Baba,team_ghana,GHA,DF,,,fantasy_player_1973,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_hai_582,Wilson Isidor,team_haiti,HAI,FW,Sunderland,whoscored_club_name:sunderland,fantasy_player_582,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_hai_581,Duke Lacroix,team_haiti,HAI,DF,,,fantasy_player_581,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_hai_583,Duckens Nazon,team_haiti,HAI,FW,,,fantasy_player_583,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_hai_571,Jean-Ricner Bellegarde,team_haiti,HAI,MF,Wolves,whoscored_club_name:wolves,fantasy_player_571,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_hai_1539,Dominique Simon,team_haiti,HAI,MF,,,fantasy_player_1539,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_hai_590,Ruben Providence,team_haiti,HAI,FW,,,fantasy_player_590,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_hai_591,Johny Placide,team_haiti,HAI,GK,SC Bastia,whoscored_club_name:sc_bastia,fantasy_player_591,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_hai_577,Ricardo Adé,team_haiti,HAI,DF,LDU de Quito,whoscored_club_name:ldu_de_quito,fantasy_player_577,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_hai_578,Martin Expérience,team_haiti,HAI,DF,,,fantasy_player_578,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_hai_593,Josué Duverger,team_haiti,HAI,GK,,,fantasy_player_593,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_hai_1538,Keeto Thermoncy,team_haiti,HAI,DF,,,fantasy_player_1538,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_hai_572,Carl Sainté,team_haiti,HAI,MF,,,fantasy_player_572,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_irn_610,Mehdi Taremi,team_ir_iran,IRN,FW,,,fantasy_player_610,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_irn_597,Ramin Rezaeian,team_ir_iran,IRN,DF,Iran,whoscored_club_name:iran,fantasy_player_597,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_irn_620,Alireza Beiranvand,team_ir_iran,IRN,GK,Tractor,whoscored_club_name:tractor,fantasy_player_620,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_irn_612,Saman Ghoddos,team_ir_iran,IRN,FW,Iran,whoscored_club_name:iran,fantasy_player_612,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_irn_594,Amir Mohammad Razzaghinia,team_ir_iran,IRN,MF,,,fantasy_player_594,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_irn_606,Ali Nemati,team_ir_iran,IRN,DF,,,fantasy_player_606,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_irn_608,Aria Yousefi,team_ir_iran,IRN,DF,,,fantasy_player_608,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_irn_627,Mohammad Mohebi,team_ir_iran,IRN,MF,,,fantasy_player_627,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_irn_629,Mehdi Ghayedi,team_ir_iran,IRN,MF,,,fantasy_player_629,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_irn_625,Mehdi Torabi,team_ir_iran,IRN,MF,,,fantasy_player_625,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_irn_626,Saeid Ezatolahi,team_ir_iran,IRN,MF,,,fantasy_player_626,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_irn_611,Alireza Jahanbakhsh,team_ir_iran,IRN,FW,,,fantasy_player_611,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_irq_656,Zidane Iqbal,team_iraq,IRQ,MF,Jong FC Utrecht,whoscored_club_name:jong_fc_utrecht,fantasy_player_656,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_irq_646,Aymen Hussein,team_iraq,IRQ,FW,Iraq U23,whoscored_club_name:iraq_u23,fantasy_player_646,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_irq_647,Mohanad Ali,team_iraq,IRQ,FW,Iraq,whoscored_club_name:iraq,fantasy_player_647,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_irq_648,Ali Jasim,team_iraq,IRQ,FW,,,fantasy_player_648,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_irq_637,Merchas Doski,team_iraq,IRQ,DF,Viktoria Plzen,whoscored_club_name:viktoria_plzen,fantasy_player_637,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_irq_644,Akam Hashim,team_iraq,IRQ,DF,,,fantasy_player_644,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_irq_657,Ibrahim Bayesh,team_iraq,IRQ,MF,,,fantasy_player_657,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_irq_635,Amir Al Ammari,team_iraq,IRQ,MF,Cracovia,whoscored_club_name:cracovia,fantasy_player_635,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_irq_636,Aimar Sher,team_iraq,IRQ,MF,,,fantasy_player_636,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_irq_634,Kevin Yakob,team_iraq,IRQ,MF,,,fantasy_player_634,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_irq_649,Ali Al Hamadi,team_iraq,IRQ,FW,,,fantasy_player_649,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_irq_630,Zaid Ismael,team_iraq,IRQ,MF,,,fantasy_player_630,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_jpn_677,Zion Suzuki,team_japan,JPN,GK,Parma Calcio 1913,whoscored_club_name:parma_calcio_1913,fantasy_player_677,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_jpn_669,Junya Ito,team_japan,JPN,MF,Genk,whoscored_club_name:genk,fantasy_player_669,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_jpn_670,Daizen Maeda,team_japan,JPN,MF,Celtic,whoscored_club_name:celtic,fantasy_player_670,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_jpn_681,Ao Tanaka,team_japan,JPN,MF,Leeds,whoscored_club_name:leeds,fantasy_player_681,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_jpn_1458,Takefusa Kubo,team_japan,JPN,MF,Real Sociedad,whoscored_club_name:real_sociedad,fantasy_player_1458,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_jpn_684,Ritsu Doan,team_japan,JPN,DF,Eintracht Frankfurt,whoscored_club_name:eintracht_frankfurt,fantasy_player_684,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_jpn_680,Yuito Suzuki,team_japan,JPN,MF,Freiburg,whoscored_club_name:freiburg,fantasy_player_680,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_jpn_668,Junnosuke Suzuki,team_japan,JPN,DF,FC Copenhagen,whoscored_club_name:fc_copenhagen,fantasy_player_668,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_jpn_672,Ayase Ueda,team_japan,JPN,FW,,,fantasy_player_672,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_jpn_1455,Takehiro Tomiyasu,team_japan,JPN,DF,,,fantasy_player_1455,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_jpn_1457,Wataru Endo,team_japan,JPN,MF,,,fantasy_player_1457,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_jpn_665,Hiroki Ito,team_japan,JPN,DF,,,fantasy_player_665,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_jor_701,Mousa Al Tamari,team_jordan,JOR,FW,Rennes,whoscored_club_name:rennes,fantasy_player_701,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_jor_1547,Ali Olwan,team_jordan,JOR,FW,,,fantasy_player_1547,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_jor_690,Yazan Al Arab,team_jordan,JOR,DF,,,fantasy_player_690,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_jor_710,Abdallah Al Fakhouri,team_jordan,JOR,GK,,,fantasy_player_710,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_jor_692,Mohannad Abu Taha,team_jordan,JOR,DF,,,fantasy_player_692,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_jor_1543,Ehsan Haddad,team_jordan,JOR,DF,,,fantasy_player_1543,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_jor_1544,Saed Al Rosan,team_jordan,JOR,DF,,,fantasy_player_1544,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_jor_1545,Anas Badawi,team_jordan,JOR,DF,,,fantasy_player_1545,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_jor_689,Nizar Al Rashdan,team_jordan,JOR,MF,,,fantasy_player_689,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_jor_687,Mohammad Al Daoud,team_jordan,JOR,MF,,,fantasy_player_687,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_jor_688,Noor Al Rawabdeh,team_jordan,JOR,MF,,,fantasy_player_688,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_jor_1546,Raja'ei Ayed,team_jordan,JOR,MF,,,fantasy_player_1546,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_kor_723,Son Heung-Min,team_korea_republic,KOR,FW,Los Angeles FC,whoscored_club_name:los_angeles_fc,fantasy_player_723,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_kor_715,Kim Min-Jae,team_korea_republic,KOR,DF,Bayern Munich,whoscored_club_name:bayern_munich,fantasy_player_715,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_kor_736,Lee Kang-In,team_korea_republic,KOR,MF,Paris Saint-Germain,whoscored_club_name:paris_saint_germain,fantasy_player_736,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_kor_729,Jo Hyeon-Woo,team_korea_republic,KOR,GK,Ulsan HD FC,whoscored_club_name:ulsan_hd_fc,fantasy_player_729,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_kor_737,Lee Jae-Sung,team_korea_republic,KOR,MF,Mainz 05,whoscored_club_name:mainz_05,fantasy_player_737,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_kor_724,Hwang Hee-Chan,team_korea_republic,KOR,FW,Wolves,whoscored_club_name:wolves,fantasy_player_724,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_kor_726,Oh Hyeon-Gyu,team_korea_republic,KOR,FW,,,fantasy_player_726,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_kor_1548,Lee Gi-Hyuk,team_korea_republic,KOR,DF,Gangwon FC,whoscored_club_name:gangwon_fc,fantasy_player_1548,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_kor_716,Seol Young-Woo,team_korea_republic,KOR,DF,FK Crvena Zvezda,whoscored_club_name:fk_crvena_zvezda,fantasy_player_716,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_kor_730,Kim Seung-Gyu,team_korea_republic,KOR,GK,,,fantasy_player_730,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_kor_731,Song Bum-Keun,team_korea_republic,KOR,GK,,,fantasy_player_731,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_kor_722,Kim Tae-Hyeon,team_korea_republic,KOR,DF,,,fantasy_player_722,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_mex_755,Guillermo Ochoa,team_mexico,MEX,GK,AEL Limassol,whoscored_club_name:ael_limassol,fantasy_player_755,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_mex_757,Raúl Rangel,team_mexico,MEX,GK,,,fantasy_player_757,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_mex_748,Raúl Jiménez,team_mexico,MEX,FW,Fulham,whoscored_club_name:fulham,fantasy_player_748,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_mex_740,Johan Vásquez,team_mexico,MEX,DF,Genoa,whoscored_club_name:genoa,fantasy_player_740,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_mex_758,Brian Gutiérrez,team_mexico,MEX,MF,,,fantasy_player_758,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_mex_1476,Gilberto Mora,team_mexico,MEX,MF,,,fantasy_player_1476,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_mex_743,Jorge Sánchez,team_mexico,MEX,DF,,,fantasy_player_743,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_mex_1465,Mateo Chávez,team_mexico,MEX,DF,AZ Alkmaar,whoscored_club_name:az_alkmaar,fantasy_player_1465,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_mex_1485,Santiago Giménez,team_mexico,MEX,FW,,,fantasy_player_1485,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_mex_1474,Edson Álvarez,team_mexico,MEX,MF,,,fantasy_player_1474,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_mex_741,César Montes,team_mexico,MEX,DF,,,fantasy_player_741,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_mex_742,Jesús Gallardo,team_mexico,MEX,DF,,,fantasy_player_742,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_mar_2012,Achraf Hakimi,team_morocco,MAR,DF,Paris Saint-Germain,whoscored_club_name:paris_saint_germain,fantasy_player_2012,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_mar_2010,Yassine Bounou,team_morocco,MAR,GK,Al Hilal,whoscored_club_name:al_hilal,fantasy_player_2010,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_mar_2015,Redouane Halhal,team_morocco,MAR,DF,KV Mechelen,whoscored_club_name:kv_mechelen,fantasy_player_2015,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_mar_2020,Brahim Díaz,team_morocco,MAR,MF,Real Madrid,whoscored_club_name:real_madrid,fantasy_player_2020,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_mar_2009,Ahmed Tagnaouti,team_morocco,MAR,GK,,,fantasy_player_2009,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_mar_2014,Noussair Mazraoui,team_morocco,MAR,DF,Manchester United,whoscored_club_name:manchester_united,fantasy_player_2014,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_mar_792,Ismael Saibari,team_morocco,MAR,MF,PSV Eindhoven,whoscored_club_name:psv_eindhoven,fantasy_player_792,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_mar_777,Ayoub El Kaabi,team_morocco,MAR,FW,Olympiacos,whoscored_club_name:olympiacos,fantasy_player_777,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_mar_2024,Abde Ezzalzouli,team_morocco,MAR,FW,,,fantasy_player_2024,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_mar_2016,Issa Diop,team_morocco,MAR,DF,,,fantasy_player_2016,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_mar_2011,Nayef Aguerd,team_morocco,MAR,DF,,,fantasy_player_2011,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_mar_782,Gessime Yassine,team_morocco,MAR,FW,,,fantasy_player_782,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ned_796,Virgil van Dijk,team_netherlands,NED,DF,Liverpool,whoscored_club_name:liverpool,fantasy_player_796,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ned_795,Denzel Dumfries,team_netherlands,NED,DF,Inter,whoscored_club_name:inter,fantasy_player_795,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ned_797,Micky van de Ven,team_netherlands,NED,DF,Tottenham,whoscored_club_name:tottenham,fantasy_player_797,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ned_804,Cody Gakpo,team_netherlands,NED,FW,Liverpool,whoscored_club_name:liverpool,fantasy_player_804,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ned_809,Bart Verbruggen,team_netherlands,NED,GK,Brighton,whoscored_club_name:brighton,fantasy_player_809,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ned_798,Nathan Aké,team_netherlands,NED,DF,Manchester City,whoscored_club_name:manchester_city,fantasy_player_798,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ned_2040,Frenkie de Jong,team_netherlands,NED,MF,Barcelona,whoscored_club_name:barcelona,fantasy_player_2040,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ned_816,Tijjani Reijnders,team_netherlands,NED,MF,Manchester City,whoscored_club_name:manchester_city,fantasy_player_816,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ned_805,Donyell Malen,team_netherlands,NED,FW,,,fantasy_player_805,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ned_2043,Memphis Depay,team_netherlands,NED,FW,,,fantasy_player_2043,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ned_802,Jan Paul van Hecke,team_netherlands,NED,DF,,,fantasy_player_802,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ned_812,Ryan Gravenberch,team_netherlands,NED,MF,,,fantasy_player_812,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_nzl_836,Lachlan Bayliss,team_new_zealand,NZL,MF,,,fantasy_player_836,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_nzl_1492,Matthew Garbett,team_new_zealand,NZL,FW,Peterborough,whoscored_club_name:peterborough,fantasy_player_1492,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_nzl_1493,Chris Wood,team_new_zealand,NZL,FW,Nottingham Forest,whoscored_club_name:nottingham_forest,fantasy_player_1493,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_nzl_827,Tim Payne,team_new_zealand,NZL,DF,Wellington Phoenix,whoscored_club_name:wellington_phoenix,fantasy_player_827,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_nzl_832,Elijah Just,team_new_zealand,NZL,MF,Motherwell,whoscored_club_name:motherwell,fantasy_player_832,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_nzl_835,Jesse Randall,team_new_zealand,NZL,FW,,,fantasy_player_835,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_nzl_838,Max Crocombe,team_new_zealand,NZL,GK,Millwall,whoscored_club_name:millwall,fantasy_player_838,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_nzl_839,Alex Paulsen,team_new_zealand,NZL,GK,Lechia Gdansk,whoscored_club_name:lechia_gdansk,fantasy_player_839,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_nzl_829,Callan Elliot,team_new_zealand,NZL,DF,,,fantasy_player_829,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_nzl_823,Marko Stamenic,team_new_zealand,NZL,MF,,,fantasy_player_823,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_nzl_822,Ryan Thomas,team_new_zealand,NZL,MF,,,fantasy_player_822,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_nzl_1494,Sarpreet Singh,team_new_zealand,NZL,MF,,,fantasy_player_1494,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_nor_855,Erling Haaland,team_norway,NOR,FW,Manchester City,whoscored_club_name:manchester_city,fantasy_player_855,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_nor_847,Julian Ryerson,team_norway,NOR,DF,Borussia Dortmund,whoscored_club_name:borussia_dortmund,fantasy_player_847,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_nor_1684,Martin Ødegaard,team_norway,NOR,MF,Arsenal,whoscored_club_name:arsenal,fantasy_player_1684,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_nor_863,Antonio Nusa,team_norway,NOR,MF,RB Leipzig,whoscored_club_name:rb_leipzig,fantasy_player_863,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_nor_859,Ørjan Nyland,team_norway,NOR,GK,Sevilla,whoscored_club_name:sevilla,fantasy_player_859,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_nor_856,Alexander Sørloth,team_norway,NOR,FW,Atletico Madrid,whoscored_club_name:atletico_madrid,fantasy_player_856,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_nor_850,David Møller Wolfe,team_norway,NOR,DF,,,fantasy_player_850,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_nor_1681,Sander Tangvik,team_norway,NOR,GK,Hamburger SV,whoscored_club_name:hamburger_sv,fantasy_player_1681,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_nor_843,Oscar Bobb,team_norway,NOR,MF,Fulham,whoscored_club_name:fulham,fantasy_player_843,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_nor_846,Kristoffer Ajer,team_norway,NOR,DF,,,fantasy_player_846,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_nor_841,Sander Berge,team_norway,NOR,MF,,,fantasy_player_841,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_nor_851,Fredrik Bjørkan,team_norway,NOR,DF,,,fantasy_player_851,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_pan_870,Amir Murillo,team_panama,PAN,DF,Besiktas,whoscored_club_name:besiktas,fantasy_player_870,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_pan_881,Cecilio Waterman,team_panama,PAN,FW,Universidad de Concepcion,whoscored_club_name:universidad_de_concepcion,fantasy_player_881,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_pan_871,José Córdoba,team_panama,PAN,DF,Norwich,whoscored_club_name:norwich,fantasy_player_871,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_pan_884,Luis Mejía,team_panama,PAN,GK,Nacional,whoscored_club_name:nacional,fantasy_player_884,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_pan_887,Adalberto Carrasquilla,team_panama,PAN,MF,Club Universidad Nacional,whoscored_club_name:club_universidad_nacional,fantasy_player_887,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_pan_879,Ismael Díaz,team_panama,PAN,FW,Leon,whoscored_club_name:leon,fantasy_player_879,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_pan_872,Éric Davis,team_panama,PAN,DF,Panama,whoscored_club_name:panama,fantasy_player_872,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_pan_885,Orlando Mosquera,team_panama,PAN,GK,Al-Fayha,whoscored_club_name:al_fayha,fantasy_player_885,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_pan_2026,Fidel Escobar,team_panama,PAN,DF,,,fantasy_player_2026,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_pan_873,César Blackman,team_panama,PAN,DF,,,fantasy_player_873,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_pan_875,Roderick Miller,team_panama,PAN,DF,,,fantasy_player_875,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_pan_876,Jiovany Ramos,team_panama,PAN,DF,,,fantasy_player_876,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_par_901,Miguel Almirón,team_paraguay,PAR,MF,Atlanta United,whoscored_club_name:atlanta_united,fantasy_player_901,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_par_895,Omar Alderete,team_paraguay,PAR,DF,Sunderland,whoscored_club_name:sunderland,fantasy_player_895,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_par_910,Orlando Gill,team_paraguay,PAR,GK,San Lorenzo,whoscored_club_name:san_lorenzo,fantasy_player_910,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_par_893,Gustavo Gómez,team_paraguay,PAR,DF,Palmeiras,whoscored_club_name:palmeiras,fantasy_player_893,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_par_896,Fabián Balbuena,team_paraguay,PAR,DF,Gremio,whoscored_club_name:gremio,fantasy_player_896,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_par_908,Roberto Fernández,team_paraguay,PAR,GK,Akron Togliatti,whoscored_club_name:akron_togliatti,fantasy_player_908,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_par_913,Diego Gómez,team_paraguay,PAR,MF,Brighton,whoscored_club_name:brighton,fantasy_player_913,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_par_912,Julio Enciso,team_paraguay,PAR,MF,Strasbourg,whoscored_club_name:strasbourg,fantasy_player_912,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_par_902,Antonio Sanabria,team_paraguay,PAR,FW,,,fantasy_player_902,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_par_904,Álex Arce,team_paraguay,PAR,FW,,,fantasy_player_904,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_par_905,Gabriel Ávalos,team_paraguay,PAR,FW,,,fantasy_player_905,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_par_889,Alejandro Romero,team_paraguay,PAR,MF,,,fantasy_player_889,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_por_939,Bruno Fernandes,team_portugal,POR,MF,Manchester United,whoscored_club_name:manchester_united,fantasy_player_939,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_por_916,Nuno Mendes,team_portugal,POR,DF,Paris Saint-Germain,whoscored_club_name:paris_saint_germain,fantasy_player_916,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_por_1573,Cristiano Ronaldo,team_portugal,POR,FW,Al Nassr FC,whoscored_club_name:al_nassr_fc,fantasy_player_1573,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_por_936,Vitinha,team_portugal,POR,MF,,,fantasy_player_936,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_por_1569,Diogo Costa,team_portugal,POR,GK,FC Porto,whoscored_club_name:fc_porto,fantasy_player_1569,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_por_917,João Cancelo,team_portugal,POR,DF,Barcelona,whoscored_club_name:barcelona,fantasy_player_917,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_por_1570,Rúben Dias,team_portugal,POR,DF,Manchester City,whoscored_club_name:manchester_city,fantasy_player_1570,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_por_937,João Neves,team_portugal,POR,MF,Paris Saint-Germain,whoscored_club_name:paris_saint_germain,fantasy_player_937,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_por_918,Diogo Dalot,team_portugal,POR,DF,,,fantasy_player_918,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_por_1572,Bernardo Silva,team_portugal,POR,MF,,,fantasy_player_1572,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_por_924,João Félix,team_portugal,POR,FW,,,fantasy_player_924,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_por_1574,Rafael Leão,team_portugal,POR,MF,,,fantasy_player_1574,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_qat_1509,Jassem Gaber,team_qatar,QAT,MF,,,fantasy_player_1509,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_qat_958,Akram Afif,team_qatar,QAT,FW,,,fantasy_player_958,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_qat_960,Edmílson Junior,team_qatar,QAT,FW,Al-Duhail SC,whoscored_club_name:al_duhail_sc,fantasy_player_960,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_qat_942,Mohammad Al Mannai,team_qatar,QAT,MF,,,fantasy_player_942,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_qat_971,Mahmud Abunada,team_qatar,QAT,GK,,,fantasy_player_971,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_qat_1510,Ahmed Alaa,team_qatar,QAT,FW,Qatar,whoscored_club_name:qatar,fantasy_player_1510,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_qat_959,Almoez Ali,team_qatar,QAT,FW,Al-Duhail SC,whoscored_club_name:al_duhail_sc,fantasy_player_959,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_qat_1508,Abdulaziz Hatem,team_qatar,QAT,MF,Qatar,whoscored_club_name:qatar,fantasy_player_1508,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_qat_1511,Mohammed Muntari,team_qatar,QAT,FW,Al-Gharafa,whoscored_club_name:al_gharafa,fantasy_player_1511,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_qat_947,Assim Madibo,team_qatar,QAT,MF,,,fantasy_player_947,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_qat_946,Karim Boudiaf,team_qatar,QAT,MF,,,fantasy_player_946,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_qat_944,Ahmed Fathy,team_qatar,QAT,MF,,,fantasy_player_944,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ksa_1956,Alaa Al Hejji,team_saudi_arabia,KSA,MF,,,fantasy_player_1956,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ksa_972,Musab Al Juwayr,team_saudi_arabia,KSA,MF,Al Qadsiah,whoscored_club_name:al_qadsiah,fantasy_player_972,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ksa_1953,Jehad Thikri,team_saudi_arabia,KSA,DF,,,fantasy_player_1953,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ksa_1001,Mohammed Al Owais,team_saudi_arabia,KSA,GK,Saudi Arabia,whoscored_club_name:saudi_arabia,fantasy_player_1001,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ksa_1955,Salem Al Dawsari,team_saudi_arabia,KSA,MF,Al Hilal,whoscored_club_name:al_hilal,fantasy_player_1955,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ksa_983,Saud Abdulhamid,team_saudi_arabia,KSA,DF,Lens,whoscored_club_name:lens,fantasy_player_983,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ksa_999,Nawaf Al Aqidi,team_saudi_arabia,KSA,GK,Al Nassr FC,whoscored_club_name:al_nassr_fc,fantasy_player_999,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ksa_1957,Nasser Al Dawsari,team_saudi_arabia,KSA,MF,Al Hilal,whoscored_club_name:al_hilal,fantasy_player_1957,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ksa_993,Abdullah Al Hamddan,team_saudi_arabia,KSA,FW,,,fantasy_player_993,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ksa_994,Khalid Al Ghannam,team_saudi_arabia,KSA,FW,Al-Ettifaq,whoscored_club_name:al_ettifaq,fantasy_player_994,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ksa_995,Saleh Al Shehri,team_saudi_arabia,KSA,FW,,,fantasy_player_995,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_ksa_1951,Hassan Al Tambakti,team_saudi_arabia,KSA,DF,,,fantasy_player_1951,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sco_1027,Scott McTominay,team_scotland,SCO,MF,Napoli,whoscored_club_name:napoli,fantasy_player_1027,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sco_1009,Andy Robertson,team_scotland,SCO,DF,Liverpool,whoscored_club_name:liverpool,fantasy_player_1009,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sco_1576,Craig Gordon,team_scotland,SCO,GK,Hearts,whoscored_club_name:hearts,fantasy_player_1576,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sco_1003,John McGinn,team_scotland,SCO,MF,Aston Villa,whoscored_club_name:aston_villa,fantasy_player_1003,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sco_1025,Angus Gunn,team_scotland,SCO,GK,Nottingham Forest,whoscored_club_name:nottingham_forest,fantasy_player_1025,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sco_1010,Kieran Tierney,team_scotland,SCO,DF,Celtic,whoscored_club_name:celtic,fantasy_player_1010,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sco_1580,Lawrence Shankland,team_scotland,SCO,FW,Hearts,whoscored_club_name:hearts,fantasy_player_1580,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sco_1018,Grant Hanley,team_scotland,SCO,DF,Hibernian,whoscored_club_name:hibernian,fantasy_player_1018,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sco_1011,Nathan Patterson,team_scotland,SCO,DF,,,fantasy_player_1011,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sco_1023,Findlay Curtis,team_scotland,SCO,FW,,,fantasy_player_1023,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sco_1019,Ché Adams,team_scotland,SCO,FW,,,fantasy_player_1019,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sco_1578,Ben Gannon-Doak,team_scotland,SCO,MF,,,fantasy_player_1578,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sen_1696,Sadio Mané,team_senegal,SEN,MF,Al Nassr FC,whoscored_club_name:al_nassr_fc,fantasy_player_1696,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sen_1051,Édouard Mendy,team_senegal,SEN,GK,Al Ahli,whoscored_club_name:al_ahli,fantasy_player_1051,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sen_1037,Kalidou Koulibaly,team_senegal,SEN,DF,Al Hilal,whoscored_club_name:al_hilal,fantasy_player_1037,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sen_1035,El Hadji Malick Diouf,team_senegal,SEN,DF,,,fantasy_player_1035,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sen_1042,Iliman Ndiaye,team_senegal,SEN,FW,Everton,whoscored_club_name:everton,fantasy_player_1042,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sen_1043,Ismaïla Sarr,team_senegal,SEN,FW,Crystal Palace,whoscored_club_name:crystal_palace,fantasy_player_1043,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sen_1030,Pape Matar Sarr,team_senegal,SEN,MF,Tottenham,whoscored_club_name:tottenham,fantasy_player_1030,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sen_1041,Nicolas Jackson,team_senegal,SEN,FW,Bayern Munich,whoscored_club_name:bayern_munich,fantasy_player_1041,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sen_1029,Idrissa Gueye,team_senegal,SEN,MF,Everton,whoscored_club_name:everton,fantasy_player_1029,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sen_1033,Mamadou Sarr,team_senegal,SEN,DF,,,fantasy_player_1033,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sen_1039,Antoine Mendy,team_senegal,SEN,DF,,,fantasy_player_1039,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sen_1056,Habib Diarra,team_senegal,SEN,MF,,,fantasy_player_1056,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_rsa_1057,Jayden Adams,team_south_africa,RSA,MF,Mamelodi Sundowns FC,whoscored_club_name:mamelodi_sundowns_fc,fantasy_player_1057,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_rsa_1077,Ronwen Williams,team_south_africa,RSA,GK,Mamelodi Sundowns FC,whoscored_club_name:mamelodi_sundowns_fc,fantasy_player_1077,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_rsa_1067,Mbekezeli Mbokazi,team_south_africa,RSA,DF,Chicago Fire FC,whoscored_club_name:chicago_fire_fc,fantasy_player_1067,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_rsa_1700,Olwethu Makhanya,team_south_africa,RSA,DF,Philadelphia Union,whoscored_club_name:philadelphia_union,fantasy_player_1700,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_rsa_1058,Teboho Mokoena,team_south_africa,RSA,MF,Mamelodi Sundowns FC,whoscored_club_name:mamelodi_sundowns_fc,fantasy_player_1058,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_rsa_1071,Lyle Foster,team_south_africa,RSA,FW,Burnley,whoscored_club_name:burnley,fantasy_player_1071,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_rsa_1072,Relebohile Mofokeng,team_south_africa,RSA,FW,,,fantasy_player_1072,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_rsa_1073,Oswin Appollis,team_south_africa,RSA,FW,,,fantasy_player_1073,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_rsa_1059,Themba Zwane,team_south_africa,RSA,MF,,,fantasy_player_1059,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_rsa_1063,Aubrey Modiba,team_south_africa,RSA,DF,,,fantasy_player_1063,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_rsa_1065,Khuliso Mudau,team_south_africa,RSA,DF,,,fantasy_player_1065,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_rsa_1707,Iqraam Rayners,team_south_africa,RSA,MF,,,fantasy_player_1707,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_esp_1092,Lamine Yamal,team_spain,ESP,MF,Barcelona,whoscored_club_name:barcelona,fantasy_player_1092,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_esp_1088,Marc Cucurella,team_spain,ESP,DF,Chelsea,whoscored_club_name:chelsea,fantasy_player_1088,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_esp_1094,Mikel Oyarzabal,team_spain,ESP,FW,Real Sociedad,whoscored_club_name:real_sociedad,fantasy_player_1094,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_esp_1098,David Raya,team_spain,ESP,GK,Arsenal,whoscored_club_name:arsenal,fantasy_player_1098,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_esp_1106,Pedri,team_spain,ESP,MF,Barcelona,whoscored_club_name:barcelona,fantasy_player_1106,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_esp_1085,Pedro Porro,team_spain,ESP,DF,Tottenham,whoscored_club_name:tottenham,fantasy_player_1085,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_esp_1099,Unai Simón,team_spain,ESP,GK,Athletic Club,whoscored_club_name:athletic_club,fantasy_player_1099,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_esp_1089,Pau Cubarsí,team_spain,ESP,DF,Barcelona,whoscored_club_name:barcelona,fantasy_player_1089,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_esp_1102,Marcos Llorente,team_spain,ESP,DF,,,fantasy_player_1102,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_esp_1086,Aymeric Laporte,team_spain,ESP,DF,,,fantasy_player_1086,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_esp_1093,Ferran Torres,team_spain,ESP,FW,,,fantasy_player_1093,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_esp_2000,Nico Williams,team_spain,ESP,MF,,,fantasy_player_2000,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_swe_1124,Viktor Gyökeres,team_sweden,SWE,FW,Arsenal,whoscored_club_name:arsenal,fantasy_player_1124,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_swe_1520,Alexander Isak,team_sweden,SWE,FW,Liverpool,whoscored_club_name:liverpool,fantasy_player_1520,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_swe_1121,Victor Lindelöf,team_sweden,SWE,DF,Aston Villa,whoscored_club_name:aston_villa,fantasy_player_1121,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_swe_1119,Gabriel Gudmundsson,team_sweden,SWE,DF,Leeds,whoscored_club_name:leeds,fantasy_player_1119,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_swe_1118,Daniel Svensson,team_sweden,SWE,DF,Borussia Dortmund,whoscored_club_name:borussia_dortmund,fantasy_player_1118,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_swe_1125,Anthony Elanga,team_sweden,SWE,FW,Newcastle,whoscored_club_name:newcastle,fantasy_player_1125,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_swe_1113,Lucas Bergvall,team_sweden,SWE,MF,Tottenham,whoscored_club_name:tottenham,fantasy_player_1113,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_swe_1129,Kristoffer Nordfeldt,team_sweden,SWE,GK,AIK,whoscored_club_name:aik,fantasy_player_1129,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_swe_1114,Yasin Ayari,team_sweden,SWE,MF,,,fantasy_player_1114,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_swe_2062,Herman Johansson,team_sweden,SWE,MF,,,fantasy_player_2062,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_swe_1514,Viktor Johansson,team_sweden,SWE,GK,,,fantasy_player_1514,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_swe_1122,Gustaf Lagerbielke,team_sweden,SWE,DF,,,fantasy_player_1122,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sui_1153,Gregor Kobel,team_switzerland,SUI,GK,Borussia Dortmund,whoscored_club_name:borussia_dortmund,fantasy_player_1153,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sui_1141,Manuel Akanji,team_switzerland,SUI,DF,Inter,whoscored_club_name:inter,fantasy_player_1141,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sui_1135,Granit Xhaka,team_switzerland,SUI,MF,Sunderland,whoscored_club_name:sunderland,fantasy_player_1135,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sui_1143,Nico Elvedi,team_switzerland,SUI,DF,Borussia M.Gladbach,whoscored_club_name:borussia_m_gladbach,fantasy_player_1143,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sui_1149,Breel Embolo,team_switzerland,SUI,FW,Rennes,whoscored_club_name:rennes,fantasy_player_1149,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sui_1142,Ricardo Rodríguez,team_switzerland,SUI,DF,,,fantasy_player_1142,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sui_1144,Silvan Widmer,team_switzerland,SUI,DF,Mainz 05,whoscored_club_name:mainz_05,fantasy_player_1144,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sui_1151,Dan Ndoye,team_switzerland,SUI,FW,Nottingham Forest,whoscored_club_name:nottingham_forest,fantasy_player_1151,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sui_1158,Rubén Vargas,team_switzerland,SUI,MF,,,fantasy_player_1158,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sui_1150,Noah Okafor,team_switzerland,SUI,FW,,,fantasy_player_1150,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sui_1145,Miro Muheim,team_switzerland,SUI,DF,,,fantasy_player_1145,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_sui_1133,Johan Manzambi,team_switzerland,SUI,MF,,,fantasy_player_1133,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_tun_1163,Mortadha Ben Ouanes,team_tunisia,TUN,MF,Kasimpasa,whoscored_club_name:kasimpasa,fantasy_player_1163,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_tun_1183,Khalil Ayari,team_tunisia,TUN,FW,,,fantasy_player_1183,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_tun_1555,Hannibal Mejbri,team_tunisia,TUN,MF,Burnley,whoscored_club_name:burnley,fantasy_player_1555,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_tun_1178,Hazem Mastouri,team_tunisia,TUN,FW,Dynamo Makhachkala,whoscored_club_name:dynamo_makhachkala,fantasy_player_1178,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_tun_1166,Ali Abdi,team_tunisia,TUN,DF,Nice,whoscored_club_name:nice,fantasy_player_1166,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_tun_1184,Abdelmouhib Chamakh,team_tunisia,TUN,GK,,,fantasy_player_1184,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_tun_1181,Rayan Elloumi,team_tunisia,TUN,FW,,,fantasy_player_1181,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_tun_1551,Montassar Talbi,team_tunisia,TUN,DF,Lorient,whoscored_club_name:lorient,fantasy_player_1551,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_tun_1187,Sabri Ben Hessen,team_tunisia,TUN,GK,,,fantasy_player_1187,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_tun_1164,Anis Ben Slimane,team_tunisia,TUN,MF,,,fantasy_player_1164,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_tun_1162,Hadj Mahmoud,team_tunisia,TUN,MF,,,fantasy_player_1162,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_tun_1554,Elias Achouri,team_tunisia,TUN,MF,,,fantasy_player_1554,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_tur_1215,Arda Güler,team_turkiye,TUR,MF,Real Madrid,whoscored_club_name:real_madrid,fantasy_player_1215,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_tur_1204,Kenan Yildiz,team_turkiye,TUR,MF,Juventus,whoscored_club_name:juventus,fantasy_player_1204,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_tur_1216,Hakan Çalhanoglu,team_turkiye,TUR,MF,Inter,whoscored_club_name:inter,fantasy_player_1216,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_tur_1195,Ferdi Kadioglu,team_turkiye,TUR,DF,Brighton,whoscored_club_name:brighton,fantasy_player_1195,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_tur_1211,Ugurcan Çakir,team_turkiye,TUR,GK,Galatasaray,whoscored_club_name:galatasaray,fantasy_player_1211,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_tur_1208,Oguz Aydin,team_turkiye,TUR,FW,Fenerbahce,whoscored_club_name:fenerbahce,fantasy_player_1208,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_tur_1201,Merih Demiral,team_turkiye,TUR,DF,Al Ahli,whoscored_club_name:al_ahli,fantasy_player_1201,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_tur_1212,Altay Bayindir,team_turkiye,TUR,GK,Manchester United,whoscored_club_name:manchester_united,fantasy_player_1212,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_tur_1206,Baris Alper Yilmaz,team_turkiye,TUR,FW,,,fantasy_player_1206,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_tur_1200,Abdülkerim Bardakci,team_turkiye,TUR,DF,,,fantasy_player_1200,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_tur_1205,Kerem Aktürkoglu,team_turkiye,TUR,FW,,,fantasy_player_1205,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_tur_1192,Orkun Kökçü,team_turkiye,TUR,MF,,,fantasy_player_1192,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_uru_1248,Federico Valverde,team_uruguay,URU,MF,Real Madrid,whoscored_club_name:real_madrid,fantasy_player_1248,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_uru_1244,Sergio Rochet,team_uruguay,URU,GK,Internacional,whoscored_club_name:internacional,fantasy_player_1244,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_uru_1226,Ronald Araujo,team_uruguay,URU,DF,Barcelona,whoscored_club_name:barcelona,fantasy_player_1226,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_uru_1236,Darwin Núñez,team_uruguay,URU,FW,Al Hilal,whoscored_club_name:al_hilal,fantasy_player_1236,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_uru_1227,José María Giménez,team_uruguay,URU,DF,Atletico Madrid,whoscored_club_name:atletico_madrid,fantasy_player_1227,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_uru_1229,Mathías Olivera,team_uruguay,URU,DF,Napoli,whoscored_club_name:napoli,fantasy_player_1229,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_uru_1245,Fernando Muslera,team_uruguay,URU,GK,Estudiantes,whoscored_club_name:estudiantes,fantasy_player_1245,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_uru_1230,Guillermo Varela,team_uruguay,URU,DF,Flamengo,whoscored_club_name:flamengo,fantasy_player_1230,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_uru_1247,Giorgian de Arrascaeta,team_uruguay,URU,MF,,,fantasy_player_1247,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_uru_1223,Maxi Araújo,team_uruguay,URU,MF,,,fantasy_player_1223,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_uru_2064,Rodrigo Bentancur,team_uruguay,URU,MF,,,fantasy_player_2064,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_uru_1224,Manuel Ugarte,team_uruguay,URU,MF,,,fantasy_player_1224,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_usa_1274,Christian Pulisic,team_usa,USA,MF,AC Milan,whoscored_club_name:ac_milan,fantasy_player_1274,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_usa_1258,Antonee Robinson,team_usa,USA,DF,Fulham,whoscored_club_name:fulham,fantasy_player_1258,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_usa_2031,Sergiño Dest,team_usa,USA,DF,PSV Eindhoven,whoscored_club_name:psv_eindhoven,fantasy_player_2031,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_usa_1267,Folarin Balogun,team_usa,USA,FW,Monaco,whoscored_club_name:monaco,fantasy_player_1267,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_usa_1270,Matt Turner,team_usa,USA,GK,New England Revolution,whoscored_club_name:new_england_revolution,fantasy_player_1270,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_usa_1273,Chris Brady,team_usa,USA,GK,Chicago Fire FC,whoscored_club_name:chicago_fire_fc,fantasy_player_1273,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_usa_1259,Chris Richards,team_usa,USA,DF,Crystal Palace,whoscored_club_name:crystal_palace,fantasy_player_1259,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_usa_1255,Weston McKennie,team_usa,USA,MF,Juventus,whoscored_club_name:juventus,fantasy_player_1255,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_usa_1271,Matt Freese,team_usa,USA,GK,,,fantasy_player_1271,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_usa_1264,Alexander Freeman,team_usa,USA,DF,,,fantasy_player_1264,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_usa_2032,Miles Robinson,team_usa,USA,DF,,,fantasy_player_2032,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_usa_1265,Timothy Weah,team_usa,USA,MF,,,fantasy_player_1265,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_uzb_1293,Abdukodir Khusanov,team_uzbekistan,UZB,DF,Manchester City,whoscored_club_name:manchester_city,fantasy_player_1293,,core_shortlist,,1,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_uzb_1284,Otabek Shukurov,team_uzbekistan,UZB,MF,Uzbekistan,whoscored_club_name:uzbekistan,fantasy_player_1284,,core_shortlist,,2,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_uzb_1311,Abduvokhid Ne'matov,team_uzbekistan,UZB,GK,,,fantasy_player_1311,,core_shortlist,,3,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_uzb_1314,Botirali Ergashev,team_uzbekistan,UZB,GK,,,fantasy_player_1314,,core_shortlist,,4,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_uzb_1306,Eldor Shomurodov,team_uzbekistan,UZB,FW,Istanbul Basaksehir,whoscored_club_name:istanbul_basaksehir,fantasy_player_1306,,core_shortlist,,5,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_uzb_1310,Azizbek Amanov,team_uzbekistan,UZB,FW,,,fantasy_player_1310,,core_shortlist,,6,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_uzb_1275,Abdulla Abdullaev,team_uzbekistan,UZB,MF,,,fantasy_player_1275,,core_shortlist,,7,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_uzb_1300,Umar Eshmurodov,team_uzbekistan,UZB,DF,,,fantasy_player_1300,,core_shortlist,,8,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_uzb_1292,Abbosbek Fayzullaev,team_uzbekistan,UZB,MF,Istanbul Basaksehir,whoscored_club_name:istanbul_basaksehir,fantasy_player_1292,,core_shortlist,,9,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_uzb_1291,Jaloliddin Masharipov,team_uzbekistan,UZB,MF,,,fantasy_player_1291,,core_shortlist,,10,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_uzb_1307,Igor Sergeev,team_uzbekistan,UZB,FW,,,fantasy_player_1307,,core_shortlist,,11,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00
+player_uzb_1290,Jamshid Iskanderov,team_uzbekistan,UZB,MF,,,fantasy_player_1290,,core_shortlist,,12,fifa_fantasy_percent_selected_then_price,2026-06-10T18:00:00+08:00

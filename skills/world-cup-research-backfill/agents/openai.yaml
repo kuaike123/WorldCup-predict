@@ -1,0 +1,4 @@
+interface:
+  display_name: "World Cup Research Backfill"
+  short_description: "Backfill World Cup research with independent providers"
+  default_prompt: "Backfill the requested World Cup fixtures, preserve existing IDs, and report selected research/odds providers, fallback reasons, and data quality."

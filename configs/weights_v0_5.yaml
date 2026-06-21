@@ -1,0 +1,24 @@
+version: v0.5.0
+pre_match_weights:
+  team_strength: 0.18
+  recent_form: 0.16
+  lineup_integrity: 0.15
+  key_player_status: 0.12
+  attack_defense_efficiency: 0.14
+  schedule_fatigue: 0.08
+  motivation_stage: 0.07
+  odds_movement: 0.10
+market_signal_internal_weights:
+  european_odds_movement: 0.30
+  asian_handicap_movement: 0.35
+  over_under_movement: 0.20
+  bookmaker_consensus: 0.15
+constraints:
+  total_weight: 1.00
+  market_signal_max_weight: 0.20
+  auto_apply_weight_adjustment: false
+risk_thresholds:
+  close_score_gap: 5
+  missing_field_ratio_high: 0.20
+  high_odds_dispersion: 0.12
+  low_confidence_floor: 45

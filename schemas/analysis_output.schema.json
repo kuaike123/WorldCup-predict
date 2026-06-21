@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "v0.5 Analysis Output",
+  "type": "object",
+  "required": [
+    "match_id",
+    "weights_version",
+    "home_team",
+    "away_team",
+    "home_score",
+    "away_score",
+    "score_gap",
+    "probabilities",
+    "market_signal",
+    "risk_level",
+    "confidence",
+    "main_direction",
+    "secondary_direction",
+    "recommended_scores",
+    "dimension_breakdown",
+    "reason_codes",
+    "explanation",
+    "disclaimer",
+    "data_quality_score",
+    "missing_fields",
+    "input_snapshot"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "match_id": {"type": "string"},
+    "weights_version": {"type": "string"},
+    "home_team": {"type": "string"},
+    "away_team": {"type": "string"},
+    "home_score": {"type": "number"},
+    "away_score": {"type": "number"},
+    "score_gap": {"type": "number"},
+    "probabilities": {
+      "type": "object",
+      "required": ["home_win", "draw", "away_win", "over_2_5", "upset_risk"],
+      "properties": {
+        "home_win": {"type": "number", "minimum": 0, "maximum": 1},
+        "draw": {"type": "number", "minimum": 0, "maximum": 1},
+        "away_win": {"type": "number", "minimum": 0, "maximum": 1},
+        "over_2_5": {"type": "number", "minimum": 0, "maximum": 1},
+        "upset_risk": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    },
+    "market_signal": {"type": "object"},
+    "risk_level": {"enum": ["low", "medium", "high"]},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 100},
+    "main_direction": {"type": "string"},
+    "secondary_direction": {"type": "string"},
+    "recommended_scores": {"type": "array", "items": {"type": "string"}},
+    "dimension_breakdown": {"type": "array", "items": {"type": "object"}},
+    "reason_codes": {"type": "array", "items": {"type": "string"}},
+    "explanation": {"type": "string"},
+    "disclaimer": {"type": "string"},
+    "data_quality_score": {"type": "number", "minimum": 0, "maximum": 1},
+    "missing_fields": {"type": "array", "items": {"type": "string"}},
+    "input_snapshot": {"type": "object"}
+  }
+}

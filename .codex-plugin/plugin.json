@@ -1,0 +1,18 @@
+{
+  "name": "world-cup-agent-open",
+  "version": "1.0.0",
+  "description": "Provider-based World Cup research backfill and scoring plugin.",
+  "author": {
+    "name": "World Cup Agent"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "World Cup Agent Open",
+    "shortDescription": "Backfill World Cup research and odds from independent providers.",
+    "longDescription": "Open-source World Cup research plugin with independent Sportradar, The Odds API, and optional crawler provider paths, stable JSON quality reporting, and a keyless offline demo.",
+    "developerName": "World Cup Agent",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": "Run the World Cup research backfill skill for the requested fixtures and report provider selection and data quality."
+  }
+}

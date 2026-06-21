@@ -1,0 +1,63 @@
+{
+  "match_id": "morocco_portugal_cautious",
+  "home_team": "Morocco",
+  "away_team": "Portugal",
+  "match_time": "2022-12-10T23:00:00+08:00",
+  "competition": "World Cup",
+  "stage": "Quarter Final",
+  "neutral_field": true,
+  "team_features": {
+    "home": {
+      "elo_score": 78,
+      "fifa_rank_score": 76,
+      "squad_value_score": 72,
+      "recent_points_per_game": 2.1,
+      "last_5_goal_diff": 4,
+      "unbeaten_rate": 0.8,
+      "expected_starters_available_ratio": 0.88,
+      "injury_impact_score": 80,
+      "key_players_available_ratio": 0.84,
+      "key_player_form_score": 82,
+      "xg_for": 1.25,
+      "xg_against": 0.65,
+      "goals_for_per_match": 1.4,
+      "goals_against_per_match": 0.4,
+      "rest_days": 4,
+      "travel_km": 120,
+      "extra_time_recent": true,
+      "climate_adjustment": 2,
+      "motivation_score": 96,
+      "must_win": true,
+      "knockout": true
+    },
+    "away": {
+      "elo_score": 84,
+      "fifa_rank_score": 83,
+      "squad_value_score": 88,
+      "recent_points_per_game": 2.0,
+      "last_5_goal_diff": 6,
+      "unbeaten_rate": 0.6,
+      "expected_starters_available_ratio": 0.9,
+      "injury_impact_score": 83,
+      "key_players_available_ratio": 0.88,
+      "key_player_form_score": 85,
+      "xg_for": 1.95,
+      "xg_against": 1.0,
+      "goals_for_per_match": 2.0,
+      "goals_against_per_match": 0.9,
+      "rest_days": 4,
+      "travel_km": 160,
+      "extra_time_recent": false,
+      "climate_adjustment": 0,
+      "motivation_score": 94,
+      "must_win": true,
+      "knockout": true
+    }
+  },
+  "odds_snapshots": [
+    {"snapshot_time": "2022-12-09T12:00:00+08:00", "bookmaker": "A", "home_win_odds": 5.3, "draw_odds": 3.45, "away_win_odds": 1.75, "asian_handicap": 0.75, "home_water": 0.92, "away_water": 0.98, "total_goals_line": 2.25, "over_water": 0.98, "under_water": 0.92},
+    {"snapshot_time": "2022-12-10T20:00:00+08:00", "bookmaker": "A", "home_win_odds": 5.1, "draw_odds": 3.25, "away_win_odds": 1.82, "asian_handicap": 0.75, "home_water": 0.86, "away_water": 1.04, "total_goals_line": 2.0, "over_water": 1.02, "under_water": 0.88},
+    {"snapshot_time": "2022-12-09T12:00:00+08:00", "bookmaker": "B", "home_win_odds": 5.4, "draw_odds": 3.4, "away_win_odds": 1.74, "asian_handicap": 0.75, "home_water": 0.93, "away_water": 0.97, "total_goals_line": 2.25, "over_water": 0.97, "under_water": 0.93},
+    {"snapshot_time": "2022-12-10T20:00:00+08:00", "bookmaker": "B", "home_win_odds": 5.05, "draw_odds": 3.2, "away_win_odds": 1.84, "asian_handicap": 0.75, "home_water": 0.85, "away_water": 1.05, "total_goals_line": 2.0, "over_water": 1.03, "under_water": 0.87}
+  ]
+}

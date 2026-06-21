@@ -1,0 +1,24 @@
+{
+  "match_id": "missing_fields_example",
+  "home_team": "Home Example",
+  "away_team": "Away Example",
+  "match_time": "2026-06-20T22:00:00+08:00",
+  "competition": "Friendly",
+  "stage": "Test",
+  "neutral_field": true,
+  "team_features": {
+    "home": {
+      "elo_score": 75,
+      "motivation_score": 70,
+      "must_win": false,
+      "knockout": false
+    },
+    "away": {
+      "elo_score": 72,
+      "motivation_score": 68,
+      "must_win": false,
+      "knockout": false
+    }
+  },
+  "odds_snapshots": []
+}

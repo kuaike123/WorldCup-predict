@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "v0.5 Match Input",
+  "type": "object",
+  "required": [
+    "match_id",
+    "home_team",
+    "away_team",
+    "match_time",
+    "competition",
+    "stage",
+    "neutral_field",
+    "team_features",
+    "odds_snapshots"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "match_id": {"type": "string", "minLength": 1},
+    "home_team": {"type": "string", "minLength": 1},
+    "away_team": {"type": "string", "minLength": 1},
+    "match_time": {"type": "string", "minLength": 1},
+    "competition": {"type": "string", "minLength": 1},
+    "stage": {"type": "string", "minLength": 1},
+    "neutral_field": {"type": "boolean"},
+    "team_features": {
+      "type": "object",
+      "required": ["home", "away"],
+      "additionalProperties": false,
+      "properties": {
+        "home": {"$ref": "#/$defs/teamFeatures"},
+        "away": {"$ref": "#/$defs/teamFeatures"}
+      }
+    },
+    "odds_snapshots": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/oddsSnapshot"}
+    }
+  },
+  "$defs": {
+    "teamFeatures": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "elo_score": {"type": "number", "minimum": 0, "maximum": 100},
+        "fifa_rank_score": {"type": "number", "minimum": 0, "maximum": 100},
+        "squad_value_score": {"type": "number", "minimum": 0, "maximum": 100},
+        "recent_points_per_game": {"type": "number", "minimum": 0, "maximum": 3},
+        "last_5_goal_diff": {"type": "number"},
+        "unbeaten_rate": {"type": "number", "minimum": 0, "maximum": 1},
+        "expected_starters_available_ratio": {"type": "number", "minimum": 0, "maximum": 1},
+        "injury_impact_score": {"type": "number", "minimum": 0, "maximum": 100},
+        "key_players_available_ratio": {"type": "number", "minimum": 0, "maximum": 1},
+        "key_player_form_score": {"type": "number", "minimum": 0, "maximum": 100},
+        "xg_for": {"type": "number", "minimum": 0},
+        "xg_against": {"type": "number", "minimum": 0},
+        "goals_for_per_match": {"type": "number", "minimum": 0},
+        "goals_against_per_match": {"type": "number", "minimum": 0},
+        "rest_days": {"type": "number", "minimum": 0},
+        "travel_km": {"type": "number", "minimum": 0},
+        "extra_time_recent": {"type": "boolean"},
+        "climate_adjustment": {"type": "number", "minimum": -20, "maximum": 20},
+        "motivation_score": {"type": "number", "minimum": 0, "maximum": 100},
+        "must_win": {"type": "boolean"},
+        "knockout": {"type": "boolean"}
+      }
+    },
+    "oddsSnapshot": {
+      "type": "object",
+      "required": ["snapshot_time", "bookmaker"],
+      "additionalProperties": false,
+      "properties": {
+        "snapshot_time": {"type": "string", "minLength": 1},
+        "bookmaker": {"type": "string", "minLength": 1},
+        "home_win_odds": {"type": "number", "exclusiveMinimum": 1},
+        "draw_odds": {"type": "number", "exclusiveMinimum": 1},
+        "away_win_odds": {"type": "number", "exclusiveMinimum": 1},
+        "asian_handicap": {"type": "number"},
+        "home_water": {"type": "number"},
+        "away_water": {"type": "number"},
+        "total_goals_line": {"type": "number", "minimum": 0},
+        "over_water": {"type": "number"},
+        "under_water": {"type": "number"}
+      }
+    }
+  }
+}

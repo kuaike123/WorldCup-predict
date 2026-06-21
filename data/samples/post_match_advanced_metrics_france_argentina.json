@@ -1,0 +1,153 @@
+{
+  "match_id": "france_argentina",
+  "advanced_metrics_events": [
+    {
+      "event_id": "wc2022_final_021_messi_penalty",
+      "minute": 21,
+      "event_type": "shot",
+      "team_id": "team_argentina",
+      "player_id": "player_lionel_messi",
+      "shot_location": "penalty",
+      "shot_method": "left_foot",
+      "is_penalty": true,
+      "in_box": true,
+      "outcome": "goal",
+      "source": "manual_public_post_match_seed",
+      "confidence": 0.95
+    },
+    {
+      "event_id": "wc2022_final_036_mbappe_box_shot",
+      "minute": 36,
+      "event_type": "shot",
+      "team_id": "team_france",
+      "player_id": "player_kylian_mbappe",
+      "passer_player_id": "player_antoine_griezmann",
+      "shot_location": "central_box",
+      "shot_method": "right_foot",
+      "in_box": true,
+      "source": "manual_public_post_match_seed",
+      "confidence": 0.8
+    },
+    {
+      "event_id": "wc2022_final_059_alvarez_six_yard",
+      "minute": 59,
+      "event_type": "shot",
+      "team_id": "team_argentina",
+      "player_id": "player_julian_alvarez",
+      "passer_player_id": "player_lionel_messi",
+      "shot_location": "six_yard_box",
+      "shot_method": "right_foot",
+      "in_box": true,
+      "is_big_chance": true,
+      "source": "manual_public_post_match_seed",
+      "confidence": 0.75
+    },
+    {
+      "event_id": "wc2022_final_071_giroud_header",
+      "minute": 71,
+      "event_type": "shot",
+      "team_id": "team_france",
+      "player_id": "player_olivier_giroud",
+      "passer_player_id": "player_antoine_griezmann",
+      "shot_location": "central_box",
+      "shot_method": "header",
+      "is_header": true,
+      "in_box": true,
+      "source": "manual_public_post_match_seed",
+      "confidence": 0.8
+    },
+    {
+      "event_id": "wc2022_final_080_mbappe_penalty",
+      "minute": 80,
+      "event_type": "shot",
+      "team_id": "team_france",
+      "player_id": "player_kylian_mbappe",
+      "shot_location": "penalty",
+      "shot_method": "right_foot",
+      "is_penalty": true,
+      "in_box": true,
+      "outcome": "goal",
+      "source": "manual_public_post_match_seed",
+      "confidence": 0.95
+    },
+    {
+      "event_id": "wc2022_final_081_mbappe_volley",
+      "minute": 81,
+      "event_type": "shot",
+      "team_id": "team_france",
+      "player_id": "player_kylian_mbappe",
+      "passer_player_id": "player_marcus_thuram",
+      "shot_location": "central_box",
+      "shot_method": "right_foot",
+      "in_box": true,
+      "outcome": "goal",
+      "source": "manual_public_post_match_seed",
+      "confidence": 0.85
+    },
+    {
+      "event_id": "wc2022_final_087_arg_card",
+      "minute": 87,
+      "event_type": "yellow_card",
+      "team_id": "team_argentina",
+      "player_id": "player_marcos_acuna",
+      "card_type": "yellow",
+      "source": "manual_public_post_match_seed",
+      "confidence": 0.8
+    },
+    {
+      "event_id": "wc2022_final_091_fra_sub",
+      "minute": 91,
+      "event_type": "substitution",
+      "team_id": "team_france",
+      "player_id": "player_kingsley_coman",
+      "qualifier": {
+        "substitution_role": "in"
+      },
+      "source": "manual_public_post_match_seed",
+      "confidence": 0.8
+    },
+    {
+      "event_id": "wc2022_final_108_messi_six_yard",
+      "minute": 108,
+      "event_type": "shot",
+      "team_id": "team_argentina",
+      "player_id": "player_lionel_messi",
+      "passer_player_id": "player_lautaro_martinez",
+      "shot_location": "six_yard_box",
+      "shot_method": "left_foot",
+      "in_box": true,
+      "outcome": "goal",
+      "source": "manual_public_post_match_seed",
+      "confidence": 0.75
+    },
+    {
+      "event_id": "wc2022_final_118_kolo_muani_one_on_one",
+      "minute": 118,
+      "event_type": "shot",
+      "team_id": "team_france",
+      "player_id": "player_randal_kolo_muani",
+      "passer_player_id": "player_kingsley_coman",
+      "shot_location": "central_box",
+      "shot_method": "right_foot",
+      "in_box": true,
+      "is_one_on_one": true,
+      "is_big_chance": true,
+      "source": "manual_public_post_match_seed",
+      "confidence": 0.85
+    }
+  ],
+  "advanced_metrics_commentary": [
+    {
+      "event_id": "wc2022_final_text_118_big_chance",
+      "minute": 118,
+      "event_type": "shot",
+      "team_id": "team_france",
+      "player_id": "player_randal_kolo_muani",
+      "shot_location": "central_box",
+      "in_box": true,
+      "text": "clear chance one-on-one saved late in extra time",
+      "source": "manual_text_commentary_seed",
+      "confidence": 0.65
+    }
+  ]
+}

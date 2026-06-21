@@ -1,0 +1,137 @@
+{
+  "review_id": "pmr_sample",
+  "match_id": "argentina_saudi_arabia",
+  "status": "proposal_pending_review",
+  "created_at": "2026-06-08T00:00:00+00:00",
+  "weights_version": "v0.5.0",
+  "reviewed_match_count": 5,
+  "learning_rates": {
+    "pre_match": 0.0537,
+    "live_signal": 0.0805
+  },
+  "prediction_snapshot": {
+    "report_id": "report_sample",
+    "home_score": 75.2,
+    "away_score": 61.3,
+    "confidence": 68.0,
+    "probabilities": {
+      "home_win": 0.64,
+      "draw": 0.22,
+      "away_win": 0.14,
+      "over_2_5": 0.54,
+      "upset_risk": 0.18
+    },
+    "market_signal": {
+      "direction": "home_market_positive",
+      "strength": "medium"
+    },
+    "dimension_breakdown": []
+  },
+  "actual_result": {
+    "final_score": {
+      "home": 1,
+      "away": 2
+    },
+    "actual_outcome": "away_win",
+    "over_2_5_result": true,
+    "key_events": [
+      {
+        "minute": 10,
+        "event_type": "goal",
+        "team": "away",
+        "description": "客队早段进球改变比赛结构"
+      }
+    ],
+    "match_stats": {
+      "home_xg": 1.8,
+      "away_xg": 0.8,
+      "home_shots": 15,
+      "away_shots": 3
+    },
+    "abnormality_flags": [
+      "normal"
+    ],
+    "review_tags": [
+      {
+        "source_layer": "pre_match",
+        "factor": "motivation_stage",
+        "error_direction": 1,
+        "bias_strength": 1.0,
+        "evidence": "弱队必须抢分，战意和执行强度被低估。"
+      }
+    ],
+    "reviewer_note": "样例复盘只生成调权建议，不自动修改配置。"
+  },
+  "evaluation": {
+    "predicted_outcome": "home_win",
+    "actual_outcome": "away_win",
+    "outcome_hit": false,
+    "predicted_over_2_5": true,
+    "over_2_5_hit": true,
+    "favorite_outcome": "home_win",
+    "favorite_probability": 0.64,
+    "upset_missed": true,
+    "prediction_error_level": "upset_missed",
+    "review_confidence": 0.9,
+    "outlier_factor": 1.0,
+    "primary_error_source": "pre_match_factor_bias",
+    "reason_codes": [
+      "outcome_prediction_missed",
+      "upset_missed",
+      "abnormality:normal"
+    ]
+  },
+  "bias_findings": [
+    {
+      "finding_id": "finding_01",
+      "source_layer": "pre_match",
+      "factor": "motivation_stage",
+      "error_direction": 1,
+      "bias_strength": 1.0,
+      "severity": "high",
+      "evidence": [
+        "predicted_outcome=home_win, actual_outcome=away_win",
+        "弱队必须抢分，战意和执行强度被低估。"
+      ],
+      "proposal_target": "pre_match_weight"
+    }
+  ],
+  "pre_match_weight_proposals": [
+    {
+      "proposal_id": "wprop_01_motivation_stage",
+      "factor": "motivation_stage",
+      "old_weight": 0.07,
+      "delta_weight_proposed": 0.004833,
+      "new_weight_proposed": 0.074833,
+      "eta": 0.0537,
+      "review_confidence_C": 0.9,
+      "outlier_factor_O": 1.0,
+      "bias_strength_A": 1.0,
+      "error_direction_E": 1,
+      "delta_points": 0.4833,
+      "evidence": [
+        "predicted_outcome=home_win, actual_outcome=away_win",
+        "弱队必须抢分，战意和执行强度被低估。"
+      ],
+      "reason": "motivation_stage 复盘标签显示存在方向性偏差；仅生成建议，等待管理员审核。",
+      "auto_applied": false,
+      "admin_review_required": true
+    }
+  ],
+  "live_signal_rule_proposals": [],
+  "upset_rule_proposals": [],
+  "parking_lot_factors": [],
+  "normalized_weights_preview": {
+    "team_strength": 0.179134,
+    "recent_form": 0.15923,
+    "lineup_integrity": 0.149279,
+    "key_player_status": 0.119423,
+    "attack_defense_efficiency": 0.139327,
+    "schedule_fatigue": 0.079615,
+    "motivation_stage": 0.074473,
+    "odds_movement": 0.099519
+  },
+  "auto_applied": false,
+  "admin_review_required": true,
+  "disclaimer": "赛后复盘仅生成参数调整建议，不自动修改模型权重或产生投注指令。"
+}

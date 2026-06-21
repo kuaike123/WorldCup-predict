@@ -1,0 +1,63 @@
+{
+  "match_id": "argentina_saudi_arabia",
+  "home_team": "Argentina",
+  "away_team": "Saudi Arabia",
+  "match_time": "2022-11-22T18:00:00+08:00",
+  "competition": "World Cup",
+  "stage": "Group",
+  "neutral_field": true,
+  "team_features": {
+    "home": {
+      "elo_score": 90,
+      "fifa_rank_score": 90,
+      "squad_value_score": 91,
+      "recent_points_per_game": 2.6,
+      "last_5_goal_diff": 9,
+      "unbeaten_rate": 1.0,
+      "expected_starters_available_ratio": 0.93,
+      "injury_impact_score": 84,
+      "key_players_available_ratio": 0.9,
+      "key_player_form_score": 88,
+      "xg_for": 2.2,
+      "xg_against": 0.75,
+      "goals_for_per_match": 2.3,
+      "goals_against_per_match": 0.7,
+      "rest_days": 5,
+      "travel_km": 200,
+      "extra_time_recent": false,
+      "climate_adjustment": -2,
+      "motivation_score": 90,
+      "must_win": false,
+      "knockout": false
+    },
+    "away": {
+      "elo_score": 65,
+      "fifa_rank_score": 62,
+      "squad_value_score": 55,
+      "recent_points_per_game": 1.25,
+      "last_5_goal_diff": -2,
+      "unbeaten_rate": 0.4,
+      "expected_starters_available_ratio": 0.88,
+      "injury_impact_score": 78,
+      "key_players_available_ratio": 0.83,
+      "key_player_form_score": 70,
+      "xg_for": 0.9,
+      "xg_against": 1.55,
+      "goals_for_per_match": 0.9,
+      "goals_against_per_match": 1.5,
+      "rest_days": 5,
+      "travel_km": 80,
+      "extra_time_recent": false,
+      "climate_adjustment": 4,
+      "motivation_score": 94,
+      "must_win": false,
+      "knockout": false
+    }
+  },
+  "odds_snapshots": [
+    {"snapshot_time": "2022-11-20T12:00:00+08:00", "bookmaker": "A", "home_win_odds": 1.22, "draw_odds": 6.0, "away_win_odds": 14.0, "asian_handicap": -1.75, "home_water": 0.9, "away_water": 1.0, "total_goals_line": 2.75, "over_water": 0.9, "under_water": 1.0},
+    {"snapshot_time": "2022-11-22T14:00:00+08:00", "bookmaker": "A", "home_win_odds": 1.2, "draw_odds": 6.2, "away_win_odds": 15.0, "asian_handicap": -1.75, "home_water": 0.78, "away_water": 1.12, "total_goals_line": 2.75, "over_water": 0.82, "under_water": 1.08},
+    {"snapshot_time": "2022-11-20T12:00:00+08:00", "bookmaker": "B", "home_win_odds": 1.24, "draw_odds": 5.8, "away_win_odds": 13.5, "asian_handicap": -1.75, "home_water": 0.92, "away_water": 0.98, "total_goals_line": 2.75, "over_water": 0.91, "under_water": 0.99},
+    {"snapshot_time": "2022-11-22T14:00:00+08:00", "bookmaker": "B", "home_win_odds": 1.21, "draw_odds": 6.1, "away_win_odds": 14.8, "asian_handicap": -1.75, "home_water": 0.8, "away_water": 1.1, "total_goals_line": 2.75, "over_water": 0.83, "under_water": 1.07}
+  ]
+}

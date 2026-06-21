@@ -1,0 +1,151 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Post Match Review Proposal Record",
+  "type": "object",
+  "required": [
+    "review_id",
+    "match_id",
+    "status",
+    "created_at",
+    "weights_version",
+    "reviewed_match_count",
+    "learning_rates",
+    "prediction_snapshot",
+    "actual_result",
+    "evaluation",
+    "bias_findings",
+    "pre_match_weight_proposals",
+    "live_signal_rule_proposals",
+    "upset_rule_proposals",
+    "normalized_weights_preview",
+    "auto_applied",
+    "admin_review_required",
+    "disclaimer"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "review_id": {"type": "string", "pattern": "^pmr_"},
+    "match_id": {"type": "string"},
+    "status": {"type": "string"},
+    "created_at": {"type": "string"},
+    "weights_version": {"type": "string"},
+    "reviewed_match_count": {"type": "integer", "minimum": 1},
+    "learning_rates": {
+      "type": "object",
+      "required": ["pre_match", "live_signal"],
+      "properties": {
+        "pre_match": {"type": "number", "minimum": 0},
+        "live_signal": {"type": "number", "minimum": 0}
+      }
+    },
+    "prediction_snapshot": {"type": "object"},
+    "actual_result": {
+      "type": "object",
+      "required": ["final_score", "actual_outcome", "over_2_5_result"],
+      "properties": {
+        "final_score": {
+          "type": "object",
+          "required": ["home", "away"],
+          "properties": {
+            "home": {"type": "integer", "minimum": 0},
+            "away": {"type": "integer", "minimum": 0}
+          }
+        },
+        "actual_outcome": {"enum": ["home_win", "draw", "away_win"]},
+        "over_2_5_result": {"type": "boolean"},
+        "review_tags": {"type": "array"}
+      }
+    },
+    "evaluation": {"type": "object"},
+    "bias_findings": {"type": "array", "items": {"type": "object"}},
+    "pre_match_weight_proposals": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/pre_match_weight_proposal"}
+    },
+    "live_signal_rule_proposals": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/rule_proposal"}
+    },
+    "upset_rule_proposals": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/rule_proposal"}
+    },
+    "parking_lot_factors": {"type": "array"},
+    "advanced_metrics_proxy": {"type": "object"},
+    "post_match_crawler_context": {"type": "object"},
+    "post_match_learning_package_id": {"type": "string"},
+    "normalized_weights_preview": {
+      "type": "object",
+      "additionalProperties": {"type": "number"}
+    },
+    "auto_applied": {"const": false},
+    "admin_review_required": {"const": true},
+    "disclaimer": {"type": "string"}
+  },
+  "$defs": {
+    "pre_match_weight_proposal": {
+      "type": "object",
+      "required": [
+        "proposal_id",
+        "factor",
+        "old_weight",
+        "delta_weight_proposed",
+        "new_weight_proposed",
+        "bias_strength_A",
+        "review_confidence_C",
+        "outlier_factor_O",
+        "error_direction_E",
+        "reason",
+        "auto_applied",
+        "admin_review_required"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "proposal_id": {"type": "string"},
+        "factor": {"type": "string"},
+        "old_weight": {"type": "number"},
+        "delta_weight_proposed": {"type": "number"},
+        "new_weight_proposed": {"type": "number"},
+        "bias_strength_A": {"enum": [0.3, 0.6, 1.0, 1.2]},
+        "review_confidence_C": {"type": "number", "minimum": 0.2, "maximum": 1.0},
+        "outlier_factor_O": {"type": "number", "minimum": 0.0, "maximum": 1.0},
+        "error_direction_E": {"enum": [-1, 0, 1]},
+        "reason": {"type": "string"},
+        "auto_applied": {"const": false},
+        "admin_review_required": {"const": true}
+      }
+    },
+    "rule_proposal": {
+      "type": "object",
+      "required": [
+        "proposal_id",
+        "rule_family",
+        "factor",
+        "proposal_target",
+        "delta_points",
+        "bias_strength_A",
+        "review_confidence_C",
+        "outlier_factor_O",
+        "error_direction_E",
+        "reason",
+        "auto_applied",
+        "admin_review_required"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "proposal_id": {"type": "string"},
+        "rule_family": {"type": "string"},
+        "factor": {"type": "string"},
+        "proposal_target": {"type": "string"},
+        "delta_points": {"type": "number"},
+        "bias_strength_A": {"enum": [0.3, 0.6, 1.0, 1.2]},
+        "review_confidence_C": {"type": "number", "minimum": 0.2, "maximum": 1.0},
+        "outlier_factor_O": {"type": "number", "minimum": 0.0, "maximum": 1.0},
+        "error_direction_E": {"enum": [-1, 0, 1]},
+        "reason": {"type": "string"},
+        "auto_applied": {"const": false},
+        "admin_review_required": {"const": true}
+      }
+    }
+  }
+}
