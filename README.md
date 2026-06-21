@@ -2,7 +2,13 @@
 
 Open-source World Cup research backfill and scoring plugin for Codex and Claude Code.
 
-The project combines independent research and odds providers, imports structured prematch facts into a local SQLite research database, and emits a stable machine-readable quality report. It does **not** place bets, guarantee data coverage, or provide financial advice.
+Bring your own providers, backfill structured prematch facts into a local SQLite database, and emit a machine-readable quality report.
+
+- research: `sportradar_soccer` or user-installed crawler
+- odds: `the_odds_api` or user-installed crawler
+- output: local SQLite facts plus stable JSON diagnostics
+
+It does **not** place bets, guarantee coverage, or provide financial advice.
 
 ## What ships
 
