@@ -98,6 +98,8 @@ def test_v1_release_metadata_and_required_docs_are_present() -> None:
         "release-notes-v1.0.0.md",
         "CHANGELOG.md",
         "schemas/targeted_backfill_summary.schema.json",
+        "POST_MATCH_SYNC.md",
+        "POST_MATCH_FEEDBACK_LOOP_SPEC.md",
     ):
         assert (ROOT / relative_path).is_file(), relative_path
 
@@ -142,6 +144,38 @@ def test_env_example_exposes_independent_provider_configuration() -> None:
         "SPORTRADAR_SOCCER_API_KEY=",
         "THE_ODDS_API_KEY=",
         "SPORTS_STABLE_CRAWL_SCRIPTS_DIR=",
+        "SPORTRADAR_SOCCER_EXTENDED_ENABLED=",
+        "POST_MATCH_SYNC_ENABLED=",
+        "POST_MATCH_SYNC_PROVIDER=",
     ):
         assert key in env_example
     assert "source-mode" not in env_example.lower()
+
+
+def test_post_match_cli_and_open_runtime_boundary() -> None:
+    pyproject = (ROOT / "pyproject.toml").read_text(encoding="utf-8")
+    assert (
+        'world-cup-post-match-sync = "app.research_db.post_match_sync_cli:main"'
+        in pyproject
+    )
+    assert not (ROOT / "app" / "scheduler").exists()
+
+    completed = subprocess.run(
+        [sys.executable, "scripts/run_post_match_sync.py", "--help"],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    assert completed.returncode == 0, completed.stderr
+    for option in (
+        "--db-path",
+        "--fixture-id",
+        "--lookback-hours",
+        "--delay-minutes",
+        "--max-fixtures",
+        "--dry-run",
+        "--force",
+        "--output",
+    ):
+        assert option in completed.stdout

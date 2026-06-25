@@ -105,6 +105,19 @@ Useful options:
 
 `--source-mode` is deprecated compatibility metadata. It must not be used to choose providers.
 
+
+## Post-match sync command
+
+The installed plugin package exposes:
+
+```bash
+world-cup-post-match-sync --help
+```
+
+Use `--dry-run` on a copied database before the first provider-backed write. The public command persists results and player appearances only; private scheduler and post-match learning/review integrations are not bundled.
+
+Provider configuration is documented in [POST_MATCH_SYNC.md](POST_MATCH_SYNC.md).
+
 ## Verify output
 
 Check these fields first:

@@ -24,6 +24,11 @@ P0_TABLES = (
     "data_source_audit",
 )
 
+POST_MATCH_LOOP_TABLES = (
+    "player_match_appearances",
+    "pre_match_predictions",
+)
+
 ADVANCED_METRICS_TABLES = (
     "post_match_advanced_events",
     "post_match_advanced_metric_summaries",
@@ -67,6 +72,7 @@ class ResearchDatabaseRepository:
             "database_path": str(self.db_path),
             "tables": tables,
             "p0_tables_present": all(table in tables for table in P0_TABLES),
+            "post_match_loop_tables_present": all(table in tables for table in POST_MATCH_LOOP_TABLES),
             "advanced_metrics_tables_present": all(table in tables for table in ADVANCED_METRICS_TABLES),
         }
 
@@ -78,6 +84,7 @@ class ResearchDatabaseRepository:
                 "initialized": False,
                 "tables": [],
                 "p0_tables_present": False,
+                "post_match_loop_tables_present": False,
                 "advanced_metrics_tables_present": False,
             }
         with self._connect(create=False) as conn:
@@ -88,6 +95,7 @@ class ResearchDatabaseRepository:
             "initialized": all(table in tables for table in P0_TABLES),
             "tables": tables,
             "p0_tables_present": all(table in tables for table in P0_TABLES),
+            "post_match_loop_tables_present": all(table in tables for table in POST_MATCH_LOOP_TABLES),
             "advanced_metrics_tables_present": all(table in tables for table in ADVANCED_METRICS_TABLES),
         }
 
@@ -116,6 +124,7 @@ class ResearchDatabaseRepository:
             "squads": 0,
             "player_stats": 0,
             "player_form_snapshots": 0,
+            "player_match_appearances": 0,
             "team_strength_snapshots": 0,
             "team_aliases": 0,
             "data_source_audit": 0,
@@ -148,6 +157,10 @@ class ResearchDatabaseRepository:
             for item in _records(payload, "player_form_snapshots"):
                 self.upsert_player_form_snapshot(item, conn=conn)
                 counts["player_form_snapshots"] += 1
+                counts["data_source_audit"] += 1
+            for item in _records(payload, "player_match_appearances"):
+                self.upsert_player_match_appearance(item, conn=conn)
+                counts["player_match_appearances"] += 1
                 counts["data_source_audit"] += 1
             for item in _records(payload, "team_strength_snapshots"):
                 self.upsert_team_strength_snapshot(item, conn=conn)
@@ -343,6 +356,93 @@ class ResearchDatabaseRepository:
             "score": [row["home_score"], row["away_score"]],
         }, conn=conn)
         return row
+
+    def upsert_player_match_appearance(
+        self,
+        record: dict[str, Any],
+        conn: sqlite3.Connection | None = None,
+    ) -> dict[str, Any]:
+        if "appeared" not in record or record.get("appeared") is None:
+            raise ValueError("player_match_appearance_appeared_required")
+        now = utc_now()
+        source = str(record.get("source") or "manual")
+        source_appearance_id = _source_id(
+            record,
+            "source_appearance_id",
+            "source_id",
+            "appearance_id",
+        )
+        appearance_id = str(
+            self._source_existing_id(
+                "player_match_appearances",
+                "appearance_id",
+                "source_appearance_id",
+                source,
+                source_appearance_id,
+                conn=conn,
+            )
+            or record.get("appearance_id")
+            or f"appearance_{uuid4().hex[:12]}"
+        )
+        source_appearance_id = source_appearance_id or appearance_id
+        starter = record.get("starter")
+        row = {
+            "appearance_id": appearance_id,
+            "fixture_id": str(record["fixture_id"]),
+            "player_id": str(record["player_id"]),
+            "team_id": str(record["team_id"]),
+            "played_at": str(record["played_at"]),
+            "appeared": 1 if bool(record.get("appeared")) else 0,
+            "starter": None if starter is None else (1 if bool(starter) else 0),
+            "minutes_played": _int_or_none(record.get("minutes_played")),
+            "position": record.get("position"),
+            "shirt_number": _int_or_none(record.get("shirt_number")),
+            "source": source,
+            "source_appearance_id": source_appearance_id,
+            "source_fixture_id": record.get("source_fixture_id"),
+            "source_player_id": record.get("source_player_id"),
+            "available_at": str(record.get("available_at") or now),
+            "created_at": str(record.get("created_at") or now),
+            "updated_at": now,
+        }
+        self._execute_upsert(
+            "player_match_appearances",
+            row,
+            update_columns=(
+                "fixture_id",
+                "player_id",
+                "team_id",
+                "played_at",
+                "appeared",
+                "starter",
+                "minutes_played",
+                "position",
+                "shirt_number",
+                "source",
+                "source_appearance_id",
+                "source_fixture_id",
+                "source_player_id",
+                "available_at",
+                "updated_at",
+            ),
+            conn=conn,
+        )
+        self.record_audit(
+            row["source"],
+            "player_match_appearance",
+            row["source_appearance_id"],
+            "upsert",
+            row["available_at"],
+            {
+                "appearance_id": row["appearance_id"],
+                "fixture_id": row["fixture_id"],
+                "player_id": row["player_id"],
+                "starter": None if row["starter"] is None else bool(row["starter"]),
+                "minutes_played": row["minutes_played"],
+            },
+            conn=conn,
+        )
+        return _appearance_from_row(row)
 
     def upsert_squad(self, record: dict[str, Any], conn: sqlite3.Connection | None = None) -> dict[str, Any]:
         now = utc_now()
@@ -710,6 +810,61 @@ class ResearchDatabaseRepository:
             rows = conn.execute(sql, tuple(params)).fetchall()
         return [_row_dict(row) for row in rows]
 
+    def list_player_match_appearances(
+        self,
+        *,
+        fixture_id: str | None = None,
+        player_id: str | None = None,
+        team_id: str | None = None,
+        available_at_cutoff: str | None = None,
+    ) -> list[dict[str, Any]]:
+        if not self.db_path.exists() or "player_match_appearances" not in self.table_names():
+            return []
+        sql = "SELECT * FROM player_match_appearances"
+        clauses: list[str] = []
+        params: list[Any] = []
+        if fixture_id is not None:
+            clauses.append("fixture_id = ?")
+            params.append(fixture_id)
+        if player_id is not None:
+            clauses.append("player_id = ?")
+            params.append(player_id)
+        if team_id is not None:
+            clauses.append("team_id = ?")
+            params.append(team_id)
+        if available_at_cutoff is not None:
+            clauses.append("datetime(available_at) <= datetime(?)")
+            params.append(available_at_cutoff)
+        if clauses:
+            sql += " WHERE " + " AND ".join(clauses)
+        sql += " ORDER BY datetime(played_at) DESC, appearance_id"
+        with self._connect(create=False) as conn:
+            rows = conn.execute(sql, tuple(params)).fetchall()
+        return [_appearance_from_row(row) for row in rows]
+
+    def latest_player_match_appearance(
+        self,
+        player_id: str,
+        *,
+        before_played_at: str,
+        available_at_cutoff: str,
+    ) -> dict[str, Any] | None:
+        if not self.db_path.exists() or "player_match_appearances" not in self.table_names():
+            return None
+        with self._connect(create=False) as conn:
+            row = conn.execute(
+                """
+                SELECT * FROM player_match_appearances
+                WHERE player_id = ?
+                  AND datetime(played_at) < datetime(?)
+                  AND datetime(available_at) <= datetime(?)
+                ORDER BY datetime(played_at) DESC, datetime(available_at) DESC, appearance_id DESC
+                LIMIT 1
+                """,
+                (player_id, before_played_at, available_at_cutoff),
+            ).fetchone()
+        return _appearance_from_row(row) if row else None
+
     def list_team_strength_snapshots(self, team_id: str | None = None) -> list[dict[str, Any]]:
         if not self.db_path.exists():
             return []
@@ -753,6 +908,17 @@ class ResearchDatabaseRepository:
 
     def get_fixture(self, fixture_id: str) -> dict[str, Any] | None:
         return self._fetch_one("SELECT * FROM fixtures WHERE fixture_id = ?", (fixture_id,))
+
+    def get_match_result(self, fixture_id: str) -> dict[str, Any] | None:
+        return self._fetch_one(
+            """
+            SELECT * FROM match_results
+            WHERE fixture_id = ?
+            ORDER BY datetime(available_at) DESC, result_id DESC
+            LIMIT 1
+            """,
+            (fixture_id,),
+        )
 
     def get_fixture_by_source(
         self,
@@ -829,6 +995,29 @@ class ResearchDatabaseRepository:
         sql += " ORDER BY created_at, audit_id"
         with self._connect(create=False) as conn:
             return [_row_dict(row) for row in conn.execute(sql, params).fetchall()]
+
+    def latest_audit_record(
+        self,
+        source_record_type: str,
+        source_record_id: str,
+    ) -> dict[str, Any] | None:
+        if not self.db_path.exists() or "data_source_audit" not in self.table_names():
+            return None
+        with self._connect(create=False) as conn:
+            row = conn.execute(
+                """
+                SELECT * FROM data_source_audit
+                WHERE source_record_type = ? AND source_record_id = ?
+                ORDER BY datetime(created_at) DESC, audit_id DESC
+                LIMIT 1
+                """,
+                (source_record_type, source_record_id),
+            ).fetchone()
+        if row is None:
+            return None
+        data = _row_dict(row)
+        data["summary"] = json.loads(data["summary_json"])
+        return data
 
     def resolve_entity(
         self,
@@ -1062,6 +1251,125 @@ class ResearchDatabaseRepository:
     def latest_feature_snapshot(self, match_id: str) -> dict[str, Any] | None:
         snapshots = self.list_feature_snapshots(match_id=match_id)
         return snapshots[-1] if snapshots else None
+
+    def save_pre_match_prediction(
+        self,
+        prediction: dict[str, Any],
+        *,
+        feature_snapshot_id: str | None = None,
+        source: str = "pre_match_research_scoring",
+    ) -> dict[str, Any]:
+        from src.scoring.pre_match_research_preview import validate_pre_match_prediction
+
+        validate_pre_match_prediction(prediction)
+        self.initialize()
+        now = utc_now()
+        fixture_id = str(prediction["fixture_id"])
+        generated_at = str(prediction["generated_at"])
+        as_of = str(prediction["as_of"])
+        weights_version = str(prediction["weights_version"])
+        with self._connect(create=True) as conn:
+            existing = conn.execute(
+                """
+                SELECT prediction_id FROM pre_match_predictions
+                WHERE fixture_id = ? AND generated_at = ? AND weights_version = ?
+                LIMIT 1
+                """,
+                (fixture_id, generated_at, weights_version),
+            ).fetchone()
+            prediction_id = str(
+                existing["prediction_id"]
+                if existing
+                else prediction.get("prediction_id") or f"prediction_{uuid4().hex[:12]}"
+            )
+            stored_prediction = dict(prediction)
+            stored_prediction["prediction_id"] = prediction_id
+            row = {
+                "prediction_id": prediction_id,
+                "fixture_id": fixture_id,
+                "generated_at": generated_at,
+                "as_of": as_of,
+                "version": str(prediction["version"]),
+                "weights_version": weights_version,
+                "feature_snapshot_id": feature_snapshot_id,
+                "status": str(prediction.get("status") or "validated"),
+                "prediction_json": json.dumps(stored_prediction, ensure_ascii=False, sort_keys=True),
+                "source": source,
+                "created_at": now,
+            }
+            conn.execute(
+                """
+                INSERT INTO pre_match_predictions (
+                    prediction_id, fixture_id, generated_at, as_of, version,
+                    weights_version, feature_snapshot_id, status, prediction_json,
+                    source, created_at
+                ) VALUES (
+                    :prediction_id, :fixture_id, :generated_at, :as_of, :version,
+                    :weights_version, :feature_snapshot_id, :status, :prediction_json,
+                    :source, :created_at
+                )
+                ON CONFLICT(prediction_id) DO UPDATE SET
+                    fixture_id = excluded.fixture_id,
+                    generated_at = excluded.generated_at,
+                    as_of = excluded.as_of,
+                    version = excluded.version,
+                    weights_version = excluded.weights_version,
+                    feature_snapshot_id = excluded.feature_snapshot_id,
+                    status = excluded.status,
+                    prediction_json = excluded.prediction_json,
+                    source = excluded.source
+                """,
+                row,
+            )
+            self.record_audit(
+                source,
+                "pre_match_prediction",
+                prediction_id,
+                "upsert",
+                as_of,
+                {
+                    "fixture_id": fixture_id,
+                    "generated_at": generated_at,
+                    "weights_version": weights_version,
+                    "feature_snapshot_id": feature_snapshot_id,
+                },
+                conn=conn,
+            )
+        return self.latest_pre_match_prediction(
+            fixture_id,
+            before_generated_at=generated_at,
+        ) or stored_prediction
+
+    def list_pre_match_predictions(self, fixture_id: str | None = None) -> list[dict[str, Any]]:
+        if not self.db_path.exists() or "pre_match_predictions" not in self.table_names():
+            return []
+        sql = "SELECT * FROM pre_match_predictions"
+        params: tuple[Any, ...] = ()
+        if fixture_id is not None:
+            sql += " WHERE fixture_id = ?"
+            params = (fixture_id,)
+        sql += " ORDER BY datetime(generated_at), prediction_id"
+        with self._connect(create=False) as conn:
+            rows = conn.execute(sql, params).fetchall()
+        return [_prediction_from_row(row) for row in rows]
+
+    def latest_pre_match_prediction(
+        self,
+        fixture_id: str,
+        *,
+        before_generated_at: str | None = None,
+    ) -> dict[str, Any] | None:
+        if not self.db_path.exists() or "pre_match_predictions" not in self.table_names():
+            return None
+        sql = "SELECT * FROM pre_match_predictions WHERE fixture_id = ?"
+        params: list[Any] = [fixture_id]
+        if before_generated_at is not None:
+            sql += " AND datetime(generated_at) <= datetime(?)"
+            params.append(before_generated_at)
+        sql += " ORDER BY datetime(generated_at) DESC, prediction_id DESC LIMIT 1"
+        with self._connect(create=False) as conn:
+            row = conn.execute(sql, tuple(params)).fetchone()
+        return _prediction_from_row(row) if row else None
 
     def save_post_match_advanced_metrics(
         self,
@@ -1371,6 +1679,19 @@ class ResearchDatabaseRepository:
         return conn
 
 
+def _appearance_from_row(row: dict[str, Any] | sqlite3.Row) -> dict[str, Any]:
+    data = _row_dict(row)
+    data["appeared"] = bool(data["appeared"])
+    data["starter"] = None if data.get("starter") is None else bool(data["starter"])
+    return data
+
+
+def _prediction_from_row(row: dict[str, Any] | sqlite3.Row) -> dict[str, Any]:
+    data = _row_dict(row)
+    data["prediction"] = json.loads(data["prediction_json"])
+    return data
+
+
 def _records(payload: dict[str, Any], *keys: str) -> list[dict[str, Any]]:
     records: list[dict[str, Any]] = []
     for key in keys:
@@ -1603,6 +1924,27 @@ CREATE TABLE IF NOT EXISTS player_stats (
     UNIQUE(source, source_player_stat_id)
 );
 
+CREATE TABLE IF NOT EXISTS player_match_appearances (
+    appearance_id TEXT PRIMARY KEY,
+    fixture_id TEXT NOT NULL,
+    player_id TEXT NOT NULL,
+    team_id TEXT NOT NULL,
+    played_at TEXT NOT NULL,
+    appeared INTEGER NOT NULL CHECK(appeared IN (0, 1)),
+    starter INTEGER CHECK(starter IN (0, 1)),
+    minutes_played INTEGER,
+    position TEXT,
+    shirt_number INTEGER,
+    source TEXT NOT NULL,
+    source_appearance_id TEXT NOT NULL,
+    source_fixture_id TEXT,
+    source_player_id TEXT,
+    available_at TEXT NOT NULL,
+    created_at TEXT NOT NULL,
+    updated_at TEXT NOT NULL,
+    UNIQUE(source, source_appearance_id)
+);
+
 CREATE TABLE IF NOT EXISTS player_form_snapshots (
     snapshot_id TEXT PRIMARY KEY,
     player_id TEXT NOT NULL,
@@ -1672,6 +2014,21 @@ CREATE TABLE IF NOT EXISTS feature_snapshots (
     created_at TEXT NOT NULL
 );
 
+CREATE TABLE IF NOT EXISTS pre_match_predictions (
+    prediction_id TEXT PRIMARY KEY,
+    fixture_id TEXT NOT NULL,
+    generated_at TEXT NOT NULL,
+    as_of TEXT NOT NULL,
+    version TEXT NOT NULL,
+    weights_version TEXT NOT NULL,
+    feature_snapshot_id TEXT,
+    status TEXT NOT NULL,
+    prediction_json TEXT NOT NULL,
+    source TEXT NOT NULL,
+    created_at TEXT NOT NULL,
+    UNIQUE(fixture_id, generated_at, weights_version)
+);
+
 CREATE TABLE IF NOT EXISTS post_match_advanced_events (
     event_id TEXT NOT NULL,
     match_id TEXT NOT NULL,
@@ -1720,11 +2077,20 @@ ON match_results(fixture_id, available_at);
 CREATE INDEX IF NOT EXISTS idx_player_form_snapshots_player_as_of
 ON player_form_snapshots(player_id, as_of);
 
+CREATE INDEX IF NOT EXISTS idx_player_match_appearances_player_played
+ON player_match_appearances(player_id, played_at DESC);
+
+CREATE INDEX IF NOT EXISTS idx_player_match_appearances_fixture
+ON player_match_appearances(fixture_id, team_id);
+
 CREATE INDEX IF NOT EXISTS idx_team_strength_snapshots_team_as_of
 ON team_strength_snapshots(team_id, as_of);
 
 CREATE INDEX IF NOT EXISTS idx_feature_snapshots_match
 ON feature_snapshots(match_id, generated_at);
+
+CREATE INDEX IF NOT EXISTS idx_pre_match_predictions_fixture_generated
+ON pre_match_predictions(fixture_id, generated_at DESC);
 
 CREATE INDEX IF NOT EXISTS idx_post_match_advanced_events_match
 ON post_match_advanced_events(match_id, minute);

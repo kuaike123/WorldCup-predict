@@ -186,7 +186,11 @@ class PreMatchResearchFeatureBuilder:
         features = dict(historical.get("features", {}))
         sample_size = int(historical.get("sample_size") or 0)
         strength = self._team_strength(team_id, available_at_cutoff=available_at_cutoff)
-        player_form = self._player_form(team_id, available_at_cutoff=available_at_cutoff)
+        player_form = self._player_form(
+            team_id,
+            match_time=match_time,
+            available_at_cutoff=available_at_cutoff,
+        )
         schedule_score = _rest_days_score(features.get("rest_days"))
 
         features.update({
@@ -288,7 +292,13 @@ class PreMatchResearchFeatureBuilder:
             },
         }
 
-    def _player_form(self, team_id: str, *, available_at_cutoff: str) -> dict[str, Any]:
+    def _player_form(
+        self,
+        team_id: str,
+        *,
+        match_time: str,
+        available_at_cutoff: str,
+    ) -> dict[str, Any]:
         expected_snapshots = self._expected_player_form_snapshots(team_id)
         rows = [
             item
@@ -308,7 +318,39 @@ class PreMatchResearchFeatureBuilder:
                 },
             }
         team_labels = _team_labels(self.repository.get_team(team_id))
-        player_scores = [_player_form_score(row, team_labels=team_labels) for row in rows]
+        enriched_rows: list[dict[str, Any]] = []
+        last_match_actual_used = 0
+        last_match_proxy_used = 0
+        last_match_unavailable = 0
+        for row in rows:
+            enriched = dict(row)
+            appearance = self.repository.latest_player_match_appearance(
+                str(row["player_id"]),
+                before_played_at=match_time,
+                available_at_cutoff=available_at_cutoff,
+            )
+            if appearance is not None:
+                enriched.update({
+                    "last_match_fixture_id": appearance.get("fixture_id"),
+                    "last_match_played_at": appearance.get("played_at"),
+                    "last_match_appeared": appearance.get("appeared"),
+                    "last_match_started": appearance.get("starter"),
+                    "last_match_minutes": appearance.get("minutes_played"),
+                    "last_match_appearance_source": appearance.get("source"),
+                    "last_match_status_source": "actual_appearance",
+                })
+                last_match_actual_used += 1
+            elif _last_match_key_player_status_score(
+                enriched,
+                has_distinct_club_name=_has_distinct_club_name(enriched, team_labels),
+            ) is not None:
+                enriched["last_match_status_source"] = "recent_window_proxy"
+                last_match_proxy_used += 1
+            else:
+                enriched["last_match_status_source"] = "unavailable"
+                last_match_unavailable += 1
+            enriched_rows.append(enriched)
+        player_scores = [_player_form_score(row, team_labels=team_labels) for row in enriched_rows]
         score = round(sum(player_scores) / len(player_scores), 2)
         club_mapped_rows = sum(1 for row in rows if _has_distinct_club_name(row, team_labels))
         row_coverage = min(1.0, len(rows) / expected_snapshots)
@@ -333,6 +375,9 @@ class PreMatchResearchFeatureBuilder:
                 "club_mapped_rows": club_mapped_rows,
                 "average_score": score,
                 "source": "derived_from_player_form_snapshots",
+                "last_match_actual_used": last_match_actual_used,
+                "last_match_proxy_used": last_match_proxy_used,
+                "last_match_unavailable": last_match_unavailable,
             },
         }
 
@@ -945,7 +990,82 @@ def _player_form_score(
         + national_minutes_score * 0.30
         + national_start_score * 0.15
     )
+    last_match_status_score = _last_match_key_player_status_score(row, has_distinct_club_name=has_distinct_club_name)
+    if last_match_status_score is not None:
+        score = score * 0.70 + last_match_status_score * 0.30
     return round(clamp(score), 2)
+
+
+def _last_match_key_player_status_score(
+    row: dict[str, Any],
+    *,
+    has_distinct_club_name: bool,
+) -> float | None:
+    actual_score = _actual_last_match_status_score(row)
+    if actual_score is not None:
+        return actual_score
+    if has_distinct_club_name:
+        score = _recent_window_status_score(
+            row.get("club_recent_matches"),
+            row.get("club_recent_starts"),
+            row.get("club_recent_minutes"),
+        )
+        if score is not None:
+            return score
+    return _recent_window_status_score(
+        row.get("national_recent_caps"),
+        row.get("national_recent_starts"),
+        row.get("national_recent_minutes"),
+    )
+
+
+def _actual_last_match_status_score(row: dict[str, Any]) -> float | None:
+    if str(row.get("last_match_status_source") or "") != "actual_appearance":
+        return None
+    appeared = row.get("last_match_appeared")
+    starter = row.get("last_match_started")
+    minutes = row.get("last_match_minutes")
+    if appeared is False:
+        return 0.0
+    if minutes is None:
+        if starter is True:
+            return 65.0
+        if starter is False and appeared is True:
+            return 25.0
+        return None
+    minutes_value = float(minutes)
+    if minutes_value <= 0:
+        return 0.0
+    if starter is True:
+        if minutes_value >= 75:
+            return 100.0
+        if minutes_value >= 60:
+            return 85.0
+        return 65.0
+    if minutes_value >= 30:
+        return 50.0
+    return 25.0
+
+
+def _recent_window_status_score(matches: Any, starts: Any, minutes: Any) -> float | None:
+    if matches is None:
+        return None
+    match_count = float(matches)
+    if match_count <= 0:
+        return 0.0
+    avg_minutes = float(minutes or 0.0) / match_count
+    start_rate = float(starts or 0.0) / match_count
+    if avg_minutes <= 0:
+        return 0.0
+    if start_rate >= 0.5:
+        if avg_minutes >= 75:
+            return 100.0
+        if avg_minutes >= 60:
+            return 85.0
+        return 65.0
+    if avg_minutes >= 30:
+        return 50.0
+    return 25.0
 
 
 def _ratio_score(value: Any, denominator: float) -> float:

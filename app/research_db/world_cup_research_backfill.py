@@ -1326,6 +1326,9 @@ def build_targeted_readiness_report(
             })
             continue
         feature_vector, prediction = service.build_prediction_with_feature_vector(fixture_id)
+        save_prediction = getattr(service, "save_prediction", None)
+        if callable(save_prediction):
+            prediction = save_prediction(prediction)
         readiness = _public_data_readiness(
             match_id=fixture_id,
             fixture=fixture,

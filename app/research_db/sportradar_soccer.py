@@ -69,6 +69,8 @@ class SportradarSoccerProvider(BaseProvider):
 
 
 class SportradarSoccerAdapter:
+    source = "sportradar_soccer"
+
     def __init__(self, settings: Settings) -> None:
         self.settings = settings
 
@@ -81,14 +83,38 @@ class SportradarSoccerAdapter:
     def fetch_player_summaries(self, player_id: str) -> SportradarResponse:
         return self._get(f"players/{_path_id(player_id)}/summaries")
 
-    def _get(self, path: str) -> SportradarResponse:
+    def fetch_sport_event_summary(self, sport_event_id: str) -> SportradarResponse:
+        return self._get(f"sport_events/{_path_id(sport_event_id)}/summary")
+
+    def fetch_sport_event_lineups(self, sport_event_id: str) -> SportradarResponse:
+        return self._get(f"sport_events/{_path_id(sport_event_id)}/lineups")
+
+    def fetch_extended_sport_event_summary(self, sport_event_id: str) -> SportradarResponse:
+        if not self.settings.sportradar_soccer_extended_enabled:
+            return SportradarResponse(
+                error=SportradarError(
+                    "missing_config",
+                    "SPORTRADAR_SOCCER_EXTENDED_ENABLED is not enabled",
+                )
+            )
+        return self._get(
+            f"sport_events/{_path_id(sport_event_id)}/summary",
+            extended=True,
+        )
+
+    def _get(self, path: str, *, extended: bool = False) -> SportradarResponse:
         if not self.settings.sportradar_soccer_api_key:
             return SportradarResponse(
                 error=SportradarError("missing_config", "SPORTRADAR_SOCCER_API_KEY is not configured")
             )
 
+        base_url = (
+            self.settings.sportradar_soccer_extended_base_url
+            if extended
+            else self.settings.sportradar_soccer_base_url
+        )
         url = (
-            f"{self.settings.sportradar_soccer_base_url.rstrip('/')}"
+            f"{base_url.rstrip('/')}"
             f"/{self.settings.sportradar_soccer_access_level}"
             f"/v4/{self.settings.sportradar_soccer_language}/{path}.json"
         )

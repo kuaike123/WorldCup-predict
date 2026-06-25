@@ -22,14 +22,22 @@
 - [x] Codex and Claude Code manifests use repository-local skill paths.
 - [x] `.env.example` contains placeholders only and independent provider settings.
 - [x] `python -m compileall app src scripts tests` passes.
-- [x] `python -m pytest -q` passes.
+- [x] `python -m pytest -q` passes (`42 passed`).
 - [x] Offline demo validation passes.
-- [x] Equivalent wheel build validation passes.
+- [x] Equivalent wheel build validation passes (`world_cup_agent_open-1.0.0-py3-none-any.whl`).
 - [x] Installed console entry points pass:
   - `world-cup-agent-demo --compact`
   - `world-cup-research-backfill --help`
+  - `world-cup-post-match-sync --help`
 - [x] Release-facing JSON/TOML files parse successfully.
 - [x] Secret and private-path scan passes outside ignored local artifacts.
+
+- [x] Additive pre-match prediction and player-appearance tables are covered by tests.
+- [x] Post-match CLI dry-run and idempotency are covered by deterministic tests.
+- [x] Missing player minutes remain null and report partial quality.
+- [x] Open package contains no private scheduler or delivery integration.
+- [x] Final wheel contains no `.env`, `outputs/`, local Mission files, or private runtime modules.
+- [x] Final secret and private-machine-path scans return no findings.
 
 ## Clean-clone gates
 

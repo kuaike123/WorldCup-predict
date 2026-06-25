@@ -77,6 +77,17 @@ python -m build
 
 Review dependency updates, especially HTTP clients, parsers, and browser/crawler runtimes. The optional crawler environment has a larger attack surface than the core package.
 
+
+## Post-match data safety
+
+The post-match sync stores normalized final scores, player identity mappings, starter flags, and minutes. Raw provider payloads are not stored by default.
+
+- Run the first live operation against a copied database with `--dry-run`.
+- Treat missing minutes as unknown; do not replace them with zero.
+- Review unmapped-player diagnostics instead of using fuzzy cross-team assignment.
+- Do not enable or claim extended player-stat coverage unless the configured provider plan actually supplies it.
+- The open package contains no automatic scheduler; operators control every sync invocation.
+
 ## Data and recommendation disclaimer
 
 Odds and match-analysis outputs are informational. They may be delayed, incomplete, or wrong. The project does not execute wagers and should not be used as the sole basis for financial decisions.

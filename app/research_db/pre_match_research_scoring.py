@@ -62,13 +62,43 @@ class PreMatchResearchScoringService:
         prediction["calibration"] = self._calibration(prediction, fixture_id=fixture_id)
         return feature_vector, prediction
 
-    def build_default_predictions(self) -> dict[str, Any]:
+    def save_prediction(self, prediction: dict[str, Any]) -> dict[str, Any]:
+        required_snapshot_fields = {
+            "version",
+            "weights_version",
+            "as_of",
+            "components",
+            "coverage",
+            "not_used_in_production_scoring_by_default",
+        }
+        if not required_snapshot_fields.issubset(prediction):
+            return prediction
+        saved = self.repository.save_pre_match_prediction(prediction)
+        persisted_prediction = dict(saved.get("prediction") or prediction)
+        persisted_prediction.setdefault("prediction_id", saved.get("prediction_id"))
+        return persisted_prediction
+
+    def build_feature_prediction_and_save(
+        self,
+        fixture_id: str,
+    ) -> tuple[dict[str, Any], dict[str, Any]]:
+        feature_vector, prediction = self.build_prediction_with_feature_vector(fixture_id)
+        return feature_vector, self.save_prediction(prediction)
+
+    def build_and_save_prediction(self, fixture_id: str) -> dict[str, Any]:
+        return self.save_prediction(self.build_prediction(fixture_id))
+
+    def build_default_predictions(self, *, persist: bool = False) -> dict[str, Any]:
         fixture_ids = self.builder.default_fixture_ids()
         predictions: list[dict[str, Any]] = []
         failed: list[dict[str, Any]] = []
         for fixture_id in fixture_ids:
             try:
-                predictions.append(self.build_prediction(fixture_id))
+                predictions.append(
+                    self.build_and_save_prediction(fixture_id)
+                    if persist
+                    else self.build_prediction(fixture_id)
+                )
             except (PreMatchResearchFeatureError, ValueError) as exc:
                 failed.append({
                     "fixture_id": fixture_id,
@@ -100,7 +130,7 @@ class PreMatchResearchScoringService:
         quality_report_path: Path = DEFAULT_P0_15_QUALITY_REPORT_PATH,
         quality_report_md_path: Path = DEFAULT_P0_15_QUALITY_REPORT_MD_PATH,
     ) -> dict[str, Any]:
-        result = self.build_default_predictions()
+        result = self.build_default_predictions(persist=True)
         predictions_payload = {
             "version": result["version"],
             "weights_version": result["weights_version"],

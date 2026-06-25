@@ -24,6 +24,7 @@ dev = [
 
 [project.scripts]
 world-cup-research-backfill = "app.research_db.world_cup_research_backfill:main"
+world-cup-post-match-sync = "app.research_db.post_match_sync_cli:main"
 world-cup-agent-demo = "app.demo:main"
 
 [tool.setuptools.packages.find]

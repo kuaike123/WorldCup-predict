@@ -4,7 +4,7 @@ from types import SimpleNamespace
 from app.config import Settings
 from app.research_db.provider_contracts import BaseProvider, CrawlerProvider, ProviderResult
 from app.research_db.provider_router import resolve_provider_route
-from app.research_db.sportradar_soccer import SportradarSoccerProvider
+from app.research_db.sportradar_soccer import SportradarSoccerAdapter, SportradarSoccerProvider
 from app.research_db.world_cup_2026_odds import TheOddsApiProvider
 
 
@@ -40,6 +40,14 @@ def test_sportradar_provider_reports_missing_config_without_network() -> None:
     assert recent.diagnostics["error_code"] == "missing_config"
     assert player.status == "missing"
     assert odds.status == "unsupported"
+
+
+def test_sportradar_post_match_endpoints_report_configuration_without_network() -> None:
+    adapter = SportradarSoccerAdapter(Settings(sportradar_soccer_api_key=""))
+
+    assert adapter.fetch_sport_event_summary("sr:sport_event:1").error.code == "missing_config"
+    assert adapter.fetch_sport_event_lineups("sr:sport_event:1").error.code == "missing_config"
+    assert adapter.fetch_extended_sport_event_summary("sr:sport_event:1").error.code == "missing_config"
 
 
 def test_the_odds_api_provider_reports_missing_config_without_network() -> None:

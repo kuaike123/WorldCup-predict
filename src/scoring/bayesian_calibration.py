@@ -90,10 +90,13 @@ def build_bayesian_calibration(
         total_weight=effective_official_sample_count,
         prior_strength=beta_prior_strength,
     )
-    calibrated_probabilities = _rounded_calibrated_probabilities(
-        calibrated_1x2,
-        over_2_5=calibrated_over,
-        upset_risk=calibrated_upset,
+    calibrated_probabilities = _merge_calibrated_probabilities(
+        baseline,
+        _rounded_calibrated_probabilities(
+            calibrated_1x2,
+            over_2_5=calibrated_over,
+            upset_risk=calibrated_upset,
+        ),
     )
     return {
         "schema_version": CALIBRATION_SCHEMA_VERSION,
@@ -211,23 +214,21 @@ def _baseline_probabilities(prediction: dict[str, Any]) -> dict[str, float] | No
     probabilities = prediction.get("probabilities")
     if not isinstance(probabilities, dict):
         return None
+    baseline = dict(probabilities)
     try:
-        baseline = {
-            "home_win": float(probabilities["home_win"]),
-            "draw": float(probabilities["draw"]),
-            "away_win": float(probabilities["away_win"]),
-            "over_2_5": float(probabilities["over_2_5"]),
-            "upset_risk": float(probabilities["upset_risk"]),
-        }
+        baseline["home_win"] = float(probabilities["home_win"])
+        baseline["draw"] = float(probabilities["draw"])
+        baseline["away_win"] = float(probabilities["away_win"])
+        baseline["over_2_5"] = float(probabilities["over_2_5"])
+        baseline["upset_risk"] = float(probabilities["upset_risk"])
     except (KeyError, TypeError, ValueError):
         return None
-    return {
-        "home_win": round(baseline["home_win"], 3),
-        "draw": round(baseline["draw"], 3),
-        "away_win": round(baseline["away_win"], 3),
-        "over_2_5": round(_clamp_probability(baseline["over_2_5"]), 3),
-        "upset_risk": round(_clamp_probability(baseline["upset_risk"]), 3),
-    }
+    baseline["home_win"] = round(baseline["home_win"], 3)
+    baseline["draw"] = round(baseline["draw"], 3)
+    baseline["away_win"] = round(baseline["away_win"], 3)
+    baseline["over_2_5"] = round(_clamp_probability(baseline["over_2_5"]), 3)
+    baseline["upset_risk"] = round(_clamp_probability(baseline["upset_risk"]), 3)
+    return baseline
 
 
 def _review_samples(
@@ -357,6 +358,15 @@ def _beta_posterior_mean(
         "posterior_alpha": round(posterior_alpha, 6),
         "posterior_beta": round(posterior_beta, 6),
     }
+
+
+def _merge_calibrated_probabilities(
+    baseline: dict[str, Any],
+    calibrated: dict[str, float],
+) -> dict[str, Any]:
+    merged = dict(baseline)
+    merged.update(calibrated)
+    return merged
 
 
 def _rounded_calibrated_probabilities(

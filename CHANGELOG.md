@@ -6,6 +6,12 @@ All notable changes to this project are documented here.
 
 ### Added
 
+- additive `pre_match_predictions` and `player_match_appearances` Research DB tables
+- idempotent provider-backed post-match result/appearance sync core
+- `world-cup-post-match-sync` manual CLI with dry-run support
+- actual last-match starter/minutes precedence in the existing 70/30 key-player blend
+- explicit formal prediction persistence while retaining JSON exports
+
 - independent research and odds provider router
 - public provider contracts for Sportradar Soccer, The Odds API, and optional crawler integrations
 - stable targeted-backfill summary schema with explicit data quality

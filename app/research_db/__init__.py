@@ -1,3 +1,4 @@
+from .post_match_sync import PostMatchSyncService
 from .pre_match_research_features import PreMatchResearchFeatureBuilder
 from .provider_contracts import BaseProvider, CrawlerProvider, ProviderResult
 from .provider_router import ProviderRoute, ProviderSelection, resolve_provider_route
@@ -11,6 +12,7 @@ __all__ = [
     "ProviderResult",
     "ProviderRoute",
     "ProviderSelection",
+    "PostMatchSyncService",
     "PreMatchResearchFeatureBuilder",
     "PreMatchResearchScoringService",
     "ResearchDatabaseRepository",

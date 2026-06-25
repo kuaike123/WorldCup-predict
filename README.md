@@ -147,6 +147,28 @@ world-cup-research-backfill `
 
 `--source-mode` remains only for backward-compatible command parsing. It is recorded in diagnostics but **does not select or override providers**. Use `DEFAULT_RESEARCH_PROVIDER` and `DEFAULT_ODDS_PROVIDER` instead.
 
+
+## Post-match result and player-appearance sync
+
+The package now includes an additive post-match feedback core:
+
+- validated formal predictions can be persisted in `pre_match_predictions`;
+- closed scores are written to `match_results`;
+- mapped starter/minutes facts are written to `player_match_appearances`;
+- the next fixture prefers the latest cutoff-safe real appearance in the existing 30% last-match term;
+- the existing aggregate proxy remains the fallback.
+
+Manual dry-run:
+
+```bash
+world-cup-post-match-sync \
+  --db-path outputs/research_local.db \
+  --lookback-hours 48 \
+  --dry-run
+```
+
+The open package intentionally provides no background scheduler or private post-match review store. See [POST_MATCH_SYNC.md](POST_MATCH_SYNC.md).
+
 ## Stable output contract
 
 Every generated `targeted_backfill_summary.json` uses this top-level contract, including failed runs:

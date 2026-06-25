@@ -163,6 +163,12 @@ class Settings:
     formal_remediation_enabled: bool = False
     formal_remediation_interval_seconds: int = 300
     formal_remediation_max_attempts: int = 3
+    post_match_sync_enabled: bool = False
+    post_match_sync_interval_seconds: int = 900
+    post_match_sync_lookback_hours: int = 48
+    post_match_sync_delay_minutes: int = 30
+    post_match_sync_max_fixtures: int = 20
+    post_match_sync_provider: str = "sportradar_soccer"
     match_day_watch_timezone: str = "Asia/Shanghai"
     match_day_watch_fixture_id_prefix: str = "fixture_wc2026_"
     match_day_watch_push_platform: str = "mock"
@@ -286,6 +292,12 @@ def load_settings() -> Settings:
         formal_remediation_enabled=env.get("FORMAL_REMEDIATION_ENABLED", "false").lower() == "true",
         formal_remediation_interval_seconds=int(env.get("FORMAL_REMEDIATION_INTERVAL_SECONDS", "300")),
         formal_remediation_max_attempts=int(env.get("FORMAL_REMEDIATION_MAX_ATTEMPTS", "3")),
+        post_match_sync_enabled=env.get("POST_MATCH_SYNC_ENABLED", "false").lower() == "true",
+        post_match_sync_interval_seconds=int(env.get("POST_MATCH_SYNC_INTERVAL_SECONDS", "900")),
+        post_match_sync_lookback_hours=int(env.get("POST_MATCH_SYNC_LOOKBACK_HOURS", "48")),
+        post_match_sync_delay_minutes=int(env.get("POST_MATCH_SYNC_DELAY_MINUTES", "30")),
+        post_match_sync_max_fixtures=int(env.get("POST_MATCH_SYNC_MAX_FIXTURES", "20")),
+        post_match_sync_provider=env.get("POST_MATCH_SYNC_PROVIDER", "sportradar_soccer"),
         match_day_watch_timezone=env.get("MATCH_DAY_WATCH_TIMEZONE", "Asia/Shanghai"),
         match_day_watch_fixture_id_prefix=env.get("MATCH_DAY_WATCH_FIXTURE_ID_PREFIX", "fixture_wc2026_"),
         match_day_watch_push_platform=env.get("MATCH_DAY_WATCH_PUSH_PLATFORM", "mock"),

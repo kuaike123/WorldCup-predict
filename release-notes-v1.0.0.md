@@ -44,6 +44,11 @@ Every generated `targeted_backfill_summary.json` includes:
 - `--source-mode` is deprecated compatibility metadata and does not select providers.
 - Provider selection comes from `DEFAULT_RESEARCH_PROVIDER` and `DEFAULT_ODDS_PROVIDER`.
 
+
+## Post-match feedback loop
+
+The release candidate also includes additive prediction and player-appearance persistence plus the manual `world-cup-post-match-sync` command. The open package does not schedule the command automatically and does not include the private post-match learning store. Missing player minutes remain explicit partial data.
+
 ## Known limitations
 
 - Sportradar player form depends on local-name-to-provider-player mapping. Unmatched players produce explicit partial or missing data.

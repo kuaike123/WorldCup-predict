@@ -339,10 +339,15 @@ def _schedule_fatigue_component(home: dict[str, Any], away: dict[str, Any]) -> d
 
 def _key_player_status_component(home: dict[str, Any], away: dict[str, Any]) -> dict[str, Any]:
     source_fields = [
+        "player_form_snapshots.club_recent_matches",
         "player_form_snapshots.club_recent_minutes",
         "player_form_snapshots.club_recent_starts",
+        "player_form_snapshots.national_recent_caps",
         "player_form_snapshots.national_recent_minutes",
         "player_form_snapshots.national_recent_starts",
+        "player_match_appearances.starter",
+        "player_match_appearances.minutes_played",
+        "player_match_appearances.played_at",
     ]
     if home.get("key_player_news_context") or away.get("key_player_news_context"):
         source_fields.extend([

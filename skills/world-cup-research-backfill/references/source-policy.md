@@ -39,6 +39,15 @@ Sportradar player lookup currently maps the local shortlist to provider players 
 - paid provider: The Odds API (`h2h`, `spreads`, `totals`)
 - self-hosted provider: Soccerway odds collector exposed through `soccerway_odds.py`
 
+### Post-match factual loop
+
+- primary structured source: Sportradar sport-event summary for closed status and final score;
+- official lineup endpoint for starter/bench identity;
+- extended sport-event summary for player minutes when enabled and available under the operator's plan;
+- crawler/manual evidence may explain or verify missing facts but must not fabricate starter/minutes values.
+
+Post-match Sportradar usage is bounded to final result, official lineup, and player appearance facts. It must not supply editorial scoring changes, odds, or automatic weight adjustments. Missing minutes remain unknown and yield partial quality.
+
 ### Lineup and news supplement
 
 Follow [lineup-news-source-matrix.md](lineup-news-source-matrix.md). Preferred order remains:
@@ -53,6 +62,7 @@ Lineup/news collection is separate from the structured research and odds provide
 ## Provider availability rules
 
 - `sportradar_soccer` requires `SPORTRADAR_SOCCER_API_KEY`.
+- post-match player minutes may additionally require `SPORTRADAR_SOCCER_EXTENDED_ENABLED=true` and provider-plan access to the extended summary endpoint.
 - `the_odds_api` requires `THE_ODDS_API_KEY`.
 - research crawler requires a configured scripts directory containing `whoscored_workflow.py`.
 - odds crawler requires the same configured scripts directory to contain `soccerway_odds.py`.
@@ -90,6 +100,17 @@ available_at <= match_time - 3 hours
 
 When `--available-at` is omitted, targeted backfill uses one minute before the earliest target fixture cutoff. Preserve this default for historical prematch reconstruction unless the task explicitly requires another timestamp.
 
+## Post-match cutoff rule
+
+A player appearance may feed a later pre-match prediction only when:
+
+```text
+appearance.played_at < target fixture match_time
+appearance.available_at <= feature available_at_cutoff
+```
+
+The key-player score keeps the existing 70% aggregate / 30% last-match blend. Real starter/minutes facts take precedence; aggregate club/national windows remain the explicit fallback.
+
 ## Output and provenance
 
 Every run must expose:
@@ -113,5 +134,5 @@ Do not report a provider capability as `ok` when no matching data rows exist. Do
 
 - player name mapping may reduce Sportradar player-form coverage
 - some sources omit goals, assists, or complete market types
-- live endpoints can rate-limit, change schemas, or remove events
+- live and post-match endpoints can rate-limit, change schemas, omit lineups, or omit player minutes
 - lineup, injury, and motivation coverage remains a separate workflow

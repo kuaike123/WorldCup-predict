@@ -137,6 +137,26 @@ source
 
 The schema is documented in `schemas/targeted_backfill_summary.schema.json`.
 
+
+## Post-match feedback loop
+
+The reusable public core adds two additive tables:
+
+- `pre_match_predictions`: exact validated formal prediction JSON;
+- `player_match_appearances`: per-fixture appeared/starter/minutes facts.
+
+```text
+formal prediction -> pre_match_predictions
+closed provider event -> match_results + player_match_appearances
+next fixture -> latest eligible appearance -> key-player 30% last-match term
+```
+
+`PostMatchSyncService` is provider-injected and processes fixtures independently. Dry-run performs no writes. Missing minutes remain null and yield partial quality. The open package omits scheduler, bot, delivery, and private review orchestration.
+
+Prediction persistence is explicit: low-level feature/scoring helpers remain pure, while formal orchestration calls `PreMatchResearchScoringService.save_prediction()`. Only payloads implementing the complete formal prediction contract are persisted.
+
+Appearance selection is cutoff-safe: `played_at` must be earlier than the target match and `available_at` must not exceed the feature cutoff.
+
 ## Deterministic demo
 
 `app.demo` and `scripts/run_demo.py` implement a fixed offline fixture. The demo:
