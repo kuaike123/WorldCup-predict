@@ -76,6 +76,8 @@ def run_world_cup_prediction(
             service,
             fixture,
             persist=persist,
+            backfill_summary=backfill_summary,
+            backfill_error=backfill_error,
         )
         for fixture in fixture_rows
     ]
@@ -103,6 +105,10 @@ def run_world_cup_prediction(
                 "risk",
                 "coverage",
                 "calibration",
+                "expected_goals",
+                "scoreline_model",
+                "prediction_routing",
+                "recommended_scores",
                 "vip",
                 "sources",
                 "gaps",
@@ -116,6 +122,8 @@ def _prediction_item(
     fixture: dict[str, Any],
     *,
     persist: bool,
+    backfill_summary: dict[str, Any] | None = None,
+    backfill_error: str | None = None,
 ) -> dict[str, Any]:
     fixture_id = str(fixture["fixture_id"])
     try:
@@ -135,15 +143,22 @@ def _prediction_item(
             "risk": {},
             "coverage": {},
             "calibration": {},
+            "expected_goals": {},
+            "scoreline_model": {},
+            "prediction_routing": {},
+            "recommended_scores": [],
             "vip": _empty_vip(),
             "sources": [],
-            "gaps": [str(exc)],
+            "gaps": _dedupe([str(exc), *_backfill_gaps(backfill_summary, backfill_error)]),
         }
 
     probabilities = dict(prediction.get("probabilities") or {})
     if "over_2_5" in probabilities:
         probabilities.setdefault("under_2_5", round(1.0 - float(probabilities["over_2_5"]), 3))
-    gaps = _prediction_gaps(probabilities, prediction)
+    gaps = _dedupe([
+        *_prediction_gaps(probabilities, prediction),
+        *_backfill_gaps(backfill_summary, backfill_error),
+    ])
     return {
         "fixture_id": fixture_id,
         "match_time_beijing": _beijing_time(str(fixture.get("match_time") or "")),
@@ -154,6 +169,10 @@ def _prediction_item(
         "risk": prediction.get("risk") or {},
         "coverage": prediction.get("coverage") or {},
         "calibration": prediction.get("calibration") or {},
+        "expected_goals": prediction.get("expected_goals") or {},
+        "scoreline_model": prediction.get("scoreline_model") or {},
+        "prediction_routing": prediction.get("prediction_routing") or {},
+        "recommended_scores": list(prediction.get("recommended_scores") or []),
         "vip": _vip_summary(probabilities, prediction),
         "sources": _sources(prediction),
         "gaps": gaps,
@@ -171,7 +190,54 @@ def _prediction_gaps(probabilities: dict[str, Any], prediction: dict[str, Any]) 
     coverage_status = str((prediction.get("coverage") or {}).get("status") or "")
     if coverage_status and coverage_status != "ok":
         gaps.append(f"coverage:{coverage_status}")
+    coverage = prediction.get("coverage") or {}
+    for key in ("missing_components", "unavailable_components", "neutral_default_components", "partial_components"):
+        values = coverage.get(key)
+        if isinstance(values, list):
+            gaps.extend(f"{key}:{value}" for value in values)
+    routing = prediction.get("prediction_routing") or {}
+    for market in ("totals", "btts", "scoreline"):
+        route = routing.get(market)
+        if isinstance(route, dict) and route.get("status") != "available":
+            reason = str(route.get("reason_code") or "unavailable")
+            gaps.append(f"{market}:{reason}")
     return gaps
+
+
+def _backfill_gaps(backfill_summary: dict[str, Any] | None, backfill_error: str | None) -> list[str]:
+    gaps = []
+    if backfill_error:
+        gaps.append(f"backfill_error:{backfill_error}")
+    if not isinstance(backfill_summary, dict):
+        return gaps
+    quality = backfill_summary.get("data_quality")
+    if isinstance(quality, dict):
+        for domain, status in quality.items():
+            if status != "ok":
+                gaps.append(f"data_quality:{domain}:{status}")
+    source = backfill_summary.get("source")
+    if isinstance(source, dict):
+        for provider_key in ("research_provider", "odds_provider"):
+            if source.get(provider_key) == "skip":
+                gaps.append(f"provider:{provider_key}:skip")
+        route = source.get("route")
+        if isinstance(route, dict):
+            for capability in ("research", "odds"):
+                selection = route.get(capability)
+                if isinstance(selection, dict) and selection.get("reason"):
+                    gaps.append(f"provider:{capability}:{selection['reason']}")
+    return gaps
+
+
+def _dedupe(values: list[str]) -> list[str]:
+    seen = set()
+    result = []
+    for value in values:
+        text = str(value)
+        if text and text not in seen:
+            seen.add(text)
+            result.append(text)
+    return result
 
 
 def _vip_summary(probabilities: dict[str, Any], prediction: dict[str, Any]) -> dict[str, Any]:
@@ -192,7 +258,7 @@ def _vip_summary(probabilities: dict[str, Any], prediction: dict[str, Any]) -> d
     return {
         "main_pick": main_pick,
         "secondary_pick": secondary_pick,
-        "scorelines": [],
+        "scorelines": list(prediction.get("recommended_scores") or []),
         "risk_level": (prediction.get("risk") or {}).get("level"),
         "capital_allocation": None,
         "risk_reward": None,

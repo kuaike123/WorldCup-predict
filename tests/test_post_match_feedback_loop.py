@@ -196,6 +196,31 @@ def _valid_prediction() -> dict[str, Any]:
             "over_2_5": 0.5,
             "upset_risk": 0.2,
         },
+        "probability_model_mode": "hybrid_routed",
+        "prediction_routing": {
+            "1x2": {
+                "route": "legacy_logistic",
+                "status": "available",
+                "probability_keys": ["home_win", "draw", "away_win"],
+            },
+            "totals": {
+                "route": "independent_poisson",
+                "status": "unavailable",
+                "reason_code": "sample_prediction_without_scoreline_route",
+                "probability_keys": ["over_2_5", "under_2_5"],
+            },
+            "btts": {
+                "route": "independent_poisson",
+                "status": "unavailable",
+                "reason_code": "sample_prediction_without_scoreline_route",
+                "probability_keys": ["btts_yes", "btts_no"],
+            },
+            "scoreline": {
+                "route": "independent_poisson",
+                "status": "unavailable",
+                "reason_code": "sample_prediction_without_scoreline_route",
+            },
+        },
         "risk": {"level": "medium", "confidence": 60.0},
         "components": components,
         "coverage": {"status": "ok"},

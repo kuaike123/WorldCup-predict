@@ -4,7 +4,7 @@
 
 这是一个面向 Codex 和 Claude Code 的开源世界杯赛事预测插件。
 
-它会从你自己配置的数据源中获取赛前事实和赔率，构造成结构化特征向量，再输出带有概率、风险和覆盖度字段的比赛预测结果。
+它会从你自己配置的数据源中获取赛前事实和赔率，构造成结构化特征向量，再输出带有概率、风险、覆盖度、预期进球、泊松比分、大小球和 BTTS 的比赛预测结果。
 
 - 不提供前端
 - 不提供托管后端
@@ -15,6 +15,7 @@
 
 - 用本地算法链路预测世界杯比赛
 - 研究数据源和赔率数据源可独立配置
+- 在攻防输入可用时，通过泊松比分模型推导推荐比分、大小球 2.5 和 BTTS
 - 输出稳定 JSON，便于智能体直接解释
 - 支持先跑离线无密钥 demo，再接入实时 API
 - 仓库根目录直接包含 Codex 和 Claude Code 所需插件清单
@@ -28,12 +29,16 @@
 1. 获取近期战绩、球员状态、阵容、赛程、战意和赔率输入
 2. 为目标比赛构造赛前特征向量
 3. 对 8 个维度打分：`team_strength`、`recent_form`、`attack_defense_efficiency`、`schedule_fatigue`、`key_player_status`、`odds_movement`、`lineup_integrity`、`motivation_stage`
-4. 将加权后的分差转换成 `home_win`、`draw`、`away_win` 以及 `over_2_5`、`upset_risk` 概率
-5. 当官方世界杯复盘样本足够时，再对基础概率做贝叶斯校准
+4. 用加权评分模型输出 1X2 概率
+5. 从攻防效率推断主客队预期进球
+6. 在输入足够时，用独立泊松比分模型推导比分分布、大小球 2.5 和 BTTS 概率
+7. 当官方世界杯复盘样本足够时，再对基础概率做贝叶斯校准
 
 对应实现位置：
 
-- 加权赛前预测: [src/scoring/pre_match_research_preview.py](src/scoring/pre_match_research_preview.py)
+- 加权赛前预测与路由: [src/scoring/pre_match_research_preview.py](src/scoring/pre_match_research_preview.py)
+- 预期进球推断: [src/scoring/expected_goals.py](src/scoring/expected_goals.py)
+- 泊松比分模型: [src/scoring/scoreline_model.py](src/scoring/scoreline_model.py)
 - 贝叶斯校准: [src/scoring/bayesian_calibration.py](src/scoring/bayesian_calibration.py)
 - 预测编排与持久化: [app/research_db/pre_match_research_scoring.py](app/research_db/pre_match_research_scoring.py)
 
@@ -66,8 +71,6 @@ python scripts/run_demo.py
 ```bash
 world-cup-agent-demo
 ```
-
-这个 demo 不访问网络、不需要 API Key，输出的是结构化预测结果。
 
 安装后的预测命令是：
 
@@ -182,23 +185,45 @@ CRAWLER_PYTHON_PATH=<optional-python-with-crawl4ai>
 
 ```json
 {
+  "schema_version": "world_cup_prediction.v1",
   "status": "ok | partial | failed",
-  "probabilities": {
-    "home_win": 0.0,
-    "draw": 0.0,
-    "away_win": 0.0,
-    "over_2_5": 0.0,
-    "upset_risk": 0.0
-  },
-  "risk": {
-    "level": "low | medium | high",
-    "confidence": 0
-  },
-  "coverage": {
-    "status": "ok | partial | blocked"
-  }
+  "predictions": [
+    {
+      "fixture_id": "fixture_wc2026_...",
+      "match_time_beijing": "2026-06-13T08:00:00+08:00",
+      "home_team": "Home",
+      "away_team": "Away",
+      "probabilities": {
+        "home_win": 0.0,
+        "draw": 0.0,
+        "away_win": 0.0,
+        "over_2_5": 0.0,
+        "under_2_5": 0.0,
+        "btts_yes": 0.0,
+        "btts_no": 0.0
+      },
+      "expected_goals": {
+        "home_expected_goals": 0.0,
+        "away_expected_goals": 0.0
+      },
+      "scoreline_model": {
+        "family": "independent_poisson"
+      },
+      "prediction_routing": {},
+      "recommended_scores": ["1:1", "1:0", "2:1"],
+      "risk": {
+        "level": "low | medium | high",
+        "confidence": 0
+      },
+      "coverage": {},
+      "calibration": {},
+      "gaps": []
+    }
+  ]
 }
 ```
+
+BTTS、推荐比分、大小球概率来自泊松比分路由；当攻防输入不足时，脚本会在 `gaps` 或 `prediction_routing` 中说明原因。资金分配和 risk/reward 只有脚本真实返回时才展示，不能由模型补写。
 
 ## 插件使用
 
@@ -209,6 +234,7 @@ CRAWLER_PYTHON_PATH=<optional-python-with-crawl4ai>
 - Claude Code 插件清单: `.claude-plugin/plugin.json`
 - Claude Code marketplace 清单: `.claude-plugin/marketplace.json`
 - 预测 skill: `skills/world-cup-prediction/`
+- 辅助数据修复 skill: `skills/world-cup-research-backfill/`
 
 安装与验证见 [PLUGIN_USAGE.md](PLUGIN_USAGE.md)。
 

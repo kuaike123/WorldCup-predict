@@ -4,7 +4,7 @@
 
 Open-source World Cup match prediction plugin for Codex and Claude Code.
 
-It pulls prematch facts and odds from your own providers, converts them into a structured feature vector, and returns machine-readable match predictions with probability, risk, and coverage fields.
+It pulls prematch facts and odds from your own providers, converts them into a structured feature vector, and returns machine-readable match predictions with probabilities, risk, coverage, expected goals, Poisson scorelines, totals, and BTTS when inputs are available.
 
 - no frontend
 - no hosted backend
@@ -15,6 +15,7 @@ It pulls prematch facts and odds from your own providers, converts them into a s
 
 - predicts World Cup fixtures with a local algorithmic pipeline
 - supports independent research and odds providers
+- derives scorelines, over/under 2.5, and BTTS through a Poisson scoreline model when attack/defense inputs are available
 - returns stable JSON that an agent can explain in natural language
 - runs with a keyless offline demo before you configure live APIs
 - ships Codex and Claude Code plugin manifests from the repo root
@@ -23,17 +24,21 @@ The open package does not guarantee betting profitability and must not be treate
 
 ## Model overview
 
-The current open-source prediction path is a local, deterministic scoring pipeline:
+The current open-source prediction path is a local, deterministic pipeline:
 
 1. collect recent-results, player-form, lineup, schedule, motivation, and odds inputs
 2. build a prematch feature vector for the target fixture
 3. score 8 dimensions: `team_strength`, `recent_form`, `attack_defense_efficiency`, `schedule_fatigue`, `key_player_status`, `odds_movement`, `lineup_integrity`, `motivation_stage`
-4. convert the weighted score gap into structured probabilities for `home_win`, `draw`, `away_win`, plus `over_2_5` and `upset_risk`
-5. when enough official World Cup review samples exist, apply Bayesian calibration to the baseline probabilities
+4. route 1X2 probabilities through the weighted scoring model
+5. infer home/away expected goals from attack and defense rates
+6. use an independent Poisson scoreline model to derive likely scorelines, over/under 2.5, and BTTS probabilities when the required inputs are available
+7. when enough official World Cup review samples exist, apply Bayesian calibration to baseline probabilities
 
 Current implementation references:
 
-- weighted prematch scoring: [src/scoring/pre_match_research_preview.py](src/scoring/pre_match_research_preview.py)
+- weighted prematch scoring and routing: [src/scoring/pre_match_research_preview.py](src/scoring/pre_match_research_preview.py)
+- expected-goals inference: [src/scoring/expected_goals.py](src/scoring/expected_goals.py)
+- Poisson scoreline model: [src/scoring/scoreline_model.py](src/scoring/scoreline_model.py)
 - Bayesian calibration: [src/scoring/bayesian_calibration.py](src/scoring/bayesian_calibration.py)
 - orchestration and persistence: [app/research_db/pre_match_research_scoring.py](app/research_db/pre_match_research_scoring.py)
 
@@ -66,8 +71,6 @@ The installed demo command is:
 ```bash
 world-cup-agent-demo
 ```
-
-The demo is deterministic, uses no network access or API keys, and prints a structured prediction payload.
 
 The installed prediction command is:
 
@@ -200,8 +203,19 @@ The open package emits structured output that agents can explain directly. Key t
         "draw": 0.0,
         "away_win": 0.0,
         "over_2_5": 0.0,
-        "under_2_5": 0.0
+        "under_2_5": 0.0,
+        "btts_yes": 0.0,
+        "btts_no": 0.0
       },
+      "expected_goals": {
+        "home_expected_goals": 0.0,
+        "away_expected_goals": 0.0
+      },
+      "scoreline_model": {
+        "family": "independent_poisson"
+      },
+      "prediction_routing": {},
+      "recommended_scores": ["1:1", "1:0", "2:1"],
       "risk": {
         "level": "low | medium | high",
         "confidence": 0
@@ -214,7 +228,7 @@ The open package emits structured output that agents can explain directly. Key t
 }
 ```
 
-BTTS, scorelines, capital allocation, and risk/reward are reported only when the script returns them. The open model must not invent those values.
+BTTS, scorelines, and over/under probabilities come from the Poisson scoreline route when attack/defense inputs are available. Capital allocation and risk/reward are reported only when the script returns them. The open model must not invent missing values.
 
 ## Plugin usage
 

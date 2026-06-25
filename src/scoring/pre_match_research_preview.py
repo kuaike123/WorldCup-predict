@@ -3,6 +3,7 @@ from __future__ import annotations
 import math
 from typing import Any
 
+from .expected_goals import ExpectedGoalsError, infer_expected_goals
 from .field_normalizer import (
     clamp,
     goal_diff_to_score,
@@ -11,10 +12,15 @@ from .field_normalizer import (
     ppg_to_score,
     ratio_to_score,
 )
+from .scoreline_model import ScorelineModelError, build_scoreline_distribution
 
 
 P0_15_VERSION = "p0.15"
 P0_15_WEIGHTS_VERSION = "p0.15-research-preview"
+PROBABILITY_MODEL_LEGACY = "legacy_logistic"
+PROBABILITY_MODEL_SCORELINE = "scoreline_poisson"
+PROBABILITY_MODEL_ROUTED = "hybrid_routed"
+DEFAULT_PROBABILITY_MODEL_MODE = PROBABILITY_MODEL_ROUTED
 P0_15_COMPONENT_STATUS_VALUES = {
     "ok",
     "partial",
@@ -77,9 +83,15 @@ def analyze_research_feature_vector_with_params(
     *,
     weights: dict[str, float] | None = None,
     probability_params: dict[str, float] | None = None,
+    probability_model_mode: str = DEFAULT_PROBABILITY_MODEL_MODE,
+    scoreline_params: dict[str, Any] | None = None,
     weights_version: str = P0_15_WEIGHTS_VERSION,
     validate_contract: bool = False,
 ) -> dict[str, Any]:
+    if probability_model_mode not in {PROBABILITY_MODEL_LEGACY, PROBABILITY_MODEL_ROUTED}:
+        raise PreMatchResearchScoringError(
+            f"unsupported probability_model_mode:{probability_model_mode}"
+        )
     _validate_feature_vector(feature_vector)
     home = feature_vector["team_features"]["home"]
     away = feature_vector["team_features"]["away"]
@@ -95,12 +107,19 @@ def analyze_research_feature_vector_with_params(
     ]
     home_score, away_score = _weighted_team_scores(components, weights=weights)
     score_gap = round(home_score - away_score, 2)
-    probabilities = _probabilities(
+    legacy_probabilities = _probabilities(
         home_score,
         away_score,
         components,
         feature_vector,
         probability_params=probability_params,
+    )
+    probabilities, prediction_routing, scoreline_payload = _routed_probabilities(
+        feature_vector=feature_vector,
+        components=components,
+        legacy_probabilities=legacy_probabilities,
+        probability_model_mode=probability_model_mode,
+        scoreline_params=scoreline_params,
     )
     risk = _risk(score_gap, components, probabilities)
     prediction = {
@@ -119,6 +138,8 @@ def analyze_research_feature_vector_with_params(
             "score_gap": score_gap,
         },
         "probabilities": probabilities,
+        "probability_model_mode": probability_model_mode,
+        "prediction_routing": prediction_routing,
         "risk": risk,
         "components": components,
         "coverage": _coverage(components),
@@ -142,10 +163,142 @@ def analyze_research_feature_vector_with_params(
             "team_strength_source": "team_strength_snapshots",
         },
     }
+    if scoreline_payload is not None:
+        prediction["expected_goals"] = scoreline_payload["expected_goals"]
+        prediction["scoreline_model"] = scoreline_payload["scoreline_model"]
+        prediction["scoreline_distribution"] = scoreline_payload["scoreline_distribution"]
+        prediction["recommended_scores"] = scoreline_payload["recommended_scores"]
     # ponytail: candidate weights are internal training outputs, not public contract payloads.
     if validate_contract:
         validate_pre_match_prediction(prediction)
     return prediction
+
+
+def _routed_probabilities(
+    *,
+    feature_vector: dict[str, Any],
+    components: list[dict[str, Any]],
+    legacy_probabilities: dict[str, float],
+    probability_model_mode: str,
+    scoreline_params: dict[str, Any] | None,
+) -> tuple[dict[str, float], dict[str, Any], dict[str, Any] | None]:
+    probabilities = dict(legacy_probabilities)
+    routing = {
+        "1x2": {
+            "route": PROBABILITY_MODEL_LEGACY,
+            "status": "available",
+            "probability_keys": ["home_win", "draw", "away_win"],
+        },
+        "totals": {
+            "route": "independent_poisson",
+            "status": "unavailable",
+            "reason_code": "scoreline_route_disabled",
+            "probability_keys": ["over_2_5", "under_2_5"],
+        },
+        "btts": {
+            "route": "independent_poisson",
+            "status": "unavailable",
+            "reason_code": "scoreline_route_disabled",
+            "probability_keys": ["btts_yes", "btts_no"],
+        },
+        "scoreline": {
+            "route": "independent_poisson",
+            "status": "unavailable",
+            "reason_code": "scoreline_route_disabled",
+        },
+    }
+    if probability_model_mode == PROBABILITY_MODEL_LEGACY:
+        return probabilities, routing, None
+
+    unavailable_reason = _scoreline_route_unavailable_reason(feature_vector, components)
+    if unavailable_reason is not None:
+        for market in ("totals", "btts", "scoreline"):
+            routing[market]["reason_code"] = unavailable_reason
+        return probabilities, routing, None
+
+    try:
+        expected_goals = infer_expected_goals(feature_vector, components)
+        params = scoreline_params or {}
+        scoreline_model = build_scoreline_distribution(
+            float(expected_goals["home_expected_goals"]),
+            float(expected_goals["away_expected_goals"]),
+            rho=float(params.get("rho") or 0.0),
+        )
+    except (ExpectedGoalsError, ScorelineModelError, TypeError, ValueError) as exc:
+        reason_code = f"scoreline_route_error:{type(exc).__name__}"
+        for market in ("totals", "btts", "scoreline"):
+            routing[market]["reason_code"] = reason_code
+        return probabilities, routing, None
+
+    poisson_probabilities = dict(scoreline_model["probabilities"])
+    probabilities.update({
+        "over_2_5": float(poisson_probabilities["over_2_5"]),
+        "under_2_5": float(poisson_probabilities["under_2_5"]),
+        "btts_yes": float(poisson_probabilities["btts_yes"]),
+        "btts_no": float(poisson_probabilities["btts_no"]),
+    })
+    for market in ("totals", "btts", "scoreline"):
+        routing[market]["status"] = "available"
+        routing[market].pop("reason_code", None)
+    routing["scoreline"]["model_version"] = scoreline_model["version"]
+    routing["scoreline"]["family"] = scoreline_model["family"]
+    return probabilities, routing, {
+        "expected_goals": expected_goals,
+        "scoreline_model": {
+            "version": scoreline_model["version"],
+            "family": scoreline_model["family"],
+            "rho": scoreline_model["rho"],
+            "home_expected_goals": scoreline_model["home_expected_goals"],
+            "away_expected_goals": scoreline_model["away_expected_goals"],
+        },
+        "scoreline_distribution": scoreline_model["scoreline_distribution"],
+        "recommended_scores": scoreline_model["recommended_scores"],
+    }
+
+
+def _scoreline_route_unavailable_reason(
+    feature_vector: dict[str, Any],
+    components: list[dict[str, Any]],
+) -> str | None:
+    attack_defense = next(
+        (
+            item
+            for item in components
+            if str(item.get("dimension") or "") == "attack_defense_efficiency"
+        ),
+        None,
+    )
+    if not isinstance(attack_defense, dict) or str(attack_defense.get("status") or "") in {
+        "unavailable",
+        "blocked",
+        "neutral_default",
+    }:
+        return "attack_defense_inputs_unavailable"
+    team_features = feature_vector.get("team_features")
+    if not isinstance(team_features, dict):
+        return "team_features_unavailable"
+    for side in ("home", "away"):
+        features = team_features.get(side)
+        if not isinstance(features, dict):
+            return f"{side}_team_features_unavailable"
+        for primary, fallback in (
+            ("shrunk_goals_for", "goals_for_per_match"),
+            ("shrunk_goals_against", "goals_against_per_match"),
+        ):
+            if not _positive_probability_input(features.get(primary), features.get(fallback)):
+                return f"{side}_{fallback}_unavailable"
+    return None
+
+
+def _positive_probability_input(primary: Any, fallback: Any) -> bool:
+    for value in (primary, fallback):
+        try:
+            number = float(value)
+        except (TypeError, ValueError):
+            continue
+        if math.isfinite(number) and number > 0:
+            return True
+    return False
 
 
 def validate_pre_match_prediction(prediction: dict[str, Any]) -> None:
@@ -161,6 +314,8 @@ def validate_pre_match_prediction(prediction: dict[str, Any]) -> None:
         "not_used_in_production_scoring_by_default",
         "team_scores",
         "probabilities",
+        "probability_model_mode",
+        "prediction_routing",
         "risk",
         "components",
         "coverage",
@@ -188,6 +343,11 @@ def validate_pre_match_prediction(prediction: dict[str, Any]) -> None:
         raise PreMatchResearchScoringError("pre_match_prediction component dimensions drifted")
     for component in components:
         _validate_component(component)
+    if prediction["probability_model_mode"] not in {
+        PROBABILITY_MODEL_LEGACY,
+        PROBABILITY_MODEL_ROUTED,
+    }:
+        raise PreMatchResearchScoringError("probability_model_mode is invalid")
     probabilities = prediction["probabilities"]
     total = probabilities["home_win"] + probabilities["draw"] + probabilities["away_win"]
     if abs(total - 1.0) > 0.02:
@@ -197,6 +357,23 @@ def validate_pre_match_prediction(prediction: dict[str, Any]) -> None:
     for key in ("over_2_5", "upset_risk"):
         if not 0 <= probabilities[key] <= 1:
             raise PreMatchResearchScoringError(f"{key} must be in 0..1")
+    routing = prediction.get("prediction_routing")
+    if not isinstance(routing, dict) or set(routing) != {"1x2", "totals", "btts", "scoreline"}:
+        raise PreMatchResearchScoringError("prediction_routing must expose 1x2, totals, btts, and scoreline")
+    if routing["1x2"].get("route") != PROBABILITY_MODEL_LEGACY:
+        raise PreMatchResearchScoringError("1x2 route must be legacy_logistic")
+    for market in ("totals", "btts", "scoreline"):
+        if routing[market].get("route") != "independent_poisson":
+            raise PreMatchResearchScoringError(f"{market} route must be independent_poisson")
+        if routing[market].get("status") not in {"available", "unavailable"}:
+            raise PreMatchResearchScoringError(f"{market} route status is invalid")
+    scoreline_available = routing["scoreline"].get("status") == "available"
+    if scoreline_available:
+        if not prediction.get("scoreline_distribution") or not prediction.get("recommended_scores"):
+            raise PreMatchResearchScoringError("available scoreline route requires model distribution")
+        for key in ("under_2_5", "btts_yes", "btts_no"):
+            if key not in probabilities or not 0 <= probabilities[key] <= 1:
+                raise PreMatchResearchScoringError(f"{key} must be available in 0..1")
     if prediction["risk"]["level"] not in {"low", "medium", "high"}:
         raise PreMatchResearchScoringError("risk.level must be low, medium, or high")
     if not 0 <= prediction["risk"]["confidence"] <= 100:
