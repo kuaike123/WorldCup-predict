@@ -2,6 +2,6 @@
   "name": "world-cup-agent-open",
   "displayName": "World Cup Agent Open",
   "version": "1.0.0",
-  "description": "Provider-based World Cup research backfill and scoring plugin.",
+  "description": "Algorithmic World Cup match prediction plugin with bring-your-own providers.",
   "skills": "./skills/"
 }

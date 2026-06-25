@@ -1,27 +1,41 @@
 # World Cup Agent Open
 
-Open-source World Cup research backfill and scoring plugin for Codex and Claude Code.
+[English](README.md) | [简体中文](README.zh-CN.md)
 
-Bring your own providers, backfill structured prematch facts into a local SQLite database, and emit a machine-readable quality report.
+Open-source World Cup match prediction plugin for Codex and Claude Code.
 
-- research: `sportradar_soccer` or user-installed crawler
-- odds: `the_odds_api` or user-installed crawler
-- output: local SQLite facts plus stable JSON diagnostics
+It pulls prematch facts and odds from your own providers, converts them into a structured feature vector, and returns machine-readable match predictions with probability, risk, and coverage fields.
 
-It does **not** place bets, guarantee coverage, or provide financial advice.
+- no frontend
+- no hosted backend
+- no push delivery
+- no betting execution
 
-## What ships
+## What this plugin does
 
-- targeted World Cup fixture research backfill
-- independent provider routing for research facts and odds
-- Sportradar Soccer research adapter
-- The Odds API odds adapter
-- optional user-installed crawler bridge
-- local scoring and report helpers
-- deterministic keyless demo
-- Codex and Claude Code plugin/marketplace manifests
+- predicts World Cup fixtures with a local algorithmic pipeline
+- supports independent research and odds providers
+- returns stable JSON that an agent can explain in natural language
+- runs with a keyless offline demo before you configure live APIs
+- ships Codex and Claude Code plugin manifests from the repo root
 
-Server APIs, UI, schedulers, push delivery, and automated wagering are intentionally out of scope.
+The open package does not guarantee betting profitability and must not be treated as financial advice.
+
+## Model overview
+
+The current open-source prediction path is a local, deterministic scoring pipeline:
+
+1. collect recent-results, player-form, lineup, schedule, motivation, and odds inputs
+2. build a prematch feature vector for the target fixture
+3. score 8 dimensions: `team_strength`, `recent_form`, `attack_defense_efficiency`, `schedule_fatigue`, `key_player_status`, `odds_movement`, `lineup_integrity`, `motivation_stage`
+4. convert the weighted score gap into structured probabilities for `home_win`, `draw`, `away_win`, plus `over_2_5` and `upset_risk`
+5. when enough official World Cup review samples exist, apply Bayesian calibration to the baseline probabilities
+
+Current implementation references:
+
+- weighted prematch scoring: [src/scoring/pre_match_research_preview.py](src/scoring/pre_match_research_preview.py)
+- Bayesian calibration: [src/scoring/bayesian_calibration.py](src/scoring/bayesian_calibration.py)
+- orchestration and persistence: [app/research_db/pre_match_research_scoring.py](app/research_db/pre_match_research_scoring.py)
 
 ## Five-minute quick start
 
@@ -47,33 +61,39 @@ python -m pip install -e ".[dev]"
 python scripts/run_demo.py
 ```
 
-The demo is deterministic, uses no network access or API keys, and prints:
-
-- a match summary
-- recent-results rows
-- player-form snapshots
-- an odds snapshot
-- per-domain data quality
-- explicit source metadata
-
-The installed equivalent is:
+The installed demo command is:
 
 ```bash
 world-cup-agent-demo
 ```
 
-## Provider model
+The demo is deterministic, uses no network access or API keys, and prints a structured prediction payload.
 
-Research and odds are configured independently. There is no forced global `api` versus `crawler` choice.
+The installed prediction command is:
 
-| Use case | Research provider | Odds provider |
-|---|---|---|
-| Paid APIs | `sportradar_soccer` | `the_odds_api` |
-| Free/self-hosted | `crawler` | `crawler` |
-| Hybrid | `sportradar_soccer` | `crawler` |
-| Hybrid | `crawler` | `the_odds_api` |
+```bash
+world-cup-predict --local-date 2026-06-13
+```
 
-Copy the sample configuration:
+## After installation
+
+In the chat window, a minimal prompt is enough:
+
+```text
+帮我预测明天的世界杯比赛
+```
+
+English equivalent:
+
+```text
+Predict tomorrow's World Cup matches
+```
+
+If you want one fixture only, include the date, teams, or fixture id.
+
+## Live API configuration
+
+Copy the sample configuration first:
 
 ```powershell
 copy .env.example .env
@@ -89,28 +109,59 @@ Primary settings:
 DEFAULT_RESEARCH_PROVIDER=auto
 DEFAULT_ODDS_PROVIDER=auto
 ENABLE_CRAWLER=true
+SPORTRADAR_SOCCER_API_KEY=
+THE_ODDS_API_KEY=
 ```
 
-Supported values:
+Supported provider values:
 
 - research: `auto`, `sportradar_soccer`, `crawler`, `skip`
 - odds: `auto`, `the_odds_api`, `crawler`, `skip`
 
-`auto` prefers the configured paid provider when its key is present, then an installed crawler. Missing or unavailable providers are reported explicitly as `skip`/`missing`; they are not silently treated as successful.
+### API examples
 
-### Paid API configuration
+Paid or trial research facts from Sportradar:
 
 ```dotenv
 DEFAULT_RESEARCH_PROVIDER=sportradar_soccer
-SPORTRADAR_SOCCER_API_KEY=<key>
-
-DEFAULT_ODDS_PROVIDER=the_odds_api
-THE_ODDS_API_KEY=<key>
+SPORTRADAR_SOCCER_API_KEY=<your-key>
 ```
 
-### Crawler configuration
+Odds from The Odds API:
 
-The crawler runtime is deliberately not bundled. Install a compatible crawler separately, then configure:
+```dotenv
+DEFAULT_ODDS_PROVIDER=the_odds_api
+THE_ODDS_API_KEY=<your-key>
+THE_ODDS_API_SPORT_KEY=soccer_fifa_world_cup
+```
+
+Hybrid setup:
+
+```dotenv
+DEFAULT_RESEARCH_PROVIDER=sportradar_soccer
+SPORTRADAR_SOCCER_API_KEY=<your-key>
+DEFAULT_ODDS_PROVIDER=the_odds_api
+THE_ODDS_API_KEY=<your-key>
+```
+
+### Official signup links
+
+Verified on June 25, 2026:
+
+- Sportradar Sports Data API free trial: [sportradar.com/media-tech/data-content/sports-data-api](https://sportradar.com/media-tech/data-content/sports-data-api/)
+- Sportradar developer getting started: [developer.sportradar.com/getting-started/docs/get-started](https://developer.sportradar.com/getting-started/docs/get-started)
+- Sportradar account setup guide: [developer.sportradar.com/football/docs/football-ig-account-setup](https://developer.sportradar.com/football/docs/football-ig-account-setup)
+- The Odds API homepage and free starter plan: [the-odds-api.com](https://the-odds-api.com/)
+- The Odds API v4 docs: [the-odds-api.com/liveapi/guides/v4](https://the-odds-api.com/liveapi/guides/v4/)
+
+Source note:
+
+- Sportradar documents a free trial flow through its developer portal.
+- The Odds API homepage shows a free starter plan with 500 credits per month as of June 25, 2026.
+
+## Optional crawler fallback
+
+The crawler runtime is not bundled. If you want a self-hosted path, install a compatible crawler separately and then configure:
 
 ```dotenv
 DEFAULT_RESEARCH_PROVIDER=crawler
@@ -125,75 +176,45 @@ The scripts directory must contain:
 - `whoscored_workflow.py` for research facts
 - `soccerway_odds.py` for odds
 
-Provider fallback is capability-specific. A directory with only one of those files can satisfy only that provider capability.
+## Stable prediction output
 
-## Run a targeted backfill
-
-The backfill expects a local research database that already contains the target World Cup fixture IDs.
-
-```powershell
-world-cup-research-backfill `
-  --db-path outputs\research_local.db `
-  --fixture-id fixture_wc2026_66456916
-```
-
-Or target a local match date:
-
-```powershell
-world-cup-research-backfill `
-  --db-path outputs\research_local.db `
-  --local-date 2026-06-13
-```
-
-`--source-mode` remains only for backward-compatible command parsing. It is recorded in diagnostics but **does not select or override providers**. Use `DEFAULT_RESEARCH_PROVIDER` and `DEFAULT_ODDS_PROVIDER` instead.
-
-
-## Post-match result and player-appearance sync
-
-The package now includes an additive post-match feedback core:
-
-- validated formal predictions can be persisted in `pre_match_predictions`;
-- closed scores are written to `match_results`;
-- mapped starter/minutes facts are written to `player_match_appearances`;
-- the next fixture prefers the latest cutoff-safe real appearance in the existing 30% last-match term;
-- the existing aggregate proxy remains the fallback.
-
-Manual dry-run:
-
-```bash
-world-cup-post-match-sync \
-  --db-path outputs/research_local.db \
-  --lookback-hours 48 \
-  --dry-run
-```
-
-The open package intentionally provides no background scheduler or private post-match review store. See [POST_MATCH_SYNC.md](POST_MATCH_SYNC.md).
-
-## Stable output contract
-
-Every generated `targeted_backfill_summary.json` uses this top-level contract, including failed runs:
+The open package emits structured output that agents can explain directly. Key top-level fields include:
 
 ```json
 {
+  "schema_version": "world_cup_prediction.v1",
   "status": "ok | partial | failed",
-  "data_quality": {
-    "recent_results": "ok | partial | missing",
-    "player_form": "ok | partial | missing",
-    "odds": "ok | partial | missing"
-  },
-  "data": {
-    "recent_results": [],
-    "player_form": [],
-    "odds": []
-  },
   "source": {
-    "research_provider": "sportradar_soccer | crawler | skip",
-    "odds_provider": "the_odds_api | crawler | skip"
-  }
+    "research_provider": "sportradar_soccer | crawler | skip | existing_db",
+    "odds_provider": "the_odds_api | crawler | skip | existing_db"
+  },
+  "predictions": [
+    {
+      "fixture_id": "fixture_wc2026_...",
+      "match_time_beijing": "2026-06-13T08:00:00+08:00",
+      "home_team": "Home",
+      "away_team": "Away",
+      "data_status": "ok | partial | failed",
+      "probabilities": {
+        "home_win": 0.0,
+        "draw": 0.0,
+        "away_win": 0.0,
+        "over_2_5": 0.0,
+        "under_2_5": 0.0
+      },
+      "risk": {
+        "level": "low | medium | high",
+        "confidence": 0
+      },
+      "coverage": {},
+      "calibration": {},
+      "gaps": []
+    }
+  ]
 }
 ```
 
-Legacy diagnostic fields remain available for compatibility, including selected fixture/team IDs, step details, import counts, readiness, and failure details.
+BTTS, scorelines, capital allocation, and risk/reward are reported only when the script returns them. The open model must not invent those values.
 
 ## Plugin usage
 
@@ -203,16 +224,17 @@ The repository root is the plugin root.
 - Codex repo marketplace: `.agents/plugins/marketplace.json`
 - Claude Code plugin manifest: `.claude-plugin/plugin.json`
 - Claude Code repo marketplace: `.claude-plugin/marketplace.json`
-- packaged skill: `skills/world-cup-research-backfill/`
+- prediction skill: `skills/world-cup-prediction/`
+- auxiliary data-repair skill: `skills/world-cup-research-backfill/`
 
 See [PLUGIN_USAGE.md](PLUGIN_USAGE.md) for host installation and verification steps.
 
-## Architecture and policy
+## More docs
 
-- [ARCHITECTURE.md](ARCHITECTURE.md): provider boundaries, routing, data flow, and output contract
-- [SECURITY.md](SECURITY.md): secrets, crawler trust boundary, vulnerability reporting, and safe operation
-- [Source policy](skills/world-cup-research-backfill/references/source-policy.md): approved source matrix and timestamp rules
-- [Release checklist](release-checklist.md): v1.0 release gates and manual marketplace checks
+- [README.zh-CN.md](README.zh-CN.md): Chinese version
+- [ARCHITECTURE.md](ARCHITECTURE.md): provider routing, data flow, and scoring boundaries
+- [SECURITY.md](SECURITY.md): secrets, crawler trust boundary, and safe operation
+- [PLUGIN_USAGE.md](PLUGIN_USAGE.md): install and verify in Codex or Claude Code
 
 ## Validation
 
@@ -222,16 +244,6 @@ python -m pytest -q
 python scripts/run_demo.py
 python -m build
 ```
-
-`python -m pip wheel . --no-deps` is an acceptable package-build fallback when the `build` module is unavailable.
-
-## Known limitations
-
-- Real Sportradar player-form coverage depends on mapping local shortlist names to Sportradar player IDs. Unmatched players are reported as partial/missing data.
-- Live API and crawler coverage cannot be guaranteed; providers can rate-limit, change schemas, or omit events.
-- The crawler path executes user-supplied code and browser automation. Install it only from a source you trust and verify site terms before collection.
-- Marketplace installation still requires host-side actions and final repository coordinates after publishing to a Git host.
-- Odds are informational market data, not a recommendation to wager.
 
 ## License
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "World Cup Prediction"
+  short_description: "Predict World Cup fixtures with the local algorithmic pipeline"
+  default_prompt: "Predict the requested World Cup fixtures with world-cup-predict and report probabilities, risk, coverage, providers, and any unsupported fields."

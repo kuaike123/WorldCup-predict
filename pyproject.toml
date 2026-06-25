@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "world-cup-agent-open"
 version = "1.0.0"
-description = "Provider-based World Cup research backfill and scoring plugin for Codex and Claude Code."
+description = "Algorithmic World Cup match prediction plugin for Codex and Claude Code."
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }
@@ -24,6 +24,7 @@ dev = [
 
 [project.scripts]
 world-cup-research-backfill = "app.research_db.world_cup_research_backfill:main"
+world-cup-predict = "app.research_db.world_cup_prediction_cli:main"
 world-cup-post-match-sync = "app.research_db.post_match_sync_cli:main"
 world-cup-agent-demo = "app.demo:main"
 

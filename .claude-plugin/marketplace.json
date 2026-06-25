@@ -3,12 +3,12 @@
   "owner": {
     "name": "World Cup Agent"
   },
-  "description": "Provider-based World Cup research backfill and scoring plugin marketplace.",
+  "description": "Algorithmic World Cup match prediction plugin marketplace.",
   "plugins": [
     {
       "name": "world-cup-agent-open",
       "displayName": "World Cup Agent Open",
-      "description": "Provider-based World Cup research backfill and scoring plugin.",
+      "description": "Algorithmic World Cup match prediction plugin with bring-your-own providers.",
       "version": "1.0.0",
       "source": "./"
     }

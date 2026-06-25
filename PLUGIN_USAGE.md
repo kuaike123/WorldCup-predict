@@ -1,5 +1,7 @@
 # Plugin Usage
 
+The repo is packaged as a World Cup prediction plugin. The internal backfill command remains available as an auxiliary data-repair tool because it prepares the local prematch dataset used by the prediction algorithm.
+
 ## Repository layout
 
 The repository root is the plugin root. Do not copy an individual marketplace JSON file to another directory before installation because both marketplace manifests use `./` as the plugin source.
@@ -11,6 +13,7 @@ Required paths:
 .claude-plugin/plugin.json
 .agents/plugins/marketplace.json
 .claude-plugin/marketplace.json
+skills/world-cup-prediction/
 skills/world-cup-research-backfill/
 ```
 
@@ -22,17 +25,18 @@ From the repository root:
 python -m pip install -e ".[dev]"
 python -m pytest -q
 python scripts/run_demo.py
+world-cup-predict --help
 world-cup-research-backfill --help
 ```
 
-The demo must succeed without keys. A live targeted backfill additionally requires an existing research database containing the target fixtures and at least one configured provider path.
+The demo must succeed without keys. A live prediction run additionally requires an existing research database containing the target fixtures and at least one configured provider path.
 
 ## Codex local installation
 
 1. Add `.agents/plugins/marketplace.json` from this repository as a local marketplace.
 2. Select `world-cup-agent-open`.
-3. Confirm that the installed plugin exposes `skills/world-cup-research-backfill/`.
-4. Run the skill against a test fixture or ask the host to run the keyless demo first.
+3. Confirm that the installed plugin exposes `skills/world-cup-prediction/`.
+4. Ask the host to run the keyless demo first or predict a test fixture.
 
 The exact UI/CLI wording depends on the installed Codex host version. The repository supplies the manifest and local source layout; it does not automate host permissions or marketplace publication.
 
@@ -40,8 +44,12 @@ The exact UI/CLI wording depends on the installed Codex host version. The reposi
 
 1. Add `.claude-plugin/marketplace.json` from this repository as a local marketplace.
 2. Select `world-cup-agent-open`.
-3. Confirm that the installed plugin exposes `skills/world-cup-research-backfill/`.
+3. Confirm that the installed plugin exposes `skills/world-cup-prediction/`.
 4. Run the keyless demo before providing live provider credentials.
+
+Typical natural-language prompt after installation:
+
+> Help me predict tomorrow's World Cup matches.
 
 The exact UI/CLI wording depends on the installed Claude Code host version.
 
@@ -80,16 +88,16 @@ SPORTS_STABLE_CRAWL_SCRIPTS_DIR=<scripts-directory>
 
 The router records configured and selected providers plus any fallback reason in `source.route`.
 
-## Invoke the skill
+## Invoke the prediction skill
 
 Typical request to the host:
 
-> Backfill research for fixture `fixture_wc2026_66456916`, preserve existing rows, and report the selected research/odds providers and `data_quality` from `targeted_backfill_summary.json`.
+> Predict fixture `fixture_wc2026_66456916`, explain the probability split, and report the selected research/odds providers plus coverage.
 
 Equivalent local command:
 
 ```bash
-world-cup-research-backfill --fixture-id fixture_wc2026_66456916
+world-cup-predict --fixture-id fixture_wc2026_66456916
 ```
 
 Useful options:
@@ -101,10 +109,44 @@ Useful options:
 - `--available-at`
 - `--skill-scripts-dir`
 - `--crawler-python-path`
-- `--no-resume-existing`
+- `--no-backfill`
+- `--persist`
+
+The lower-level `world-cup-research-backfill` command remains available for data repair, but prediction requests should use `world-cup-predict`.
+
+## Verify prediction output
+
+Check these fields first:
+
+```text
+schema_version
+status
+source.research_provider
+source.odds_provider
+backfill_error
+predictions[].fixture_id
+predictions[].probabilities
+predictions[].risk
+predictions[].coverage
+predictions[].calibration
+predictions[].gaps
+```
+
+Interpretation:
+
+- `ok`: all requested fixtures produced complete open-model prediction fields
+- `partial`: prediction completed but at least one provider, coverage, BTTS, staking, or optional field is missing
+- `failed`: no requested fixture could produce a prediction payload
+
+## Auxiliary backfill command
+
+Use this only when you need to repair or refresh the local prematch dataset:
+
+```bash
+world-cup-research-backfill --fixture-id fixture_wc2026_66456916
+```
 
 `--source-mode` is deprecated compatibility metadata. It must not be used to choose providers.
-
 
 ## Post-match sync command
 
@@ -117,28 +159,6 @@ world-cup-post-match-sync --help
 Use `--dry-run` on a copied database before the first provider-backed write. The public command persists results and player appearances only; private scheduler and post-match learning/review integrations are not bundled.
 
 Provider configuration is documented in [POST_MATCH_SYNC.md](POST_MATCH_SYNC.md).
-
-## Verify output
-
-Check these fields first:
-
-```text
-status
-data_quality.recent_results
-data_quality.player_form
-data_quality.odds
-source.research_provider
-source.odds_provider
-source.route
-failed_step (failed runs only)
-error (failed runs only)
-```
-
-Interpretation:
-
-- `ok`: all public data domains are available
-- `partial`: command completed but at least one domain is partial or missing
-- `failed`: an exception interrupted execution; partial artifacts may still be present
 
 ## Publication checklist
 

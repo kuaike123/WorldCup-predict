@@ -40,6 +40,7 @@ def test_plugin_manifests_use_repo_local_paths() -> None:
     assert (root / ".claude-plugin" / "plugin.json").is_file()
     assert (root / ".agents" / "plugins" / "marketplace.json").is_file()
     assert (root / ".claude-plugin" / "marketplace.json").is_file()
+    assert (root / "skills" / "world-cup-prediction" / "SKILL.md").is_file()
 
 
 def test_plugin_manifests_keep_release_metadata_in_sync() -> None:
@@ -55,6 +56,38 @@ def test_plugin_manifests_keep_release_metadata_in_sync() -> None:
     assert codex_plugin["name"] == claude_plugin["name"] == codex_listing["name"] == claude_listing["name"]
     assert codex_plugin["version"] == claude_plugin["version"] == claude_listing["version"]
     assert codex_plugin["interface"]["displayName"] == claude_plugin["displayName"] == codex_marketplace["interface"]["displayName"] == claude_listing["displayName"]
+
+
+def test_release_readmes_focus_on_prediction_and_language_switch() -> None:
+    root = Path(__file__).resolve().parents[1]
+    readme_en = (root / "README.md").read_text(encoding="utf-8")
+    readme_zh = (root / "README.zh-CN.md").read_text(encoding="utf-8")
+
+    assert "[English](README.md) | [简体中文](README.zh-CN.md)" in readme_en
+    assert "[English](README.md) | [简体中文](README.zh-CN.md)" in readme_zh
+    assert "match prediction plugin" in readme_en
+    assert "帮我预测明天的世界杯比赛" in readme_en
+    assert "贝叶斯校准" in readme_zh
+    assert "THE_ODDS_API_KEY=" in readme_en
+    assert "SPORTRADAR_SOCCER_API_KEY=" in readme_zh
+    assert "world-cup-predict" in readme_en
+    assert "skills/world-cup-prediction/" in readme_zh
+
+
+def test_prediction_skill_routes_prediction_intent_to_script_first_flow() -> None:
+    root = Path(__file__).resolve().parents[1]
+    skill_doc = (root / "skills" / "world-cup-prediction" / "SKILL.md").read_text(encoding="utf-8")
+    openai_yaml = (root / "skills" / "world-cup-prediction" / "agents" / "openai.yaml").read_text(encoding="utf-8")
+    pyproject = (root / "pyproject.toml").read_text(encoding="utf-8")
+
+    assert "description: Script-first World Cup match prediction flow" in skill_doc
+    assert "world-cup-predict" in skill_doc
+    assert "Prediction numbers come from repo scripts" in skill_doc
+    assert "schema_version: world_cup_prediction.v1" in skill_doc
+    assert "probabilities.home_win" in skill_doc
+    assert "unsupported by the current open model" in skill_doc
+    assert "World Cup Prediction" in openai_yaml
+    assert "world-cup-predict = \"app.research_db.world_cup_prediction_cli:main\"" in pyproject
 
 
 def test_repo_root_is_the_only_layout_that_satisfies_local_marketplace_paths() -> None:
