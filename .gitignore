@@ -22,6 +22,8 @@ outputs/
 *.sqlite3
 
 data/research_import/targeted_backfill/
+data/research_import/**/*_diagnostics.json
+data/samples/bot_output_p0_13_*.json
 
 /active-mission.md
 /NUL

@@ -99,9 +99,22 @@ def test_v1_release_metadata_and_required_docs_are_present() -> None:
         "CHANGELOG.md",
         "schemas/targeted_backfill_summary.schema.json",
         "POST_MATCH_SYNC.md",
-        "POST_MATCH_FEEDBACK_LOOP_SPEC.md",
     ):
         assert (ROOT / relative_path).is_file(), relative_path
+
+
+def test_release_excludes_development_artifacts() -> None:
+    forbidden_paths = (
+        "POST_MATCH_FEEDBACK_LOOP_SPEC.md",
+        "data/research_import/p0_11/odds_diagnostics.json",
+        "data/research_import/p0_11/player_form_diagnostics.json",
+        "data/research_import/p0_11/recent_results_diagnostics.json",
+        "data/samples/bot_output_p0_13_admin.json",
+        "data/samples/bot_output_p0_13_free.json",
+        "data/samples/bot_output_p0_13_vip.json",
+    )
+    for relative_path in forbidden_paths:
+        assert not (ROOT / relative_path).exists(), relative_path
 
 
 def test_dotenv_can_configure_independent_providers_and_crawler_path(tmp_path, monkeypatch) -> None:
