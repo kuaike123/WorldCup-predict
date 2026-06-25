@@ -11,6 +11,7 @@ from app.storage.repository import LocalRepository
 
 from .pre_match_research_scoring import PreMatchResearchScoringService
 from .repository import ResearchDatabaseRepository
+from .world_cup_2026_bootstrap import import_bootstrap_bundle
 from .world_cup_research_backfill import (
     DEFAULT_DB_PATH,
     DEFAULT_LOCAL_DATE_UTC_OFFSET_HOURS,
@@ -22,6 +23,25 @@ from .world_cup_research_backfill import (
 
 
 PREDICTION_SCHEMA_VERSION = "world_cup_prediction.v1"
+DEFAULT_BOOTSTRAP_BUNDLE_DIR = Path(__file__).resolve().parents[2] / "data" / "research_import" / "p0_11"
+
+TEAM_NAMES_ZH = {
+    "Argentina": "阿根廷",
+    "Australia": "澳大利亚",
+    "Belgium": "比利时",
+    "Côte d'Ivoire": "科特迪瓦",
+    "Curaçao": "库拉索",
+    "Ecuador": "厄瓜多尔",
+    "France": "法国",
+    "Germany": "德国",
+    "Japan": "日本",
+    "Netherlands": "荷兰",
+    "Paraguay": "巴拉圭",
+    "Sweden": "瑞典",
+    "Tunisia": "突尼斯",
+    "Türkiye": "土耳其",
+    "USA": "美国",
+}
 
 
 def run_world_cup_prediction(
@@ -40,6 +60,7 @@ def run_world_cup_prediction(
     local_store_path: Path = DEFAULT_LOCAL_STORE_PATH,
 ) -> dict[str, Any]:
     repository = ResearchDatabaseRepository(db_path)
+    bootstrap = _ensure_bootstrap_data(repository)
     fixture_rows = resolve_target_fixture_rows(
         repository,
         fixture_ids=fixture_ids,
@@ -90,6 +111,7 @@ def run_world_cup_prediction(
             "local_date": local_date,
             "local_utc_offset_hours": local_utc_offset_hours,
             "backfill": "skipped" if not run_backfill else (backfill_summary or {}).get("status", "failed"),
+            "bootstrap": bootstrap,
         },
         "source": _source_summary(backfill_summary, run_backfill=run_backfill),
         "backfill_error": backfill_error,
@@ -136,8 +158,8 @@ def _prediction_item(
         return {
             "fixture_id": fixture_id,
             "match_time_beijing": _beijing_time(str(fixture.get("match_time") or "")),
-            "home_team": str(fixture.get("home_team_id") or ""),
-            "away_team": str(fixture.get("away_team_id") or ""),
+            "home_team": _team_name_zh(str(fixture.get("home_team_id") or "")),
+            "away_team": _team_name_zh(str(fixture.get("away_team_id") or "")),
             "data_status": "failed",
             "probabilities": {},
             "risk": {},
@@ -162,8 +184,8 @@ def _prediction_item(
     return {
         "fixture_id": fixture_id,
         "match_time_beijing": _beijing_time(str(fixture.get("match_time") or "")),
-        "home_team": prediction.get("home_team") or str(fixture.get("home_team_id") or ""),
-        "away_team": prediction.get("away_team") or str(fixture.get("away_team_id") or ""),
+        "home_team": _team_name_zh(prediction.get("home_team") or str(fixture.get("home_team_id") or "")),
+        "away_team": _team_name_zh(prediction.get("away_team") or str(fixture.get("away_team_id") or "")),
         "data_status": "partial" if gaps else "ok",
         "probabilities": probabilities,
         "risk": prediction.get("risk") or {},
@@ -284,6 +306,19 @@ def _sources(prediction: dict[str, Any]) -> list[str]:
     return sources
 
 
+def _ensure_bootstrap_data(repository: ResearchDatabaseRepository) -> str:
+    if repository.row_counts().get("fixtures", 0):
+        return "existing"
+    if not DEFAULT_BOOTSTRAP_BUNDLE_DIR.exists():
+        return "missing"
+    import_bootstrap_bundle(DEFAULT_BOOTSTRAP_BUNDLE_DIR, repository)
+    return "imported"
+
+
+def _team_name_zh(name: str) -> str:
+    return TEAM_NAMES_ZH.get(name, name)
+
+
 def _overall_status(
     predictions: list[dict[str, Any]],
     backfill_summary: dict[str, Any] | None,
@@ -314,7 +349,12 @@ def _beijing_time(value: str) -> str:
 
 
 def _emit_json(payload: dict[str, Any]) -> None:
-    print(json.dumps(payload, ensure_ascii=False, indent=2))
+    text = json.dumps(payload, ensure_ascii=False, indent=2) + "\n"
+    buffer = getattr(__import__("sys").stdout, "buffer", None)
+    if buffer is not None:
+        buffer.write(text.encode("utf-8"))
+        return
+    print(text, end="")
 
 
 def main() -> None:

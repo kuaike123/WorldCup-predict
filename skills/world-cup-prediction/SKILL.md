@@ -20,6 +20,7 @@ Use this skill when the user asks for:
 3. Structured JSON comes first; natural-language explanation comes second.
 4. The LLM may explain gaps, but may not invent probabilities, odds, BTTS values, stake sizing, or market conclusions.
 5. If a field is missing or unsupported, report the gap explicitly.
+6. Team names in user-facing summaries must be Chinese. Preserve fixture IDs separately when needed.
 
 ## Workflow
 
@@ -42,9 +43,10 @@ world-cup-predict `
 ```
 
 4. By default the command runs provider backfill first, using configured APIs or crawler fallback through the provider router, then builds predictions through `PreMatchResearchScoringService`.
-5. Read the returned JSON and preserve the script-produced values.
-6. If data remains incomplete, still report the script-produced prediction payload when present, mark it as `partial`, and explain the blocker from `gaps`, `backfill_error`, `coverage`, `prediction_routing`, or `source`.
-7. If a fixture cannot produce any prediction, report the fixed failed payload and the exact failure reason from `gaps`.
+5. If the local research DB is empty, the command imports the packaged bootstrap bundle before resolving fixtures.
+6. Read the returned JSON and preserve the script-produced values.
+7. If data remains incomplete, still report the script-produced prediction payload when present, mark it as `partial`, and explain the blocker from `gaps`, `backfill_error`, `coverage`, `prediction_routing`, or `source`.
+8. If a fixture cannot produce any prediction, report the fixed failed payload and the exact failure reason from `gaps`.
 
 ## No-backfill mode
 

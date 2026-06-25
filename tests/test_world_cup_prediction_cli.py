@@ -102,6 +102,58 @@ def test_prediction_cli_emits_fixed_contract_without_backfill(tmp_path: Path, mo
     assert "fixture_id" in payload["output_contract"]["required_per_fixture_fields"]
 
 
+def test_prediction_cli_bootstraps_empty_db_before_resolving_fixtures(tmp_path: Path, monkeypatch) -> None:
+    db_path = tmp_path / "research.db"
+    bootstrap_dir = tmp_path / "p0_11"
+    bootstrap_dir.mkdir()
+    calls = []
+
+    def fake_bootstrap(bundle_dir: Path, repository: ResearchDatabaseRepository) -> dict[str, Any]:
+        calls.append(bundle_dir)
+        _seed_fixture(repository.db_path)
+        return {"status": "ok"}
+
+    class FakeService:
+        def __init__(self, *args: Any, **kwargs: Any) -> None:
+            pass
+
+        def build_prediction(self, fixture_id: str) -> dict[str, Any]:
+            return {
+                "fixture_id": fixture_id,
+                "home_team": "Japan",
+                "away_team": "Sweden",
+                "probabilities": {
+                    "home_win": 0.46,
+                    "draw": 0.29,
+                    "away_win": 0.25,
+                    "over_2_5": 0.47,
+                    "under_2_5": 0.53,
+                    "btts_yes": 0.45,
+                    "btts_no": 0.55,
+                },
+                "risk": {"level": "medium", "confidence": 60},
+                "coverage": {"status": "ok"},
+                "calibration": {"applied": False},
+                "prediction_routing": {"scoreline": {"status": "available"}},
+            }
+
+    monkeypatch.setattr(cli, "DEFAULT_BOOTSTRAP_BUNDLE_DIR", bootstrap_dir)
+    monkeypatch.setattr(cli, "import_bootstrap_bundle", fake_bootstrap)
+    monkeypatch.setattr(cli, "PreMatchResearchScoringService", FakeService)
+
+    payload = cli.run_world_cup_prediction(
+        db_path=db_path,
+        output_dir=tmp_path / "bundle",
+        fixture_ids=["fixture_wc2026_open_1"],
+        run_backfill=False,
+    )
+
+    assert calls == [bootstrap_dir]
+    assert payload["request"]["bootstrap"] == "imported"
+    assert payload["predictions"][0]["home_team"] == "日本"
+    assert payload["predictions"][0]["away_team"] == "瑞典"
+
+
 def test_prediction_cli_runs_backfill_before_prediction_by_default(tmp_path: Path, monkeypatch) -> None:
     db_path = tmp_path / "research.db"
     _seed_fixture(db_path)
